@@ -1,0 +1,10 @@
+# Caches & Artifacts
+dist/
+node_modules/
+storybook-static/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
