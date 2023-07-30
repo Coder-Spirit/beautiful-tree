@@ -5,22 +5,24 @@
   "license": "MIT",
   "exports": {
     ".": {
+			"types": "./dist/beautiful-tree.d.ts",
       "import": "./dist/beautiful-tree.mjs",
       "require": "./dist/beautiful-tree.cjs",
       "browser": "./dist/beautiful-tree.iife.js",
-      "types": "./dist/beautiful-tree.d.ts",
       "default": "./dist/beautiful-tree.umd.js"
     },
     "./min": {
+			"types": "./dist/beautiful-tree.d.ts",
       "import": "./dist/beautiful-tree.min.mjs",
       "require": "./dist/beautiful-tree.min.cjs",
       "browser": "./dist/beautiful-tree.min.iife.js",
       "default": "./dist/beautiful-tree.min.umd.js"
     }
   },
+	"files": ["dist"],
   "scripts": {
-		"build": "rollup --config rollup.config.prod.mjs",
-		"install-githooks": "if [ -d .git ]; then git config core.hooksPath .hooks; fi",
+    "build": "rollup --config rollup.config.prod.mjs",
+    "install-githooks": "if [ -d .git ]; then git config core.hooksPath .hooks; fi",
     "lint": "tsc && eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:eslint": "eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:tsc": "tsc"
@@ -42,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "^3.0.0",
+    "publint": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.26.3",
