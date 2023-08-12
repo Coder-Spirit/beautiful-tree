@@ -22,13 +22,21 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install PNPM
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - run: pnpm install
-    - run: pnpm lint
-    - run: pnpm build
+    - name: Install dependencies
+      run: pnpm install
+    - name: Run Linters
+      run: pnpm lint
+    - name: Build Library
+      run: pnpm build
     # - run: pnpm test
