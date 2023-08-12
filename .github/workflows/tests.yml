@@ -28,6 +28,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+    - run: corepack enable
+    - run: corepack prepare pnpm@latest-8 --activate
     - run: pnpm install
     - run: pnpm lint
     - run: pnpm build
