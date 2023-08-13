@@ -16,6 +16,8 @@ module.exports = {
 		'import',
 		'prettier',
 		'react-refresh',
+		'sonarjs',
+		'unicorn',
 	],
 	extends: [
 		'eslint:recommended',
@@ -26,10 +28,17 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
+		"plugin:sonarjs/recommended",
 		'plugin:storybook/recommended',
+		'plugin:unicorn/recommended',
 		'prettier',
 	],
 	rules: {
+		// Base ESLint rules
+		'curly': 'error',
+		'sort-imports': 'error',
+
+		// TypeScript-related rules
 		'@typescript-eslint/consistent-type-exports': 'error',
 		'@typescript-eslint/consistent-type-imports': 'error',
 		"@typescript-eslint/explicit-function-return-type": "error",
@@ -40,6 +49,18 @@ module.exports = {
 		"@typescript-eslint/no-unnecessary-qualifier": "error",
 		"@typescript-eslint/prefer-readonly": "error",
 		"@typescript-eslint/prefer-readonly-parameter-types": "error",
+		"@typescript-eslint/promise-function-async": "error",
+		"@typescript-eslint/require-array-sort-compare": "error",
+		"@typescript-eslint/sort-type-constituents": "error",
+		"@typescript-eslint/switch-exhaustiveness-check": "error",
+    "no-shadow": "off", // replaced by @typescript-eslint/no-shadow
+    "@typescript-eslint/no-shadow": "error",
+    "no-return-await": "off", // replaced by @typescript-eslint/return-await
+    "@typescript-eslint/return-await": "error",
+
+		// Unicorn Rules
+		'unicorn/filename-case': 'off',
+    'unicorn/prevent-abbreviations': 'off',
 	},
 	settings: {
     react: {

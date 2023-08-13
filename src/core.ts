@@ -38,7 +38,7 @@ const _computeLeftShiftLayout = (
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	layout[depth]!.push(x)
 
-	const treeWithLayout = {
+	return {
 		data: tree.data,
 		children: tree.children?.map((child: Readonly<TreeChild>) => ({
 			edgeData: child.edgeData,
@@ -46,8 +46,6 @@ const _computeLeftShiftLayout = (
 		})),
 		layout: { plan: { x, y: depth } },
 	} satisfies TreeWithLayout
-
-	return treeWithLayout
 }
 
 export const computeLeftShiftLayout: ((tree: Tree) => TreeWithLayout) = _computeLeftShiftLayout
