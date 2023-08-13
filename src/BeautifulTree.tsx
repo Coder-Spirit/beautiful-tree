@@ -1,21 +1,15 @@
-export type Tree = {
-	data: Record<string, unknown>,
-	children: {
-		edgeData: Record<string, unknown>,
-		node: Tree
-	}[]
-}
+import type { Tree } from './core'
 
 export interface BeautifulTreeProps {
-	id: string,
-	svgProps: {
-			width: number,
-			height: number,
+	readonly id: string,
+	readonly svgProps: {
+			readonly width: number,
+			readonly height: number,
 	},
-	tree: Tree,
+	readonly tree: Tree,
 }
 
-export function BeautifulTree(props: BeautifulTreeProps) {
+export function BeautifulTree(props: Readonly<BeautifulTreeProps>): JSX.Element {
 	return (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"

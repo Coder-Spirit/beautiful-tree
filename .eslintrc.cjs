@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
 	root: true,
 	env: {
@@ -6,22 +8,20 @@ module.exports = {
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-    ecmaVersion: 2022,
+    ecmaVersion: 2020,
 		sourceType: 'module',
     tsConfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
 	plugins: [
-		'@typescript-eslint',
-		'prettier',
-		'react-refresh'
+		'react-refresh',
 	],
 	extends: [
-		'eslint:recommended',
-		'plugin:@typescript-eslint/strict-type-checked',
+		'@coderspirit',
 		'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
+		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
+		'plugin:storybook/recommended',
 	],
 	settings: {
     react: {
