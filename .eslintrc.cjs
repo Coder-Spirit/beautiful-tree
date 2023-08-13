@@ -20,8 +20,9 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/strict-type-checked',
 		'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
+		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
+		'plugin:storybook/recommended'
 	],
 	settings: {
     react: {
