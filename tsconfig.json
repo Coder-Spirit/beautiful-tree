@@ -43,7 +43,9 @@
     "skipLibCheck": true
   },
 	"exclude": [
+		"coverage/**/*",
 		"dist/**/*",
 		"node_modules/**/*",
+		"storybook-static/**/*",
 	]
 }
