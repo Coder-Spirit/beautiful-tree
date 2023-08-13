@@ -43,6 +43,8 @@
     "skipLibCheck": true
   },
 	"exclude": [
+		".github/**/*",
+		".hooks/**/*",
 		"coverage/**/*",
 		"dist/**/*",
 		"node_modules/**/*",

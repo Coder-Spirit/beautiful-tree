@@ -1,11 +1,3 @@
-const config = {
-	semi: false,
-	singleQuote: true,
-	parser: 'typescript',
-	trailingComma: 'all',
-	options: {
-		editorconfig: true
-	},
-}
+import config from '@coderspirit/eslint-config/prettier'
 
 export default config
