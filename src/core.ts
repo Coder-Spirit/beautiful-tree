@@ -1,18 +1,18 @@
 export type TreeChild<T extends Tree = Tree> = {
 	node: T,
-	edgeData: Record<string, unknown>,
+	edgeData?: Record<string, unknown> | undefined,
 }
 
 export type Node = {
-	data: Record<string, unknown>,
+	data?: Record<string, unknown> | undefined,
 }
 
 export type Tree = Node & {
-	children?: TreeChild[]
+	children?: TreeChild[] | undefined,
 }
 
 export type TreeWithLayout = Node & {
-	children?: Required<TreeChild<TreeWithLayout>>[]
+	children?: Required<TreeChild<TreeWithLayout>>[] | undefined,
 	layout: {
 		plan: { x: number, y: number },
 	}
@@ -35,7 +35,7 @@ const _computeLeftShiftLayout = (tree: Tree, depth: number = 0, layout?: Interna
 		children: tree.children?.map(child => ({
 			edgeData: child.edgeData,
 			node: _computeLeftShiftLayout(child.node, depth + 1, layout),
-		})) ?? [],
+		})),
 		layout: { plan: { x, y: depth } },
 	} satisfies TreeWithLayout
 
