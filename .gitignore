@@ -1,6 +1,8 @@
 # Caches & Artifacts
+coverage/
 dist/
 node_modules/
+storybook-static/
 
 # Lockfiles
 pnpm-lock.yaml

@@ -1,10 +1,4 @@
-export type Tree = {
-	data: Record<string, unknown>,
-	children: {
-		edgeData: Record<string, unknown>,
-		node: Tree
-	}[]
-}
+import type { Tree } from './core'
 
 export interface BeautifulTreeProps {
 	id: string,
