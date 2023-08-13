@@ -1,26 +1,34 @@
-export type TreeChild<T extends Tree = Tree> = {
-	node: T,
-	edgeData?: Record<string, unknown> | undefined,
+export interface TreeChild<T extends Tree = Tree> {
+	readonly node: T,
+	readonly edgeData?: Readonly<Record<string, unknown>> | undefined,
 }
 
-export type Node = {
-	data?: Record<string, unknown> | undefined,
+export interface Node {
+	readonly data?: Readonly<Record<string, unknown>> | undefined,
 }
 
 export type Tree = Node & {
-	children?: TreeChild[] | undefined,
+	readonly children?: readonly TreeChild[] | undefined,
 }
 
 export type TreeWithLayout = Node & {
-	children?: Required<TreeChild<TreeWithLayout>>[] | undefined,
-	layout: {
-		plan: { x: number, y: number },
+	readonly children?: Required<TreeChild<TreeWithLayout>>[] | undefined,
+	readonly layout: {
+		readonly plan: {
+			readonly x: number,
+			readonly y: number
+		},
 	}
 }
 
 type InternalTreeLayout = number[][]
 
-const _computeLeftShiftLayout = (tree: Tree, depth: number = 0, layout?: InternalTreeLayout): TreeWithLayout => {
+const _computeLeftShiftLayout = (
+		tree: Tree,
+		depth = 0,
+		// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+		layout?: InternalTreeLayout
+	): TreeWithLayout => {
 	layout ??= []
 
 	if (layout[depth] === undefined) {
@@ -32,7 +40,7 @@ const _computeLeftShiftLayout = (tree: Tree, depth: number = 0, layout?: Interna
 
 	const treeWithLayout = {
 		data: tree.data,
-		children: tree.children?.map(child => ({
+		children: tree.children?.map((child: Readonly<TreeChild>) => ({
 			edgeData: child.edgeData,
 			node: _computeLeftShiftLayout(child.node, depth + 1, layout),
 		})),
