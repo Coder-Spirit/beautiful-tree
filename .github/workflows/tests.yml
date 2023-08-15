@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [ 16, 18, 20 ]
-        os: [ubuntu-20.04, ubuntu-22.04, windows-latest, macos-12, macos-11]
+        os: [ubuntu-22.04, ubuntu-20.04, windows-latest, macos-12, macos-11]
 
     runs-on: ${{ matrix.os }}
 
@@ -36,6 +36,7 @@ jobs:
     - name: Install dependencies
       run: pnpm install
     - name: Run Linters
+      if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm lint
     - name: Build Library
       run: pnpm build
