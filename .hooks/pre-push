@@ -5,4 +5,4 @@ set -o pipefail
 
 pnpm run lint
 pnpm publint
-pnpm test
+pnpm test:coverage

@@ -18,16 +18,47 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Empty: Story = {
+const testTree = {
+	data: { v: 42 },
+	children: [
+		{
+			edgeData: {},
+			node: {
+				data: { v: 43 },
+				children: [
+					{
+						edgeData: {},
+						node: { data: { v: 45 } },
+					},
+				],
+			},
+		},
+		{
+			edgeData: {},
+			node: {
+				data: { v: 44 },
+				children: [
+					{
+						edgeData: {},
+						node: { data: { v: 46 } },
+					},
+					{
+						edgeData: {},
+						node: { data: { v: 47 } },
+					},
+				],
+			},
+		},
+	],
+}
+
+export const SimpleTree: Story = {
 	args: {
-		id: 'empty-beautiful-tree',
+		id: 'simple-beautiful-tree',
 		svgProps: {
 			width: 100,
 			height: 100,
 		},
-		tree: {
-			data: {},
-			children: [],
-		},
+		tree: testTree,
 	},
 }
