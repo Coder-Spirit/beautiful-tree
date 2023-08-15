@@ -29,7 +29,7 @@ describe('computeLeftShiftLayout', () => {
 				{
 					edgeData: {},
 					node: { data: { v: 43 } },
-				}
+				},
 			],
 		})
 
@@ -42,7 +42,7 @@ describe('computeLeftShiftLayout', () => {
 						data: { v: 43 },
 						layout: { plan: { x: 0, y: 1 } },
 					},
-				}
+				},
 			],
 			layout: { plan: { x: 0, y: 0 } },
 		})
@@ -59,7 +59,7 @@ describe('computeLeftShiftLayout', () => {
 				{
 					edgeData: {},
 					node: { data: { v: 44 } },
-				}
+				},
 			],
 		})
 
@@ -79,7 +79,7 @@ describe('computeLeftShiftLayout', () => {
 						data: { v: 44 },
 						layout: { plan: { x: 1, y: 1 } },
 					},
-				}
+				},
 			],
 			layout: { plan: { x: 0, y: 0 } },
 		})
@@ -102,7 +102,7 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: { data: { v: 46 } },
 							},
-						]
+						],
 					},
 				},
 				{
@@ -114,9 +114,9 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: { data: { v: 47 } },
 							},
-						]
+						],
 					},
-				}
+				},
 			],
 		})
 
@@ -161,7 +161,7 @@ describe('computeLeftShiftLayout', () => {
 						],
 						layout: { plan: { x: 1, y: 1 } },
 					},
-				}
+				},
 			],
 			layout: { plan: { x: 0, y: 0 } },
 		})
@@ -179,8 +179,8 @@ describe('computeLeftShiftLayout', () => {
 							{
 								edgeData: {},
 								node: { data: { v: 45 } },
-							}
-						]
+							},
+						],
 					},
 				},
 				{
@@ -196,9 +196,9 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: { data: { v: 47 } },
 							},
-						]
+						],
 					},
-				}
+				},
 			],
 		})
 
@@ -243,7 +243,7 @@ describe('computeLeftShiftLayout', () => {
 						],
 						layout: { plan: { x: 1, y: 1 } },
 					},
-				}
+				},
 			],
 			layout: { plan: { x: 0, y: 0 } },
 		})

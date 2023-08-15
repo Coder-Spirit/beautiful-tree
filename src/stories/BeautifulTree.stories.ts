@@ -1,22 +1,22 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { BeautifulTree } from "../BeautifulTree";
+import type { Meta, StoryObj } from '@storybook/react'
+import { BeautifulTree } from '../BeautifulTree'
 
 const meta = {
-  title: 'BeautifulTree',
-  component: BeautifulTree,
-  parameters: {
-    // https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'centered',
-  },
-  tags: [
-		'autodocs' // https://storybook.js.org/docs/react/writing-docs/autodocs
+	title: 'BeautifulTree',
+	component: BeautifulTree,
+	parameters: {
+		// https://storybook.js.org/docs/react/configure/story-layout
+		layout: 'centered',
+	},
+	tags: [
+		'autodocs', // https://storybook.js.org/docs/react/writing-docs/autodocs
 	],
-  argTypes: {}, // https://storybook.js.org/docs/react/api/argtypes
-} satisfies Meta<typeof BeautifulTree>;
+	argTypes: {}, // https://storybook.js.org/docs/react/api/argtypes
+} satisfies Meta<typeof BeautifulTree>
 
 export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Empty: Story = {
 	args: {
@@ -28,6 +28,6 @@ export const Empty: Story = {
 		tree: {
 			data: {},
 			children: [],
-		}
+		},
 	},
 }
