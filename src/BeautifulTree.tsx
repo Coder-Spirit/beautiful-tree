@@ -1,4 +1,4 @@
-import type { Tree } from './core'
+import type { Tree } from './layouts'
 
 export interface BeautifulTreeProps {
 	readonly id: string

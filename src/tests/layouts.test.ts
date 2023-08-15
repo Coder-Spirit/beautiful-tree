@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { computeLeftShiftLayout } from '../core'
+import { computeLeftShiftLayout } from '../layouts'
 
 describe('computeLeftShiftLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
