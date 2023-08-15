@@ -41,4 +41,4 @@ jobs:
     - name: Build Library
       run: pnpm build
     - name: Run Tests
-      run: pnpm test
+      run: pnpm test:coverage
