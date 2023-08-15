@@ -8,7 +8,11 @@ describe('computeLeftShiftLayout', () => {
 		})
 		expect(resultWithoutChildren).toEqual({
 			data: { v: 42 },
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: true,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 
 		const resultWithEmptyChildren = computeLeftShiftLayout({
@@ -18,7 +22,11 @@ describe('computeLeftShiftLayout', () => {
 		expect(resultWithEmptyChildren).toEqual({
 			data: { v: 42 },
 			children: [],
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: true,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 	})
 
@@ -40,11 +48,19 @@ describe('computeLeftShiftLayout', () => {
 					edgeData: {},
 					node: {
 						data: { v: 43 },
-						layout: { plan: { x: 0, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: true,
+							abstractPosition: { x: 0, y: 1 },
+						},
 					},
 				},
 			],
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: false,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 	})
 
@@ -70,18 +86,30 @@ describe('computeLeftShiftLayout', () => {
 					edgeData: {},
 					node: {
 						data: { v: 43 },
-						layout: { plan: { x: 0, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: true,
+							abstractPosition: { x: 0, y: 1 },
+						},
 					},
 				},
 				{
 					edgeData: {},
 					node: {
 						data: { v: 44 },
-						layout: { plan: { x: 1, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: true,
+							abstractPosition: { x: 1, y: 1 },
+						},
 					},
 				},
 			],
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: false,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 	})
 
@@ -132,18 +160,30 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: {
 									data: { v: 45 },
-									layout: { plan: { x: 0, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 0, y: 2 },
+									},
 								},
 							},
 							{
 								edgeData: {},
 								node: {
 									data: { v: 46 },
-									layout: { plan: { x: 1, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 1, y: 2 },
+									},
 								},
 							},
 						],
-						layout: { plan: { x: 0, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: false,
+							abstractPosition: { x: 0, y: 1 },
+						},
 					},
 				},
 				{
@@ -155,15 +195,27 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: {
 									data: { v: 47 },
-									layout: { plan: { x: 2, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 2, y: 2 },
+									},
 								},
 							},
 						],
-						layout: { plan: { x: 1, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: false,
+							abstractPosition: { x: 1, y: 1 },
+						},
 					},
 				},
 			],
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: false,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 	})
 
@@ -214,11 +266,19 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: {
 									data: { v: 45 },
-									layout: { plan: { x: 0, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 0, y: 2 },
+									},
 								},
 							},
 						],
-						layout: { plan: { x: 0, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: false,
+							abstractPosition: { x: 0, y: 1 },
+						},
 					},
 				},
 				{
@@ -230,22 +290,38 @@ describe('computeLeftShiftLayout', () => {
 								edgeData: {},
 								node: {
 									data: { v: 46 },
-									layout: { plan: { x: 1, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 1, y: 2 },
+									},
 								},
 							},
 							{
 								edgeData: {},
 								node: {
 									data: { v: 47 },
-									layout: { plan: { x: 2, y: 2 } },
+									meta: {
+										isRoot: false,
+										isLeaf: true,
+										abstractPosition: { x: 2, y: 2 },
+									},
 								},
 							},
 						],
-						layout: { plan: { x: 1, y: 1 } },
+						meta: {
+							isRoot: false,
+							isLeaf: false,
+							abstractPosition: { x: 1, y: 1 },
+						},
 					},
 				},
 			],
-			layout: { plan: { x: 0, y: 0 } },
+			meta: {
+				isRoot: true,
+				isLeaf: false,
+				abstractPosition: { x: 0, y: 0 },
+			},
 		})
 	})
 })

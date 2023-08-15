@@ -43,12 +43,12 @@ describe('postOrderIterator', () => {
 		const expandedResult = [...result]
 
 		expect(expandedResult).toEqual([
-			{ v: 45 },
-			{ v: 43 },
-			{ v: 46 },
-			{ v: 47 },
-			{ v: 44 },
-			{ v: 42 },
+			{ data: { v: 45 } },
+			{ data: { v: 43 } },
+			{ data: { v: 46 } },
+			{ data: { v: 47 } },
+			{ data: { v: 44 } },
+			{ data: { v: 42 } },
 		])
 	})
 })
