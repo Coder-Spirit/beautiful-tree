@@ -1,9 +1,9 @@
-import type { Tree, TreeWithLayout } from './types'
+import type { Edge, Tree, TreeWithLayout } from './types'
 
 export function* postOrderIterator<T extends Tree | TreeWithLayout = Tree>(
-	v: Readonly<T>,
+	tree: Readonly<T>,
 ): Generator<Omit<Readonly<T>, 'children'>, void> {
-	for (const child of v.children ?? []) {
+	for (const child of tree.children ?? []) {
 		yield* postOrderIterator<T>(child.node as T)
 	}
 
@@ -11,6 +11,19 @@ export function* postOrderIterator<T extends Tree | TreeWithLayout = Tree>(
 	// might also want to access v.layout in case it exists.
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const { children, ...vv } = v
+	const { children, ...vv } = tree
 	yield vv
+}
+
+export function* edgesIterator(
+	tree: Readonly<TreeWithLayout>,
+): Generator<Readonly<Edge>, void> {
+	for (const child of tree.children ?? []) {
+		yield {
+			start: tree.meta.abstractPosition,
+			end: child.node.meta.abstractPosition,
+			edgeData: child.edgeData,
+		}
+		yield* edgesIterator(child.node)
+	}
 }

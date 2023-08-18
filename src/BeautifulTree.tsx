@@ -1,6 +1,6 @@
+import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
 import { computeLeftShiftLayout } from './layouts'
-import { postOrderIterator } from './traversal'
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -18,9 +18,10 @@ export function BeautifulTree({
 	tree,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
 	const { tree: treeWithLayout, maxX, maxY } = computeLeftShiftLayout(tree)
-	const orderedNodes = [...postOrderIterator(treeWithLayout)]
-
 	const { width, height, sizeUnit = 'px' } = svgProps
+
+	const xDivisor = maxX + 2
+	const yDivisor = maxY + 2
 
 	return (
 		<svg
@@ -33,15 +34,29 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
-			{orderedNodes.map((node, idx) => {
+			{/* TODO: introduce edge "styles" (straight, cornered, curved..., plus CSS styles) */}
+			{[...edgesIterator(treeWithLayout)].map((edge, idx) => {
+				return (
+					<line
+						key={`${id}-edge-${idx}`}
+						x1={((edge.start.x + 1) * width) / xDivisor}
+						y1={((edge.start.y + 1) * height) / yDivisor}
+						x2={((edge.end.x + 1) * width) / xDivisor}
+						y2={((edge.end.y + 1) * height) / yDivisor}
+						stroke="black"
+					/>
+				)
+			})}
+
+			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
 				const aX = node.meta.abstractPosition.x
 				const aY = node.meta.abstractPosition.y
 				return (
 					<circle
 						key={`${id}-node-${idx}`}
 						className={'beautiful-tree-node'}
-						cx={((aX + 1) * width) / (maxX + 2)}
-						cy={((aY + 1) * height) / (maxY + 2)}
+						cx={((aX + 1) * width) / xDivisor}
+						cy={((aY + 1) * height) / yDivisor}
 						stroke="black"
 						fill="white"
 						r="5"

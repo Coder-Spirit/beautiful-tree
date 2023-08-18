@@ -12,7 +12,9 @@ export type Tree = Node & {
 }
 
 export type TreeWithLayout = Node & {
-	readonly children?: Required<TreeChild<TreeWithLayout>>[] | undefined
+	readonly children?:
+		| Readonly<Required<TreeChild<TreeWithLayout>>[]>
+		| undefined
 	readonly meta: {
 		readonly isRoot: boolean
 		readonly isLeaf: boolean
@@ -21,4 +23,16 @@ export type TreeWithLayout = Node & {
 			readonly y: number
 		}
 	}
+}
+
+export interface Edge {
+	readonly start: {
+		readonly x: number
+		readonly y: number
+	}
+	readonly end: {
+		readonly x: number
+		readonly y: number
+	}
+	readonly edgeData?: Readonly<Record<string, unknown>> | undefined
 }
