@@ -1,5 +1,6 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
+import type { WrappedTreeWithLayout } from './layouts'
 import { computeLeftShiftLayout } from './layouts'
 
 export interface BeautifulTreeProps {
@@ -10,14 +11,18 @@ export interface BeautifulTreeProps {
 		readonly sizeUnit?: '%' | 'em' | 'px' | 'rem'
 	}
 	readonly tree: Tree
+	readonly computeLayout?: (
+		tree: Readonly<Tree>,
+	) => Readonly<WrappedTreeWithLayout>
 }
 
 export function BeautifulTree({
 	id,
 	svgProps,
 	tree,
+	computeLayout = computeLeftShiftLayout,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
-	const { tree: treeWithLayout, maxX, maxY } = computeLeftShiftLayout(tree)
+	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
 	const xDivisor = maxX + 2
@@ -34,6 +39,10 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
+			<style>{`
+				line { stroke: black; }
+				circle { stroke: black; fill: white; }
+			`}</style>
 			{/* TODO: introduce edge "styles" (straight, cornered, curved..., plus CSS styles) */}
 			{[...edgesIterator(treeWithLayout)].map((edge, idx) => {
 				return (
@@ -43,11 +52,9 @@ export function BeautifulTree({
 						y1={((edge.start.y + 1) * height) / yDivisor}
 						x2={((edge.end.x + 1) * width) / xDivisor}
 						y2={((edge.end.y + 1) * height) / yDivisor}
-						stroke="black"
 					/>
 				)
 			})}
-
 			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
 				const aX = node.meta.abstractPosition.x
 				const aY = node.meta.abstractPosition.y
@@ -57,8 +64,6 @@ export function BeautifulTree({
 						className={'beautiful-tree-node'}
 						cx={((aX + 1) * width) / xDivisor}
 						cy={((aY + 1) * height) / yDivisor}
-						stroke="black"
-						fill="white"
 						r="5"
 					/>
 				)
