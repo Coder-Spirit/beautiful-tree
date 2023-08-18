@@ -7,35 +7,29 @@ export interface BeautifulTreeProps {
 	readonly svgProps: {
 		readonly width: number
 		readonly height: number
+		readonly sizeUnit?: '%' | 'em' | 'px' | 'rem'
 	}
 	readonly tree: Tree
 }
 
-export function BeautifulTree(
-	props: Readonly<BeautifulTreeProps>,
-): JSX.Element {
-	const treeWithLayout = computeLeftShiftLayout(props.tree)
+export function BeautifulTree({
+	id,
+	svgProps,
+	tree,
+}: Readonly<BeautifulTreeProps>): JSX.Element {
+	const { tree: treeWithLayout, maxX, maxY } = computeLeftShiftLayout(tree)
 	const orderedNodes = [...postOrderIterator(treeWithLayout)]
 
-	let maxX = 0
-	let maxY = 0
-	for (const node of orderedNodes) {
-		if (node.meta.abstractPosition.x > maxX) {
-			maxX = node.meta.abstractPosition.x
-		}
-		if (node.meta.abstractPosition.y > maxY) {
-			maxY = node.meta.abstractPosition.y
-		}
-	}
+	const { width, height, sizeUnit = 'px' } = svgProps
 
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			id={props.id}
-			viewBox={`0 0 ${props.svgProps.width} ${props.svgProps.height}`}
+			id={id}
+			viewBox={`0 0 ${width} ${height}`}
 			style={{
-				width: `${props.svgProps.width}px`,
-				height: `${props.svgProps.height}px`,
+				width: `${width}${sizeUnit}`,
+				height: `${height}${sizeUnit}`,
 			}}
 			className={'beautiful-tree-react'}
 		>
@@ -44,11 +38,12 @@ export function BeautifulTree(
 				const aY = node.meta.abstractPosition.y
 				return (
 					<circle
-						key={`${props.id}-node-${idx}`}
-						cx={((aX + 1) * props.svgProps.width) / (maxX + 2)}
-						cy={((aY + 1) * props.svgProps.height) / (maxY + 2)}
-						stroke="blue"
-						fill="purple"
+						key={`${id}-node-${idx}`}
+						className={'beautiful-tree-node'}
+						cx={((aX + 1) * width) / (maxX + 2)}
+						cy={((aY + 1) * height) / (maxY + 2)}
+						stroke="black"
+						fill="white"
 						r="5"
 					/>
 				)
