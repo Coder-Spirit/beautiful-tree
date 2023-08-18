@@ -1,19 +1,26 @@
 import type { Tree, TreeChild, TreeWithLayout } from './types'
 
+export interface WrappedTreeWithLayout {
+	readonly tree: Readonly<TreeWithLayout>
+	readonly maxX: number
+	readonly maxY: number
+}
+
 const _computeLeftShiftLayout = (
 	tree: Tree,
 	depth = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	counters?: number[][],
-): TreeWithLayout => {
-	counters ??= []
+	counters: { layers: number[][]; maxX: number },
+): Readonly<TreeWithLayout> => {
+	const layers = counters.layers
 
-	if (counters[depth] === undefined) {
-		counters[depth] = []
+	if (layers[depth] === undefined) {
+		layers[depth] = []
 	}
-	const x = (counters[depth]?.at(-1) ?? -1) + 1
+	const x = (layers[depth]?.at(-1) ?? -1) + 1
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	counters[depth]!.push(x)
+	layers[depth]!.push(x)
+	counters.maxX = Math.max(counters.maxX, x)
 
 	return {
 		data: tree.data,
@@ -26,8 +33,16 @@ const _computeLeftShiftLayout = (
 			isLeaf: tree.children === undefined || tree.children.length === 0,
 			abstractPosition: { x, y: depth },
 		},
-	} satisfies TreeWithLayout
+	} satisfies Readonly<TreeWithLayout>
 }
 
-export const computeLeftShiftLayout: (tree: Tree) => TreeWithLayout =
-	_computeLeftShiftLayout
+export const computeLeftShiftLayout = (
+	tree: Readonly<Tree>,
+): Readonly<WrappedTreeWithLayout> => {
+	const counters = { layers: [], maxX: 0 }
+	return {
+		tree: _computeLeftShiftLayout(tree, 0, counters),
+		maxX: counters.maxX,
+		maxY: counters.layers.length - 1,
+	}
+}

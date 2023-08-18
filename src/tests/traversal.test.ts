@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { postOrderIterator } from '../traversal'
+import { edgesIterator, postOrderIterator } from '../traversal'
+import type { TreeWithLayout } from '../types'
 
 describe('postOrderIterator', () => {
 	const testTree = {
@@ -38,8 +39,6 @@ describe('postOrderIterator', () => {
 
 	it('traverses tree in post-order', () => {
 		const result = postOrderIterator(testTree)
-
-		console.log('result:')
 		const expandedResult = [...result]
 
 		expect(expandedResult).toEqual([
@@ -49,6 +48,91 @@ describe('postOrderIterator', () => {
 			{ data: { v: 47 } },
 			{ data: { v: 44 } },
 			{ data: { v: 42 } },
+		])
+	})
+})
+
+describe('edgesIterator', () => {
+	const testTree: TreeWithLayout = {
+		data: { v: 42 },
+		children: [
+			{
+				edgeData: { e: 100 },
+				node: {
+					data: { v: 43 },
+					children: [
+						{
+							edgeData: { e: 102 },
+							node: {
+								data: { v: 45 },
+								meta: {
+									isRoot: false,
+									isLeaf: true,
+									abstractPosition: { x: 0, y: 2 },
+								},
+							},
+						},
+					],
+					meta: {
+						isRoot: false,
+						isLeaf: false,
+						abstractPosition: { x: 0, y: 1 },
+					},
+				},
+			},
+			{
+				edgeData: { e: 101 },
+				node: {
+					data: { v: 44 },
+					children: [
+						{
+							edgeData: { e: 103 },
+							node: {
+								data: { v: 46 },
+								meta: {
+									isRoot: false,
+									isLeaf: true,
+									abstractPosition: { x: 1, y: 2 },
+								},
+							},
+						},
+						{
+							edgeData: { e: 104 },
+							node: {
+								data: { v: 47 },
+								meta: {
+									isRoot: false,
+									isLeaf: true,
+									abstractPosition: { x: 2, y: 2 },
+								},
+							},
+						},
+					],
+					meta: {
+						isRoot: false,
+						isLeaf: false,
+						abstractPosition: { x: 1, y: 1 },
+					},
+				},
+			},
+		],
+		meta: {
+			isRoot: true,
+			isLeaf: false,
+			abstractPosition: { x: 0, y: 0 },
+		},
+	}
+
+	it('traverses edges in pre-order', () => {
+		const result = edgesIterator(testTree)
+		const expandedResult = [...result]
+
+		expect(expandedResult).toEqual([
+			{ start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, edgeData: { e: 100 } },
+			{ start: { x: 0, y: 1 }, end: { x: 0, y: 2 }, edgeData: { e: 102 } },
+			{ start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, edgeData: { e: 101 } },
+			{ start: { x: 1, y: 1 }, end: { x: 1, y: 2 }, edgeData: { e: 103 } },
+			{ start: { x: 1, y: 1 }, end: { x: 2, y: 2 }, edgeData: { e: 104 } },
 		])
 	})
 })

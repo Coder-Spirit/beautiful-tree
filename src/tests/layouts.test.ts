@@ -7,11 +7,15 @@ describe('computeLeftShiftLayout', () => {
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
-			data: { v: 42 },
-			meta: {
-				isRoot: true,
-				isLeaf: true,
-				abstractPosition: { x: 0, y: 0 },
+			maxX: 0,
+			maxY: 0,
+			tree: {
+				data: { v: 42 },
+				meta: {
+					isRoot: true,
+					isLeaf: true,
+					abstractPosition: { x: 0, y: 0 },
+				},
 			},
 		})
 
@@ -20,12 +24,16 @@ describe('computeLeftShiftLayout', () => {
 			children: [],
 		})
 		expect(resultWithEmptyChildren).toEqual({
-			data: { v: 42 },
-			children: [],
-			meta: {
-				isRoot: true,
-				isLeaf: true,
-				abstractPosition: { x: 0, y: 0 },
+			maxX: 0,
+			maxY: 0,
+			tree: {
+				data: { v: 42 },
+				children: [],
+				meta: {
+					isRoot: true,
+					isLeaf: true,
+					abstractPosition: { x: 0, y: 0 },
+				},
 			},
 		})
 	})
@@ -42,24 +50,28 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			data: { v: 42 },
-			children: [
-				{
-					edgeData: {},
-					node: {
-						data: { v: 43 },
-						meta: {
-							isRoot: false,
-							isLeaf: true,
-							abstractPosition: { x: 0, y: 1 },
+			maxX: 0,
+			maxY: 1,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								abstractPosition: { x: 0, y: 1 },
+							},
 						},
 					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					abstractPosition: { x: 0, y: 0 },
 				},
-			],
-			meta: {
-				isRoot: true,
-				isLeaf: false,
-				abstractPosition: { x: 0, y: 0 },
 			},
 		})
 	})
@@ -80,35 +92,39 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			data: { v: 42 },
-			children: [
-				{
-					edgeData: {},
-					node: {
-						data: { v: 43 },
-						meta: {
-							isRoot: false,
-							isLeaf: true,
-							abstractPosition: { x: 0, y: 1 },
+			maxX: 1,
+			maxY: 1,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								abstractPosition: { x: 0, y: 1 },
+							},
 						},
 					},
-				},
-				{
-					edgeData: {},
-					node: {
-						data: { v: 44 },
-						meta: {
-							isRoot: false,
-							isLeaf: true,
-							abstractPosition: { x: 1, y: 1 },
+					{
+						edgeData: {},
+						node: {
+							data: { v: 44 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								abstractPosition: { x: 1, y: 1 },
+							},
 						},
 					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					abstractPosition: { x: 0, y: 0 },
 				},
-			],
-			meta: {
-				isRoot: true,
-				isLeaf: false,
-				abstractPosition: { x: 0, y: 0 },
 			},
 		})
 	})
@@ -149,72 +165,76 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			data: { v: 42 },
-			children: [
-				{
-					edgeData: {},
-					node: {
-						data: { v: 43 },
-						children: [
-							{
-								edgeData: {},
-								node: {
-									data: { v: 45 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 0, y: 2 },
+			maxX: 2,
+			maxY: 2,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							children: [
+								{
+									edgeData: {},
+									node: {
+										data: { v: 45 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 0, y: 2 },
+										},
 									},
 								},
-							},
-							{
-								edgeData: {},
-								node: {
-									data: { v: 46 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 1, y: 2 },
+								{
+									edgeData: {},
+									node: {
+										data: { v: 46 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 1, y: 2 },
+										},
 									},
 								},
+							],
+							meta: {
+								isRoot: false,
+								isLeaf: false,
+								abstractPosition: { x: 0, y: 1 },
 							},
-						],
-						meta: {
-							isRoot: false,
-							isLeaf: false,
-							abstractPosition: { x: 0, y: 1 },
 						},
 					},
-				},
-				{
-					edgeData: {},
-					node: {
-						data: { v: 44 },
-						children: [
-							{
-								edgeData: {},
-								node: {
-									data: { v: 47 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 2, y: 2 },
+					{
+						edgeData: {},
+						node: {
+							data: { v: 44 },
+							children: [
+								{
+									edgeData: {},
+									node: {
+										data: { v: 47 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 2, y: 2 },
+										},
 									},
 								},
+							],
+							meta: {
+								isRoot: false,
+								isLeaf: false,
+								abstractPosition: { x: 1, y: 1 },
 							},
-						],
-						meta: {
-							isRoot: false,
-							isLeaf: false,
-							abstractPosition: { x: 1, y: 1 },
 						},
 					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					abstractPosition: { x: 0, y: 0 },
 				},
-			],
-			meta: {
-				isRoot: true,
-				isLeaf: false,
-				abstractPosition: { x: 0, y: 0 },
 			},
 		})
 	})
@@ -255,72 +275,76 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			data: { v: 42 },
-			children: [
-				{
-					edgeData: {},
-					node: {
-						data: { v: 43 },
-						children: [
-							{
-								edgeData: {},
-								node: {
-									data: { v: 45 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 0, y: 2 },
+			maxX: 2,
+			maxY: 2,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							children: [
+								{
+									edgeData: {},
+									node: {
+										data: { v: 45 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 0, y: 2 },
+										},
 									},
 								},
+							],
+							meta: {
+								isRoot: false,
+								isLeaf: false,
+								abstractPosition: { x: 0, y: 1 },
 							},
-						],
-						meta: {
-							isRoot: false,
-							isLeaf: false,
-							abstractPosition: { x: 0, y: 1 },
 						},
 					},
-				},
-				{
-					edgeData: {},
-					node: {
-						data: { v: 44 },
-						children: [
-							{
-								edgeData: {},
-								node: {
-									data: { v: 46 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 1, y: 2 },
+					{
+						edgeData: {},
+						node: {
+							data: { v: 44 },
+							children: [
+								{
+									edgeData: {},
+									node: {
+										data: { v: 46 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 1, y: 2 },
+										},
 									},
 								},
-							},
-							{
-								edgeData: {},
-								node: {
-									data: { v: 47 },
-									meta: {
-										isRoot: false,
-										isLeaf: true,
-										abstractPosition: { x: 2, y: 2 },
+								{
+									edgeData: {},
+									node: {
+										data: { v: 47 },
+										meta: {
+											isRoot: false,
+											isLeaf: true,
+											abstractPosition: { x: 2, y: 2 },
+										},
 									},
 								},
+							],
+							meta: {
+								isRoot: false,
+								isLeaf: false,
+								abstractPosition: { x: 1, y: 1 },
 							},
-						],
-						meta: {
-							isRoot: false,
-							isLeaf: false,
-							abstractPosition: { x: 1, y: 1 },
 						},
 					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					abstractPosition: { x: 0, y: 0 },
 				},
-			],
-			meta: {
-				isRoot: true,
-				isLeaf: false,
-				abstractPosition: { x: 0, y: 0 },
 			},
 		})
 	})
