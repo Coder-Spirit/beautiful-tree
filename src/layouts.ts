@@ -61,44 +61,35 @@ const _addMods = (
 	}
 }
 
-const _computeCenter1Layout = (
+const _computeCenter2Layout = (
 	tree: Tree,
 	depth = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	offsets: number[],
-	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	nexts: number[],
 ): DeepWriteable<TreeWithLayout> => {
 	const children = tree.children?.map((child) => ({
 		edgeData: child.edgeData,
-		node: _computeCenter1Layout(child.node, depth + 1, offsets, nexts),
+		node: _computeCenter2Layout(child.node, depth + 1, offsets),
 	}))
 
-	let place: number
 	let x: number
-
+	let m = 0
 	const numChildren = tree.children?.length ?? 0
 	if (numChildren === 0) {
-		place = nexts[depth] ?? 0
-		x = place
+		x = offsets[depth] ?? 0
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		place = children![0]!.node.meta.pos.x
+		x = children![0]!.node.meta.pos.x
 	} else {
-		place =
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			(children![0]!.node.meta.pos.x +
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				children![numChildren - 1]!.node.meta.pos.x) *
 			0.5
+		x = Math.max(offsets[depth] ?? 0, c)
+		m = x - c
 	}
-
-	offsets[depth] = Math.max(offsets[depth] ?? 0, nexts[depth] ?? 0 - place)
-	if (numChildren > 0) {
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		x = place + offsets[depth]!
-	}
-	nexts[depth] = (nexts[depth] ?? 0) + 1
+	offsets[depth] = 1 + x
 
 	return {
 		data: tree.data,
@@ -106,31 +97,24 @@ const _computeCenter1Layout = (
 		meta: {
 			isRoot: depth === 0,
 			isLeaf: tree.children === undefined || tree.children.length === 0,
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-			pos: { x: x!, y: depth },
-			m: offsets[depth],
+			pos: { x, y: depth },
+			m,
 		},
 	} satisfies Readonly<TreeWithLayout> as DeepWriteable<TreeWithLayout>
 }
 
-export const computeCenter1Layout = (
+export const computeCenter2Layout = (
 	tree: Readonly<Tree>,
 ): Readonly<WrappedTreeWithLayout> => {
-	const nexts: number[] = []
-	const t = _computeCenter1Layout(tree, 0, [], nexts)
-
-	console.log('without mods')
-	console.log(t)
+	const offsets: number[] = []
+	const t = _computeCenter2Layout(tree, 0, offsets)
 
 	const tracer = { maxX: 0 }
 	_addMods(t, 0, tracer)
 
-	console.log('with mods')
-	console.log(t)
-
 	return {
 		tree: t,
-		maxY: nexts.length - 1,
+		maxY: offsets.length - 1,
 		maxX: tracer.maxX,
 	}
 }

@@ -1,7 +1,7 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
-export { computeLeftShiftLayout, computeCenter1Layout } from './layouts'
+export { computeLeftShiftLayout, computeCenter2Layout } from './layouts'
 
 export interface BeautifulTreeProps {
 	readonly id: string

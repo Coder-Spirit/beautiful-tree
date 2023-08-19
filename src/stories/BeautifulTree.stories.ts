@@ -1,6 +1,6 @@
 import {
 	BeautifulTree,
-	computeCenter1Layout,
+	computeCenter2Layout,
 	computeLeftShiftLayout,
 } from '../BeautifulTree'
 import type { Meta, StoryObj } from '@storybook/react'
@@ -97,7 +97,7 @@ const bigTree = {
 
 export const LeftShifted_Tree: Story = {
 	args: {
-		id: 'leftshifted-beautiful-tree',
+		id: 'leftshifted-small-tree',
 		svgProps: {
 			width: 100,
 			height: 100,
@@ -109,7 +109,7 @@ export const LeftShifted_Tree: Story = {
 
 export const LeftShifted_Big_Tree: Story = {
 	args: {
-		id: 'leftshifted-beautiful-tree',
+		id: 'leftshifted-big-tree',
 		svgProps: {
 			width: 100,
 			height: 100,
@@ -119,26 +119,26 @@ export const LeftShifted_Big_Tree: Story = {
 	},
 }
 
-export const Centered1_Tree: Story = {
+export const Centered2_Tree: Story = {
 	args: {
-		id: 'centered1-beautiful-tree',
+		id: 'centered2-small-tree',
 		svgProps: {
 			width: 100,
 			height: 100,
 		},
 		tree: smallTree,
-		computeLayout: computeCenter1Layout,
+		computeLayout: computeCenter2Layout,
 	},
 }
 
-export const Centered1_Big_Tree: Story = {
+export const Centered2_Big_Tree: Story = {
 	args: {
-		id: 'centered1-beautiful-tree',
+		id: 'centered2-big-tree',
 		svgProps: {
 			width: 100,
 			height: 100,
 		},
 		tree: bigTree,
-		computeLayout: computeCenter1Layout,
+		computeLayout: computeCenter2Layout,
 	},
 }
