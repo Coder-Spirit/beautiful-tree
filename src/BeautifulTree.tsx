@@ -27,6 +27,9 @@ export function BeautifulTree({
 
 	const xCoef = width / (maxX + 2)
 	const yCoef = height / (maxY + 2)
+	const maxNodeWidth = xCoef * 0.25
+	const maxNodeHeight = yCoef * 0.25
+	const maxNodeRadius = Math.min(maxNodeWidth, maxNodeHeight)
 
 	return (
 		<svg
@@ -66,7 +69,7 @@ export function BeautifulTree({
 						}${node.meta.isLeaf ? ' beautiful-tree-leaf' : ''}`}
 						cx={(aX + 1) * xCoef}
 						cy={(aY + 1) * yCoef}
-						r="5"
+						r={maxNodeRadius}
 					/>
 				)
 			})}
