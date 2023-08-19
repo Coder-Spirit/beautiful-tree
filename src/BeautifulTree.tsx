@@ -51,6 +51,7 @@ export function BeautifulTree({
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
+						className={'beautiful-tree-edge'}
 						x1={(edge.start.x + 1) * xCoef}
 						y1={(edge.start.y + 1) * yCoef}
 						x2={(edge.end.x + 1) * xCoef}
