@@ -10,16 +10,12 @@ const _computeLeftShiftLayout = (
 	tree: Tree,
 	depth = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	counters: { layers: number[][]; maxX: number },
+	counters: { layers: number[]; maxX: number },
 ): Readonly<TreeWithLayout> => {
 	const layers = counters.layers
 
-	if (layers[depth] === undefined) {
-		layers[depth] = []
-	}
-	const x = (layers[depth]?.at(-1) ?? -1) + 1
-	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	layers[depth]!.push(x)
+	const x = (layers[depth] ?? -1) + 1
+	layers[depth] = x
 	counters.maxX = Math.max(counters.maxX, x)
 
 	return {
