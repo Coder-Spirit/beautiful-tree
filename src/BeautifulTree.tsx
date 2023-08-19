@@ -25,8 +25,8 @@ export function BeautifulTree({
 	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xDivisor = maxX + 2
-	const yDivisor = maxY + 2
+	const xCoef = width / (maxX + 2)
+	const yCoef = height / (maxY + 2)
 
 	return (
 		<svg
@@ -48,10 +48,10 @@ export function BeautifulTree({
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
-						x1={((edge.start.x + 1) * width) / xDivisor}
-						y1={((edge.start.y + 1) * height) / yDivisor}
-						x2={((edge.end.x + 1) * width) / xDivisor}
-						y2={((edge.end.y + 1) * height) / yDivisor}
+						x1={(edge.start.x + 1) * xCoef}
+						y1={(edge.start.y + 1) * yCoef}
+						x2={(edge.end.x + 1) * xCoef}
+						y2={(edge.end.y + 1) * yCoef}
 					/>
 				)
 			})}
@@ -61,9 +61,11 @@ export function BeautifulTree({
 				return (
 					<circle
 						key={`${id}-node-${idx}`}
-						className={'beautiful-tree-node'}
-						cx={((aX + 1) * width) / xDivisor}
-						cy={((aY + 1) * height) / yDivisor}
+						className={`beautiful-tree-node${
+							node.meta.isRoot ? ' beautiful-tree-root' : ''
+						}${node.meta.isLeaf ? ' beautiful-tree-leaf' : ''}`}
+						cx={(aX + 1) * xCoef}
+						cy={(aY + 1) * yCoef}
 						r="5"
 					/>
 				)
