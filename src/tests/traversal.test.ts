@@ -68,7 +68,7 @@ describe('edgesIterator', () => {
 								meta: {
 									isRoot: false,
 									isLeaf: true,
-									abstractPosition: { x: 0, y: 2 },
+									pos: { x: 0, y: 2 },
 								},
 							},
 						},
@@ -76,7 +76,7 @@ describe('edgesIterator', () => {
 					meta: {
 						isRoot: false,
 						isLeaf: false,
-						abstractPosition: { x: 0, y: 1 },
+						pos: { x: 0, y: 1 },
 					},
 				},
 			},
@@ -92,7 +92,7 @@ describe('edgesIterator', () => {
 								meta: {
 									isRoot: false,
 									isLeaf: true,
-									abstractPosition: { x: 1, y: 2 },
+									pos: { x: 1, y: 2 },
 								},
 							},
 						},
@@ -103,7 +103,7 @@ describe('edgesIterator', () => {
 								meta: {
 									isRoot: false,
 									isLeaf: true,
-									abstractPosition: { x: 2, y: 2 },
+									pos: { x: 2, y: 2 },
 								},
 							},
 						},
@@ -111,7 +111,7 @@ describe('edgesIterator', () => {
 					meta: {
 						isRoot: false,
 						isLeaf: false,
-						abstractPosition: { x: 1, y: 1 },
+						pos: { x: 1, y: 1 },
 					},
 				},
 			},
@@ -119,7 +119,7 @@ describe('edgesIterator', () => {
 		meta: {
 			isRoot: true,
 			isLeaf: false,
-			abstractPosition: { x: 0, y: 0 },
+			pos: { x: 0, y: 0 },
 		},
 	}
 

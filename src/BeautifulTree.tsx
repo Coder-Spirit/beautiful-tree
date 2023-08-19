@@ -1,7 +1,7 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
-import { computeLeftShiftLayout } from './layouts'
+export { computeLeftShiftLayout, computeCenter1Layout } from './layouts'
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -11,7 +11,7 @@ export interface BeautifulTreeProps {
 		readonly sizeUnit?: '%' | 'em' | 'px' | 'rem'
 	}
 	readonly tree: Tree
-	readonly computeLayout?: (
+	readonly computeLayout: (
 		tree: Readonly<Tree>,
 	) => Readonly<WrappedTreeWithLayout>
 }
@@ -20,7 +20,7 @@ export function BeautifulTree({
 	id,
 	svgProps,
 	tree,
-	computeLayout = computeLeftShiftLayout,
+	computeLayout,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
 	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
@@ -60,8 +60,8 @@ export function BeautifulTree({
 				)
 			})}
 			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
-				const aX = node.meta.abstractPosition.x
-				const aY = node.meta.abstractPosition.y
+				const aX = node.meta.pos.x
+				const aY = node.meta.pos.y
 				return (
 					<circle
 						key={`${id}-node-${idx}`}
