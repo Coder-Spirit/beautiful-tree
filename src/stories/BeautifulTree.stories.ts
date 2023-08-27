@@ -333,8 +333,8 @@ export const Centered3_Tree: Story = {
 		},
 		tree: smallTree,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -347,8 +347,8 @@ export const Centered3_Big_Tree: Story = {
 		},
 		tree: bigTree,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -361,8 +361,8 @@ export const Centered3_Wide_Tree_A: Story = {
 		},
 		tree: wideTree_A,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -375,8 +375,8 @@ export const Centered3_Wide_Tree_B: Story = {
 		},
 		tree: wideTree_B,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -389,8 +389,8 @@ export const Centered3_Wide_Tree_Bm: Story = {
 		},
 		tree: wideTree_Bm,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -403,8 +403,8 @@ export const Centered3_Wide_Tree_C: Story = {
 		},
 		tree: wideTree_C,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -417,7 +417,7 @@ export const Centered3_Wide_Tree_D: Story = {
 		},
 		tree: wideTree_D,
 		computeLayout: computeSmartLayout,
-		nodeClassesInferrer: getCssFromNodeData,
-		edgeClassesInferrer: getCssFromEdgeData,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
