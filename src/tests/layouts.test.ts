@@ -424,4 +424,57 @@ describe('computeCenter3Layout', () => {
 			},
 		})
 	})
+
+	it('sets x=0.5,y=0 & x=0,y=1 & x=1,y=1 for tree with two children', () => {
+		const result = computeCenter3Layout({
+			data: { v: 42 },
+			children: [
+				{
+					edgeData: {},
+					node: { data: { v: 43 } },
+				},
+				{
+					edgeData: {},
+					node: { data: { v: 44 } },
+				},
+			],
+		})
+
+		expect(result).toEqual({
+			maxX: 1,
+			maxY: 1,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								pos: { x: 0, y: 1 },
+							},
+						},
+					},
+					{
+						edgeData: {},
+						node: {
+							data: { v: 44 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								pos: { x: 1, y: 1 },
+							},
+						},
+					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					pos: { x: 0.5, y: 0 },
+				},
+			},
+		})
+	})
 })
