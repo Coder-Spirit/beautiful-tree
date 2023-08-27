@@ -18,10 +18,11 @@ export type TreeWithLayout = Node & {
 	readonly meta: {
 		readonly isRoot: boolean
 		readonly isLeaf: boolean
-		readonly abstractPosition: {
+		readonly pos: {
 			readonly x: number
 			readonly y: number
 		}
+		readonly m?: number | undefined
 	}
 }
 

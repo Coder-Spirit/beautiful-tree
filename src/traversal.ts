@@ -20,8 +20,8 @@ export function* edgesIterator(
 ): Generator<Readonly<Edge>, void> {
 	for (const child of tree.children ?? []) {
 		yield {
-			start: tree.meta.abstractPosition,
-			end: child.node.meta.abstractPosition,
+			start: tree.meta.pos,
+			end: child.node.meta.pos,
 			edgeData: child.edgeData,
 		}
 		yield* edgesIterator(child.node)

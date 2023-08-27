@@ -1,6 +1,7 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
-import { computeLeftShiftLayout } from './layouts'
+import type { WrappedTreeWithLayout } from './layouts'
+export { computeLeftShiftLayout, computeCenter3Layout } from './layouts'
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -10,18 +11,25 @@ export interface BeautifulTreeProps {
 		readonly sizeUnit?: '%' | 'em' | 'px' | 'rem'
 	}
 	readonly tree: Tree
+	readonly computeLayout: (
+		tree: Readonly<Tree>,
+	) => Readonly<WrappedTreeWithLayout>
 }
 
 export function BeautifulTree({
 	id,
 	svgProps,
 	tree,
+	computeLayout,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
-	const { tree: treeWithLayout, maxX, maxY } = computeLeftShiftLayout(tree)
+	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xDivisor = maxX + 2
-	const yDivisor = maxY + 2
+	const xCoef = width / (maxX + 2)
+	const yCoef = height / (maxY + 2)
+	const maxNodeWidth = xCoef * 0.25
+	const maxNodeHeight = yCoef * 0.25
+	const maxNodeRadius = Math.min(maxNodeWidth, maxNodeHeight)
 
 	return (
 		<svg
@@ -34,32 +42,35 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
+			<style>{`
+				line { stroke: black; }
+				circle { stroke: black; fill: white; }
+			`}</style>
 			{/* TODO: introduce edge "styles" (straight, cornered, curved..., plus CSS styles) */}
 			{[...edgesIterator(treeWithLayout)].map((edge, idx) => {
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
-						x1={((edge.start.x + 1) * width) / xDivisor}
-						y1={((edge.start.y + 1) * height) / yDivisor}
-						x2={((edge.end.x + 1) * width) / xDivisor}
-						y2={((edge.end.y + 1) * height) / yDivisor}
-						stroke="black"
+						className={'beautiful-tree-edge'}
+						x1={(edge.start.x + 1) * xCoef}
+						y1={(edge.start.y + 1) * yCoef}
+						x2={(edge.end.x + 1) * xCoef}
+						y2={(edge.end.y + 1) * yCoef}
 					/>
 				)
 			})}
-
 			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
-				const aX = node.meta.abstractPosition.x
-				const aY = node.meta.abstractPosition.y
+				const aX = node.meta.pos.x
+				const aY = node.meta.pos.y
 				return (
 					<circle
 						key={`${id}-node-${idx}`}
-						className={'beautiful-tree-node'}
-						cx={((aX + 1) * width) / xDivisor}
-						cy={((aY + 1) * height) / yDivisor}
-						stroke="black"
-						fill="white"
-						r="5"
+						className={`beautiful-tree-node${
+							node.meta.isRoot ? ' beautiful-tree-root' : ''
+						}${node.meta.isLeaf ? ' beautiful-tree-leaf' : ''}`}
+						cx={(aX + 1) * xCoef}
+						cy={(aY + 1) * yCoef}
+						r={maxNodeRadius}
 					/>
 				)
 			})}
