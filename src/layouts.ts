@@ -119,11 +119,9 @@ const _inPlaceEvenSpacingUpdate = (
 ): void => {
 	if (numChildren === 0) {
 		tree.meta.pos.x += shift
-		tree.meta.m = 0
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		tree.meta.pos.x = tree.children![0]!.node.meta.pos.x
-		tree.meta.m = 0
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			(tree.children![0]!.node.meta.pos.x +
@@ -132,6 +130,7 @@ const _inPlaceEvenSpacingUpdate = (
 			0.5
 		tree.meta.pos.x = Math.max(offsets[depth] ?? 0, c)
 	}
+	delete tree.meta.m
 	tracer.maxX = Math.max(tracer.maxX, tree.meta.pos.x)
 	offsets[depth] = 1 + tree.meta.pos.x
 }

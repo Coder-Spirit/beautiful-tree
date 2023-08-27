@@ -1,5 +1,5 @@
+import { computeCenter3Layout, computeLeftShiftLayout } from '../layouts'
 import { describe, expect, it } from 'vitest'
-import { computeLeftShiftLayout } from '../layouts'
 
 describe('computeLeftShiftLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
@@ -336,6 +336,82 @@ describe('computeLeftShiftLayout', () => {
 								isRoot: false,
 								isLeaf: false,
 								pos: { x: 1, y: 1 },
+							},
+						},
+					},
+				],
+				meta: {
+					isRoot: true,
+					isLeaf: false,
+					pos: { x: 0, y: 0 },
+				},
+			},
+		})
+	})
+})
+
+describe('computeCenter3Layout', () => {
+	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
+		const resultWithoutChildren = computeCenter3Layout({
+			data: { v: 42 },
+		})
+		expect(resultWithoutChildren).toEqual({
+			maxX: 0,
+			maxY: 0,
+			tree: {
+				data: { v: 42 },
+				meta: {
+					isRoot: true,
+					isLeaf: true,
+					pos: { x: 0, y: 0 },
+				},
+			},
+		})
+
+		const resultWithEmptyChildren = computeCenter3Layout({
+			data: { v: 42 },
+			children: [],
+		})
+		expect(resultWithEmptyChildren).toEqual({
+			maxX: 0,
+			maxY: 0,
+			tree: {
+				data: { v: 42 },
+				children: [],
+				meta: {
+					isRoot: true,
+					isLeaf: true,
+					pos: { x: 0, y: 0 },
+				},
+			},
+		})
+	})
+
+	it('sets x=0,y=0 & x=0,y=1 for tree with single child', () => {
+		const result = computeCenter3Layout({
+			data: { v: 42 },
+			children: [
+				{
+					edgeData: {},
+					node: { data: { v: 43 } },
+				},
+			],
+		})
+
+		expect(result).toEqual({
+			maxX: 0,
+			maxY: 1,
+			tree: {
+				data: { v: 42 },
+				children: [
+					{
+						edgeData: {},
+						node: {
+							data: { v: 43 },
+							meta: {
+								isRoot: false,
+								isLeaf: true,
+								pos: { x: 0, y: 1 },
 							},
 						},
 					},
