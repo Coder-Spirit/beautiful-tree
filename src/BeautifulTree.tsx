@@ -1,7 +1,11 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
-export { computeLeftShiftLayout, computeCenter3Layout } from './layouts'
+export { computeNaiveLayout, computeSmartLayout } from './layouts'
+
+export type CssClassesInferrer = (
+	data?: Readonly<Record<string, unknown>> | undefined,
+) => string[]
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -14,6 +18,22 @@ export interface BeautifulTreeProps {
 	readonly computeLayout: (
 		tree: Readonly<Tree>,
 	) => Readonly<WrappedTreeWithLayout>
+	readonly nodeClassesInferrer?: CssClassesInferrer | undefined
+	readonly edgeClassesInferrer?: CssClassesInferrer | undefined
+}
+
+function runClassesInferrer(
+	classesInferrer?: CssClassesInferrer | undefined,
+	data?: Readonly<Record<string, unknown>> | undefined,
+): string {
+	if (classesInferrer === undefined) {
+		return ''
+	}
+	const cssClasses = classesInferrer(data)
+	if (cssClasses.length === 0) {
+		return ''
+	}
+	return ` ${cssClasses.join(' ')}`
 }
 
 export function BeautifulTree({
@@ -21,6 +41,8 @@ export function BeautifulTree({
 	svgProps,
 	tree,
 	computeLayout,
+	nodeClassesInferrer,
+	edgeClassesInferrer,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
 	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
@@ -51,7 +73,10 @@ export function BeautifulTree({
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
-						className={'beautiful-tree-edge'}
+						className={`beautiful-tree-edge${runClassesInferrer(
+							edgeClassesInferrer,
+							edge.edgeData,
+						)}`}
 						x1={(edge.start.x + 1) * xCoef}
 						y1={(edge.start.y + 1) * yCoef}
 						x2={(edge.end.x + 1) * xCoef}
@@ -67,7 +92,9 @@ export function BeautifulTree({
 						key={`${id}-node-${idx}`}
 						className={`beautiful-tree-node${
 							node.meta.isRoot ? ' beautiful-tree-root' : ''
-						}${node.meta.isLeaf ? ' beautiful-tree-leaf' : ''}`}
+						}${
+							node.meta.isLeaf ? ' beautiful-tree-leaf' : ''
+						}${runClassesInferrer(nodeClassesInferrer, node.data)}`}
 						cx={(aX + 1) * xCoef}
 						cy={(aY + 1) * yCoef}
 						r={maxNodeRadius}

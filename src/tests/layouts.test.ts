@@ -1,9 +1,9 @@
-import { computeCenter3Layout, computeLeftShiftLayout } from '../layouts'
+import { computeNaiveLayout, computeSmartLayout } from '../layouts'
 import { describe, expect, it } from 'vitest'
 
-describe('computeLeftShiftLayout', () => {
+describe('computeNaiveLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
-		const resultWithoutChildren = computeLeftShiftLayout({
+		const resultWithoutChildren = computeNaiveLayout({
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
@@ -19,7 +19,7 @@ describe('computeLeftShiftLayout', () => {
 			},
 		})
 
-		const resultWithEmptyChildren = computeLeftShiftLayout({
+		const resultWithEmptyChildren = computeNaiveLayout({
 			data: { v: 42 },
 			children: [],
 		})
@@ -39,7 +39,7 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 for tree with single child', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -77,7 +77,7 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 & x=1,y=1 for tree with two children', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -130,7 +130,7 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x for ((.,.),(.))', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -240,7 +240,7 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x for ((.),(.,.))', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -350,9 +350,9 @@ describe('computeLeftShiftLayout', () => {
 	})
 })
 
-describe('computeCenter3Layout', () => {
+describe('computeSmartLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
-		const resultWithoutChildren = computeCenter3Layout({
+		const resultWithoutChildren = computeSmartLayout({
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
@@ -368,7 +368,7 @@ describe('computeCenter3Layout', () => {
 			},
 		})
 
-		const resultWithEmptyChildren = computeCenter3Layout({
+		const resultWithEmptyChildren = computeSmartLayout({
 			data: { v: 42 },
 			children: [],
 		})
@@ -388,7 +388,7 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 for tree with single child', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -426,7 +426,7 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x=0.5,y=0 & x=0,y=1 & x=1,y=1 for tree with two children', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -479,7 +479,7 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x for ((.,.),(.))', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
@@ -592,7 +592,7 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x for ((.),(.,.))', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{

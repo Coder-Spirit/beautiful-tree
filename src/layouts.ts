@@ -32,7 +32,7 @@ const _computeLeftShiftLayout = (
 	} satisfies Readonly<TreeWithLayout>
 }
 
-export const computeLeftShiftLayout = (
+export const computeNaiveLayout = (
 	tree: Readonly<Tree>,
 ): Readonly<WrappedTreeWithLayout> => {
 	const counters = { layers: [], maxX: 0 }
@@ -231,7 +231,7 @@ const _cousinsEvenSpacing = (
 	_inPlaceEvenSpacingUpdate(numChildren, tree, shift, offsets, depth, tracer)
 }
 
-export const computeCenter3Layout = (
+export const computeSmartLayout = (
 	tree: Readonly<Tree>,
 ): Readonly<WrappedTreeWithLayout> => {
 	const offsets: number[] = []
