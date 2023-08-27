@@ -239,6 +239,7 @@ const wideTree_D: Tree = {
 				data: { v: -1 },
 				children: [
 					{
+						edgeData: { e: 1 },
 						node: {
 							data: { v: -2 },
 							children: [
@@ -247,7 +248,7 @@ const wideTree_D: Tree = {
 										data: { v: -3 },
 										children: [
 											{ node: { data: { v: -4 } } },
-											{ node: { data: { v: -2.5 } } },
+											{ edgeData: { e: 1 }, node: { data: { v: -2.5 } } },
 										],
 									},
 								},
@@ -293,6 +294,12 @@ const getCssFromNodeData = (
 	return typeof data?.['v'] === 'number' && data['v'] % 2 === 0 ? ['even'] : []
 }
 
+const getCssFromEdgeData = (
+	data?: Readonly<Record<string, unknown>>,
+): string[] => {
+	return typeof data?.['e'] === 'number' && data['e'] % 2 === 1 ? ['odd'] : []
+}
+
 export const LeftShifted_Tree: Story = {
 	args: {
 		id: 'leftshifted-small-tree',
@@ -327,6 +334,7 @@ export const Centered3_Tree: Story = {
 		tree: smallTree,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -340,6 +348,7 @@ export const Centered3_Big_Tree: Story = {
 		tree: bigTree,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -353,6 +362,7 @@ export const Centered3_Wide_Tree_A: Story = {
 		tree: wideTree_A,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -366,6 +376,7 @@ export const Centered3_Wide_Tree_B: Story = {
 		tree: wideTree_B,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -379,6 +390,7 @@ export const Centered3_Wide_Tree_Bm: Story = {
 		tree: wideTree_Bm,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -392,6 +404,7 @@ export const Centered3_Wide_Tree_C: Story = {
 		tree: wideTree_C,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }
 
@@ -405,5 +418,6 @@ export const Centered3_Wide_Tree_D: Story = {
 		tree: wideTree_D,
 		computeLayout: computeSmartLayout,
 		nodeClassesInferrer: getCssFromNodeData,
+		edgeClassesInferrer: getCssFromEdgeData,
 	},
 }

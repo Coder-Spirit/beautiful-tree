@@ -69,7 +69,7 @@ export function BeautifulTree({
 				circle { stroke: black; fill: white; }
 			`}</style>
 			{/* TODO: introduce edge "styles" (straight, cornered, curved..., plus CSS styles) */}
-			{[...edgesIterator(treeWithLayout)].map((edge, idx) => {
+			{Array.from(edgesIterator(treeWithLayout), (edge, idx) => {
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
@@ -84,7 +84,7 @@ export function BeautifulTree({
 					/>
 				)
 			})}
-			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
+			{Array.from(postOrderIterator(treeWithLayout), (node, idx) => {
 				const aX = node.meta.pos.x
 				const aY = node.meta.pos.y
 				return (
