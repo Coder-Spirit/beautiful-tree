@@ -1,89 +1,87 @@
 import { defineConfig } from 'rollup'
-import pluginTs from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
+import pluginTs from '@rollup/plugin-typescript'
 import terser from '@rollup/plugin-terser'
 
 const input = 'src/BeautifulTree.tsx'
 const external = ['react', 'react-dom', 'react/jsx-runtime']
 const globals = {
 	react: 'React',
-  'react-dom': 'ReactDOM',
+	'react-dom': 'ReactDOM',
 	'react/jsx-runtime': 'jsxRuntime',
 }
 
 export default defineConfig([
-    {
-			input,
-			output: [
-				{
-					file: 'dist/beautiful-tree.cjs',
-					format: 'cjs',
-					globals,
-					sourcemap: true
-				},
-				{
-					file: 'dist/beautiful-tree.mjs',
-					format: 'es',
-					globals,
-					sourcemap: true
-				},
-				{
-					name: 'BeautifulTree',
-					file: 'dist/beautiful-tree.iife.js',
-					format: 'iife',
-					globals,
-					sourcemap: true
-				},
-				{
-					name: 'BeautifulTree',
-					file: 'dist/beautiful-tree.umd.js',
-					format: 'umd',
-					globals,
-					sourcemap: true,
-				},
-			],
-			external,
-			plugins: [pluginTs()]
-		},
-		{
-			input,
-			output: [
-				{
-					file: 'dist/beautiful-tree.min.cjs',
-					format: 'cjs',
-					globals,
-					sourcemap: true,
-				},
-				{
-					file: 'dist/beautiful-tree.min.mjs',
-					format: 'es',
-					globals,
-					sourcemap: true,
-				},
-				{
-					name: 'BeautifulTree',
-					file: 'dist/beautiful-tree.min.iife.js',
-					format: 'iife',
-					globals,
-					sourcemap: true,
-				},
-				{
-					name: 'BeautifulTree',
-					file: 'dist/beautiful-tree.min.umd.js',
-					format: 'umd',
-					globals,
-					sourcemap: true,
-				},
-			],
-			external,
-			plugins: [pluginTs(), terser()]
-		},
-		{
-			input,
-			output: [
-				{ file: 'dist/beautiful-tree.d.ts' },
-			],
-			external,
-			plugins: [dts()]
-		},
+	{
+		input,
+		output: [
+			{
+				file: 'dist/beautiful-tree.cjs',
+				format: 'cjs',
+				globals,
+				sourcemap: true,
+			},
+			{
+				file: 'dist/beautiful-tree.mjs',
+				format: 'es',
+				globals,
+				sourcemap: true,
+			},
+			{
+				name: 'BeautifulTree',
+				file: 'dist/beautiful-tree.iife.js',
+				format: 'iife',
+				globals,
+				sourcemap: true,
+			},
+			{
+				name: 'BeautifulTree',
+				file: 'dist/beautiful-tree.umd.js',
+				format: 'umd',
+				globals,
+				sourcemap: true,
+			},
+		],
+		external,
+		plugins: [pluginTs()],
+	},
+	{
+		input,
+		output: [
+			{
+				file: 'dist/beautiful-tree.min.cjs',
+				format: 'cjs',
+				globals,
+				sourcemap: true,
+			},
+			{
+				file: 'dist/beautiful-tree.min.mjs',
+				format: 'es',
+				globals,
+				sourcemap: true,
+			},
+			{
+				name: 'BeautifulTree',
+				file: 'dist/beautiful-tree.min.iife.js',
+				format: 'iife',
+				globals,
+				sourcemap: true,
+			},
+			{
+				name: 'BeautifulTree',
+				file: 'dist/beautiful-tree.min.umd.js',
+				format: 'umd',
+				globals,
+				sourcemap: true,
+			},
+		],
+		external,
+		plugins: [pluginTs(), terser()],
+	},
+	{
+		input,
+		output: [{ file: 'dist/beautiful-tree.d.ts' }],
+		external,
+		plugins: [dts()],
+	},
 ])
