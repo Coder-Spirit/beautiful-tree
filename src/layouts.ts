@@ -2,31 +2,33 @@ import type { Tree, TreeChild, TreeWithLayout } from './types'
 
 export interface WrappedTreeWithLayout {
 	readonly tree: Readonly<TreeWithLayout>
-	readonly maxX: number
-	readonly maxY: number
+	readonly mX: number
+	readonly mY: number
 }
 
-const _computeLeftShiftLayout = (
+const M = Math.max
+
+const _computeNaiveLayout = (
 	tree: Tree,
 	depth = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	counters: { layers: number[]; maxX: number },
+	counters: { l: number[]; mX: number },
 ): Readonly<TreeWithLayout> => {
-	const layers = counters.layers
+	const l = counters.l
+	const x = (l[depth] ?? -1) + 1
+	l[depth] = x
+	counters.mX = M(counters.mX, x)
 
-	const x = (layers[depth] ?? -1) + 1
-	layers[depth] = x
-	counters.maxX = Math.max(counters.maxX, x)
-
+	const tc = tree.children
 	return {
 		data: tree.data,
-		children: tree.children?.map((child: Readonly<TreeChild>) => ({
+		children: tc?.map((child: Readonly<TreeChild>) => ({
 			edgeData: child.edgeData,
-			node: _computeLeftShiftLayout(child.node, depth + 1, counters),
+			node: _computeNaiveLayout(child.node, depth + 1, counters),
 		})),
 		meta: {
 			isRoot: depth === 0,
-			isLeaf: tree.children === undefined || tree.children.length === 0,
+			isLeaf: tc === undefined || tc.length === 0,
 			pos: { x, y: depth },
 		},
 	} satisfies Readonly<TreeWithLayout>
@@ -35,11 +37,11 @@ const _computeLeftShiftLayout = (
 export const computeNaiveLayout = (
 	tree: Readonly<Tree>,
 ): Readonly<WrappedTreeWithLayout> => {
-	const counters = { layers: [], maxX: 0 }
+	const counters = { l: [], mX: 0 }
 	return {
-		tree: _computeLeftShiftLayout(tree, 0, counters),
-		maxX: counters.maxX,
-		maxY: counters.layers.length - 1,
+		tree: _computeNaiveLayout(tree, 0, counters),
+		mX: counters.mX,
+		mY: counters.l.length - 1,
 	}
 }
 
@@ -50,10 +52,10 @@ const _addMods = (
 	tree: DeepWriteable<TreeWithLayout>,
 	modsum = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { maxX: number },
+	tracer: { mX: number },
 ): void => {
 	tree.meta.pos.x += modsum
-	tracer.maxX = Math.max(tracer.maxX, tree.meta.pos.x)
+	tracer.mX = M(tracer.mX, tree.meta.pos.x)
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	modsum += tree.meta.m! // We know it's defined because we control when it's called
 	for (const child of tree.children ?? []) {
@@ -67,16 +69,17 @@ const _computeCenter2Layout = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	offsets: number[],
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { maxX: number },
+	tracer: { mX: number },
 ): DeepWriteable<TreeWithLayout> => {
-	const children = tree.children?.map((child) => ({
+	const tc = tree.children
+	const children = tc?.map((child) => ({
 		edgeData: child.edgeData,
 		node: _computeCenter2Layout(child.node, depth + 1, offsets, tracer),
 	}))
 
 	let x: number
 	let m = 0
-	const numChildren = tree.children?.length ?? 0
+	const numChildren = tc?.length ?? 0
 	if (numChildren === 0) {
 		x = offsets[depth] ?? 0
 	} else if (numChildren === 1) {
@@ -88,10 +91,10 @@ const _computeCenter2Layout = (
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				children![numChildren - 1]!.node.meta.pos.x) *
 			0.5
-		x = Math.max(offsets[depth] ?? 0, c)
+		x = M(offsets[depth] ?? 0, c)
 		m = x - c
 	}
-	tracer.maxX = Math.max(tracer.maxX, x)
+	tracer.mX = M(tracer.mX, x)
 	offsets[depth] = 1 + x
 
 	return {
@@ -99,7 +102,7 @@ const _computeCenter2Layout = (
 		children,
 		meta: {
 			isRoot: depth === 0,
-			isLeaf: tree.children === undefined || tree.children.length === 0,
+			isLeaf: tc === undefined || tc.length === 0,
 			pos: { x, y: depth },
 			m,
 		},
@@ -115,24 +118,26 @@ const _inPlaceEvenSpacingUpdate = (
 	offsets: number[],
 	depth: number,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { maxX: number },
+	tracer: { mX: number },
 ): void => {
+	const tm = tree.meta
+	const tmp = tm.pos
 	if (numChildren === 0) {
-		tree.meta.pos.x += shift
+		tmp.x += shift
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		tree.meta.pos.x = tree.children![0]!.node.meta.pos.x
+		tmp.x = tree.children![0]!.node.meta.pos.x
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			(tree.children![0]!.node.meta.pos.x +
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				tree.children![numChildren - 1]!.node.meta.pos.x) *
 			0.5
-		tree.meta.pos.x = Math.max(offsets[depth] ?? 0, c)
+		tmp.x = M(offsets[depth] ?? 0, c)
 	}
-	delete tree.meta.m
-	tracer.maxX = Math.max(tracer.maxX, tree.meta.pos.x)
-	offsets[depth] = 1 + tree.meta.pos.x
+	delete tm.m
+	tracer.mX = M(tracer.mX, tmp.x)
+	offsets[depth] = 1 + tmp.x
 }
 
 const _siblingsEvenSpacing = (
@@ -141,54 +146,53 @@ const _siblingsEvenSpacing = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	offsets: number[],
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { maxX: number },
+	tracer: { mX: number },
 	depth = 0,
 	shift = 0,
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 ): void => {
-	const numChildren = tree.children?.length ?? 0
+	const tc = tree.children
+	const numChildren = tc?.length ?? 0
 	let lastFixedIdx: number | undefined
 	let maxSpacing = 1
-	for (const [idx, child] of (tree.children ?? []).entries()) {
-		const isFixed = (child.node.children?.length ?? 0) > 0
+	for (const [idx, { node }] of (tc ?? []).entries()) {
+		const isFixed = (node.children?.length ?? 0) > 0
 		if (isFixed) {
 			if (lastFixedIdx !== undefined) {
 				const spacing =
-					(child.node.meta.pos.x -
+					(node.meta.pos.x -
 						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						tree.children![lastFixedIdx]!.node.meta.pos.x) /
+						tc![lastFixedIdx]!.node.meta.pos.x) /
 					(idx - lastFixedIdx)
-				maxSpacing = Math.max(maxSpacing, spacing)
+				maxSpacing = M(maxSpacing, spacing)
 			}
 			lastFixedIdx = idx
 		}
 	}
 
 	let accShift = shift
-	for (const [idx, child] of (tree.children ?? []).entries()) {
+	for (const [idx, { node }] of (tc ?? []).entries()) {
 		if (idx === 0) {
 			if (numChildren > 1) {
-				accShift = Math.max(
+				accShift = M(
 					0,
 					shift +
 						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						tree.children![1]!.node.meta.pos.x -
+						tc![1]!.node.meta.pos.x -
 						maxSpacing -
-						child.node.meta.pos.x,
+						node.meta.pos.x,
 				)
 			}
 		} else {
 			accShift =
 				shift +
-				Math.max(
+				M(
 					0,
 					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-					tree.children![idx - 1]!.node.meta.pos.x +
-						maxSpacing -
-						child.node.meta.pos.x,
+					tc![idx - 1]!.node.meta.pos.x + maxSpacing - node.meta.pos.x,
 				)
 		}
-		_siblingsEvenSpacing(child.node, offsets, tracer, depth + 1, accShift)
+		_siblingsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
 	}
 
 	_inPlaceEvenSpacingUpdate(numChildren, tree, shift, offsets, depth, tracer)
@@ -200,11 +204,12 @@ const _cousinsEvenSpacing = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	offsets: number[],
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { maxX: number },
+	tracer: { mX: number },
 	depth = 0,
 	shift = 0,
 ): void => {
-	const numChildren = tree.children?.length ?? 0
+	const tc = tree.children
+	const numChildren = tc?.length ?? 0
 
 	const nextOffset = offsets[depth + 1]
 	let accShift = shift
@@ -212,19 +217,19 @@ const _cousinsEvenSpacing = (
 		numChildren >= 2 &&
 		nextOffset !== undefined &&
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		(tree.children![0]!.node.children?.length ?? 0) === 0
+		(tc![0]!.node.children?.length ?? 0) === 0
 	) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		const mid = tree.children![1]!.node.meta.pos.x - 1
+		const mid = tc![1]!.node.meta.pos.x - 1
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		accShift = shift + Math.max(0, mid - tree.children![0]!.node.meta.pos.x)
+		accShift = shift + M(0, mid - tc![0]!.node.meta.pos.x)
 	}
 
-	for (const [idx, child] of (tree.children ?? []).entries()) {
+	for (const [idx, { node }] of (tc ?? []).entries()) {
 		if (idx === 0) {
-			_cousinsEvenSpacing(child.node, offsets, tracer, depth + 1, accShift)
+			_cousinsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
 		} else {
-			_cousinsEvenSpacing(child.node, offsets, tracer, depth + 1, shift)
+			_cousinsEvenSpacing(node, offsets, tracer, depth + 1, shift)
 		}
 	}
 
@@ -235,7 +240,7 @@ export const computeSmartLayout = (
 	tree: Readonly<Tree>,
 ): Readonly<WrappedTreeWithLayout> => {
 	const offsets: number[] = []
-	const tracer = { maxX: 0 }
+	const tracer = { mX: 0 }
 
 	const t = _computeCenter2Layout(tree, 0, offsets, tracer)
 	_addMods(t, 0, tracer)
@@ -245,7 +250,7 @@ export const computeSmartLayout = (
 
 	return {
 		tree: t,
-		maxY: offsets.length - 1,
-		maxX: tracer.maxX,
+		mY: offsets.length - 1,
+		mX: tracer.mX,
 	}
 }

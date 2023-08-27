@@ -7,8 +7,8 @@ describe('computeNaiveLayout', () => {
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				meta: {
@@ -24,8 +24,8 @@ describe('computeNaiveLayout', () => {
 			children: [],
 		})
 		expect(resultWithEmptyChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				children: [],
@@ -50,8 +50,8 @@ describe('computeNaiveLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 0,
-			maxY: 1,
+			mX: 0,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -92,8 +92,8 @@ describe('computeNaiveLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 1,
-			maxY: 1,
+			mX: 1,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -165,8 +165,8 @@ describe('computeNaiveLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -275,8 +275,8 @@ describe('computeNaiveLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -356,8 +356,8 @@ describe('computeSmartLayout', () => {
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				meta: {
@@ -373,8 +373,8 @@ describe('computeSmartLayout', () => {
 			children: [],
 		})
 		expect(resultWithEmptyChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				children: [],
@@ -399,8 +399,8 @@ describe('computeSmartLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 0,
-			maxY: 1,
+			mX: 0,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -441,8 +441,8 @@ describe('computeSmartLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 1,
-			maxY: 1,
+			mX: 1,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -514,8 +514,8 @@ describe('computeSmartLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
@@ -627,8 +627,8 @@ describe('computeSmartLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [

@@ -26,14 +26,8 @@ function runClassesGetter(
 	classesGetter?: CssClassesGetter | undefined,
 	data?: Readonly<Record<string, unknown>> | undefined,
 ): string {
-	if (classesGetter === undefined) {
-		return ''
-	}
-	const cssClasses = classesGetter(data)
-	if (cssClasses.length === 0) {
-		return ''
-	}
-	return ` ${cssClasses.join(' ')}`
+	const cssClasses = classesGetter?.(data) ?? []
+	return cssClasses.length === 0 ? '' : ` ${cssClasses.join(' ')}`
 }
 
 export function BeautifulTree({
@@ -44,11 +38,11 @@ export function BeautifulTree({
 	getNodeClass: nodeClassesInferrer,
 	getEdgeClass: edgeClassesInferrer,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
-	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
+	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xCoef = width / (maxX + 2)
-	const yCoef = height / (maxY + 2)
+	const xCoef = width / (mX + 2)
+	const yCoef = height / (mY + 2)
 	const maxNodeWidth = xCoef * 0.25
 	const maxNodeHeight = yCoef * 0.25
 	const maxNodeRadius = Math.min(maxNodeWidth, maxNodeHeight)
@@ -64,10 +58,9 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
-			<style>{`
-				line { stroke: black; }
-				circle { stroke: black; fill: white; }
-			`}</style>
+			<style>
+				{'line { stroke: black; } circle { stroke: black; fill: white; }'}
+			</style>
 			{Array.from(edgesIterator(treeWithLayout), (edge, idx) => {
 				return (
 					<line
