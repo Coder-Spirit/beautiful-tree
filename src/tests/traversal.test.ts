@@ -7,28 +7,28 @@ describe('postOrderIterator', () => {
 		data: { v: 42 },
 		children: [
 			{
-				edgeData: {},
+				eData: {},
 				node: {
 					data: { v: 43 },
 					children: [
 						{
-							edgeData: {},
+							eData: {},
 							node: { data: { v: 45 } },
 						},
 					],
 				},
 			},
 			{
-				edgeData: {},
+				eData: {},
 				node: {
 					data: { v: 44 },
 					children: [
 						{
-							edgeData: {},
+							eData: {},
 							node: { data: { v: 46 } },
 						},
 						{
-							edgeData: {},
+							eData: {},
 							node: { data: { v: 47 } },
 						},
 					],
@@ -57,12 +57,12 @@ describe('edgesIterator', () => {
 		data: { v: 42 },
 		children: [
 			{
-				edgeData: { e: 100 },
+				eData: { e: 100 },
 				node: {
 					data: { v: 43 },
 					children: [
 						{
-							edgeData: { e: 102 },
+							eData: { e: 102 },
 							node: {
 								data: { v: 45 },
 								meta: {
@@ -81,12 +81,12 @@ describe('edgesIterator', () => {
 				},
 			},
 			{
-				edgeData: { e: 101 },
+				eData: { e: 101 },
 				node: {
 					data: { v: 44 },
 					children: [
 						{
-							edgeData: { e: 103 },
+							eData: { e: 103 },
 							node: {
 								data: { v: 46 },
 								meta: {
@@ -97,7 +97,7 @@ describe('edgesIterator', () => {
 							},
 						},
 						{
-							edgeData: { e: 104 },
+							eData: { e: 104 },
 							node: {
 								data: { v: 47 },
 								meta: {
@@ -128,11 +128,11 @@ describe('edgesIterator', () => {
 		const expandedResult = [...result]
 
 		expect(expandedResult).toEqual([
-			{ start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, edgeData: { e: 100 } },
-			{ start: { x: 0, y: 1 }, end: { x: 0, y: 2 }, edgeData: { e: 102 } },
-			{ start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, edgeData: { e: 101 } },
-			{ start: { x: 1, y: 1 }, end: { x: 1, y: 2 }, edgeData: { e: 103 } },
-			{ start: { x: 1, y: 1 }, end: { x: 2, y: 2 }, edgeData: { e: 104 } },
+			{ start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, eData: { e: 100 } },
+			{ start: { x: 0, y: 1 }, end: { x: 0, y: 2 }, eData: { e: 102 } },
+			{ start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, eData: { e: 101 } },
+			{ start: { x: 1, y: 1 }, end: { x: 1, y: 2 }, eData: { e: 103 } },
+			{ start: { x: 1, y: 1 }, end: { x: 2, y: 2 }, eData: { e: 104 } },
 		])
 	})
 })

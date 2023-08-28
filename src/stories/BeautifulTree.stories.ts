@@ -1,7 +1,7 @@
 import {
 	BeautifulTree,
-	computeCenter3Layout,
-	computeLeftShiftLayout,
+	computeNaiveLayout,
+	computeSmartLayout,
 } from '../BeautifulTree'
 import type { Meta, StoryObj } from '@storybook/react'
 import type { Tree } from '../types'
@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>
 
 const mirrorTree = (tree: Tree): Tree => {
 	const children = tree.children?.map((child) => ({
-		edgeData: child.edgeData,
+		eData: child.eData,
 		node: mirrorTree(child.node),
 	}))
 	return {
@@ -239,6 +239,7 @@ const wideTree_D: Tree = {
 				data: { v: -1 },
 				children: [
 					{
+						eData: { e: 1 },
 						node: {
 							data: { v: -2 },
 							children: [
@@ -247,7 +248,7 @@ const wideTree_D: Tree = {
 										data: { v: -3 },
 										children: [
 											{ node: { data: { v: -4 } } },
-											{ node: { data: { v: -2.5 } } },
+											{ eData: { e: 1 }, node: { data: { v: -2.5 } } },
 										],
 									},
 								},
@@ -287,6 +288,18 @@ const wideTree_D: Tree = {
 	],
 }
 
+const getCssFromNodeData = (
+	data?: Readonly<Record<string, unknown>>,
+): string[] => {
+	return typeof data?.['v'] === 'number' && data['v'] % 2 === 0 ? ['even'] : []
+}
+
+const getCssFromEdgeData = (
+	data?: Readonly<Record<string, unknown>>,
+): string[] => {
+	return typeof data?.['e'] === 'number' && data['e'] % 2 === 1 ? ['odd'] : []
+}
+
 export const LeftShifted_Tree: Story = {
 	args: {
 		id: 'leftshifted-small-tree',
@@ -295,7 +308,7 @@ export const LeftShifted_Tree: Story = {
 			height: 100,
 		},
 		tree: smallTree,
-		computeLayout: computeLeftShiftLayout,
+		computeLayout: computeNaiveLayout,
 	},
 }
 
@@ -307,7 +320,7 @@ export const LeftShifted_Big_Tree: Story = {
 			height: 100,
 		},
 		tree: bigTree,
-		computeLayout: computeLeftShiftLayout,
+		computeLayout: computeNaiveLayout,
 	},
 }
 
@@ -319,7 +332,9 @@ export const Centered3_Tree: Story = {
 			height: 100,
 		},
 		tree: smallTree,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -331,7 +346,9 @@ export const Centered3_Big_Tree: Story = {
 			height: 100,
 		},
 		tree: bigTree,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -343,7 +360,9 @@ export const Centered3_Wide_Tree_A: Story = {
 			height: 100,
 		},
 		tree: wideTree_A,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -355,7 +374,9 @@ export const Centered3_Wide_Tree_B: Story = {
 			height: 100,
 		},
 		tree: wideTree_B,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -367,7 +388,9 @@ export const Centered3_Wide_Tree_Bm: Story = {
 			height: 100,
 		},
 		tree: wideTree_Bm,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -379,7 +402,9 @@ export const Centered3_Wide_Tree_C: Story = {
 			height: 100,
 		},
 		tree: wideTree_C,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }
 
@@ -391,6 +416,8 @@ export const Centered3_Wide_Tree_D: Story = {
 			height: 100,
 		},
 		tree: wideTree_D,
-		computeLayout: computeCenter3Layout,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
 	},
 }

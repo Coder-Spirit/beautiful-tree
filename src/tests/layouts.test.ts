@@ -1,14 +1,14 @@
-import { computeCenter3Layout, computeLeftShiftLayout } from '../layouts'
+import { computeNaiveLayout, computeSmartLayout } from '../layouts'
 import { describe, expect, it } from 'vitest'
 
-describe('computeLeftShiftLayout', () => {
+describe('computeNaiveLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
-		const resultWithoutChildren = computeLeftShiftLayout({
+		const resultWithoutChildren = computeNaiveLayout({
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				meta: {
@@ -19,13 +19,13 @@ describe('computeLeftShiftLayout', () => {
 			},
 		})
 
-		const resultWithEmptyChildren = computeLeftShiftLayout({
+		const resultWithEmptyChildren = computeNaiveLayout({
 			data: { v: 42 },
 			children: [],
 		})
 		expect(resultWithEmptyChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				children: [],
@@ -39,24 +39,24 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 for tree with single child', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 			],
 		})
 
 		expect(result).toEqual({
-			maxX: 0,
-			maxY: 1,
+			mX: 0,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -77,28 +77,28 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 & x=1,y=1 for tree with two children', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 44 } },
 				},
 			],
 		})
 
 		expect(result).toEqual({
-			maxX: 1,
-			maxY: 1,
+			mX: 1,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -109,7 +109,7 @@ describe('computeLeftShiftLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							meta: {
@@ -130,32 +130,32 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x for ((.,.),(.))', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -165,18 +165,18 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -187,7 +187,7 @@ describe('computeLeftShiftLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -206,12 +206,12 @@ describe('computeLeftShiftLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {
@@ -240,32 +240,32 @@ describe('computeLeftShiftLayout', () => {
 	})
 
 	it('sets x for ((.),(.,.))', () => {
-		const result = computeLeftShiftLayout({
+		const result = computeNaiveLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -275,18 +275,18 @@ describe('computeLeftShiftLayout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -305,12 +305,12 @@ describe('computeLeftShiftLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -321,7 +321,7 @@ describe('computeLeftShiftLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {
@@ -350,14 +350,14 @@ describe('computeLeftShiftLayout', () => {
 	})
 })
 
-describe('computeCenter3Layout', () => {
+describe('computeSmartLayout', () => {
 	it('sets x=0,y=0 for a single-node tree, and data is preserved', () => {
-		const resultWithoutChildren = computeCenter3Layout({
+		const resultWithoutChildren = computeSmartLayout({
 			data: { v: 42 },
 		})
 		expect(resultWithoutChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				meta: {
@@ -368,13 +368,13 @@ describe('computeCenter3Layout', () => {
 			},
 		})
 
-		const resultWithEmptyChildren = computeCenter3Layout({
+		const resultWithEmptyChildren = computeSmartLayout({
 			data: { v: 42 },
 			children: [],
 		})
 		expect(resultWithEmptyChildren).toEqual({
-			maxX: 0,
-			maxY: 0,
+			mX: 0,
+			mY: 0,
 			tree: {
 				data: { v: 42 },
 				children: [],
@@ -388,24 +388,24 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x=0,y=0 & x=0,y=1 for tree with single child', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 			],
 		})
 
 		expect(result).toEqual({
-			maxX: 0,
-			maxY: 1,
+			mX: 0,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -426,28 +426,28 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x=0.5,y=0 & x=0,y=1 & x=1,y=1 for tree with two children', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 44 } },
 				},
 			],
 		})
 
 		expect(result).toEqual({
-			maxX: 1,
-			maxY: 1,
+			mX: 1,
+			mY: 1,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -458,7 +458,7 @@ describe('computeCenter3Layout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							meta: {
@@ -479,32 +479,32 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x for ((.,.),(.))', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -514,18 +514,18 @@ describe('computeCenter3Layout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 45 },
@@ -537,7 +537,7 @@ describe('computeCenter3Layout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 46 },
@@ -557,12 +557,12 @@ describe('computeCenter3Layout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 47 },
@@ -592,32 +592,32 @@ describe('computeCenter3Layout', () => {
 	})
 
 	it('sets x for ((.),(.,.))', () => {
-		const result = computeCenter3Layout({
+		const result = computeSmartLayout({
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -627,18 +627,18 @@ describe('computeCenter3Layout', () => {
 		})
 
 		expect(result).toEqual({
-			maxX: 2,
-			maxY: 2,
+			mX: 2,
+			mY: 2,
 			tree: {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -657,12 +657,12 @@ describe('computeCenter3Layout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -673,7 +673,7 @@ describe('computeCenter3Layout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {

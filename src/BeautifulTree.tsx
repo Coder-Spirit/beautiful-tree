@@ -1,7 +1,11 @@
 import { edgesIterator, postOrderIterator } from './traversal'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
-export { computeLeftShiftLayout, computeCenter3Layout } from './layouts'
+export { computeNaiveLayout, computeSmartLayout } from './layouts'
+
+export type CssClassesGetter = (
+	data?: Readonly<Record<string, unknown>> | undefined,
+) => string[]
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -14,6 +18,16 @@ export interface BeautifulTreeProps {
 	readonly computeLayout: (
 		tree: Readonly<Tree>,
 	) => Readonly<WrappedTreeWithLayout>
+	readonly getNodeClass?: CssClassesGetter | undefined
+	readonly getEdgeClass?: CssClassesGetter | undefined
+}
+
+function runClassesGetter(
+	classesGetter?: CssClassesGetter | undefined,
+	data?: Readonly<Record<string, unknown>> | undefined,
+): string {
+	const cssClasses = classesGetter?.(data) ?? []
+	return cssClasses.length === 0 ? '' : ` ${cssClasses.join(' ')}`
 }
 
 export function BeautifulTree({
@@ -21,12 +35,14 @@ export function BeautifulTree({
 	svgProps,
 	tree,
 	computeLayout,
+	getNodeClass: nodeClassesInferrer,
+	getEdgeClass: edgeClassesInferrer,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
-	const { tree: treeWithLayout, maxX, maxY } = computeLayout(tree)
+	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xCoef = width / (maxX + 2)
-	const yCoef = height / (maxY + 2)
+	const xCoef = width / (mX + 2)
+	const yCoef = height / (mY + 2)
 	const maxNodeWidth = xCoef * 0.25
 	const maxNodeHeight = yCoef * 0.25
 	const maxNodeRadius = Math.min(maxNodeWidth, maxNodeHeight)
@@ -42,16 +58,15 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
-			<style>{`
-				line { stroke: black; }
-				circle { stroke: black; fill: white; }
-			`}</style>
-			{/* TODO: introduce edge "styles" (straight, cornered, curved..., plus CSS styles) */}
-			{[...edgesIterator(treeWithLayout)].map((edge, idx) => {
+			<style>{'line{stroke:black;}circle{stroke:black;fill:white;}'}</style>
+			{Array.from(edgesIterator(treeWithLayout), (edge, idx) => {
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
-						className={'beautiful-tree-edge'}
+						className={`beautiful-tree-edge${runClassesGetter(
+							edgeClassesInferrer,
+							edge.eData,
+						)}`}
 						x1={(edge.start.x + 1) * xCoef}
 						y1={(edge.start.y + 1) * yCoef}
 						x2={(edge.end.x + 1) * xCoef}
@@ -59,17 +74,19 @@ export function BeautifulTree({
 					/>
 				)
 			})}
-			{[...postOrderIterator(treeWithLayout)].map((node, idx) => {
-				const aX = node.meta.pos.x
-				const aY = node.meta.pos.y
+			{Array.from(postOrderIterator(treeWithLayout), (node, idx) => {
+				const nm = node.meta
 				return (
 					<circle
 						key={`${id}-node-${idx}`}
 						className={`beautiful-tree-node${
-							node.meta.isRoot ? ' beautiful-tree-root' : ''
-						}${node.meta.isLeaf ? ' beautiful-tree-leaf' : ''}`}
-						cx={(aX + 1) * xCoef}
-						cy={(aY + 1) * yCoef}
+							nm.isRoot ? ' beautiful-tree-root' : ''
+						}${nm.isLeaf ? ' beautiful-tree-leaf' : ''}${runClassesGetter(
+							nodeClassesInferrer,
+							node.data,
+						)}`}
+						cx={(nm.pos.x + 1) * xCoef}
+						cy={(nm.pos.y + 1) * yCoef}
 						r={maxNodeRadius}
 					/>
 				)

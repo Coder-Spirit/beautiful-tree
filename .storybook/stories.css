@@ -1,0 +1,7 @@
+.even {
+	fill: red;
+}
+
+.odd {
+	stroke-dasharray: 1.5 0.5;
+}

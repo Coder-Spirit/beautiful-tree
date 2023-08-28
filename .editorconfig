@@ -4,7 +4,7 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.{js,cjs,mjs,json,ts,cjs,mts,jsx,tsx}]
+[*.{css,js,cjs,mjs,json,ts,cjs,mts,jsx,tsx}]
 charset = utf-8
 indent_style = tab
 indent_size = 2
