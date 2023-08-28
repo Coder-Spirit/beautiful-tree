@@ -7,6 +7,7 @@ export interface WrappedTreeWithLayout {
 }
 
 const M = Math.max
+const C = 'children'
 
 const _computeNaiveLayout = (
 	tree: Tree,
@@ -19,11 +20,11 @@ const _computeNaiveLayout = (
 	l[depth] = x
 	counters.mX = M(counters.mX, x)
 
-	const tc = tree.children
+	const tc = tree[C]
 	return {
 		data: tree.data,
 		children: tc?.map((child: Readonly<TreeChild>) => ({
-			edgeData: child.edgeData,
+			eData: child.eData,
 			node: _computeNaiveLayout(child.node, depth + 1, counters),
 		})),
 		meta: {
@@ -49,21 +50,25 @@ type DeepWriteable<T> = { -readonly [P in keyof T]: DeepWriteable<T[P]> }
 
 const _addMods = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tree: DeepWriteable<TreeWithLayout>,
+	{ meta, children }: DeepWriteable<TreeWithLayout>,
 	modsum = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	tracer: { mX: number },
 ): void => {
-	tree.meta.pos.x += modsum
-	tracer.mX = M(tracer.mX, tree.meta.pos.x)
+	meta.pos.x += modsum
+	tracer.mX = M(tracer.mX, meta.pos.x)
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	modsum += tree.meta.m! // We know it's defined because we control when it's called
-	for (const child of tree.children ?? []) {
+	modsum += meta.m! // We know it's defined because we control when it's called
+	for (const child of children ?? []) {
 		_addMods(child.node, modsum, tracer)
 	}
 }
 
-const _computeCenter2Layout = (
+const _getPosX = (v: { readonly node: Readonly<TreeWithLayout> }): number => {
+	return v.node.meta.pos.x
+}
+
+const _computeSmartLayout = (
 	tree: Tree,
 	depth = 0,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
@@ -71,10 +76,10 @@ const _computeCenter2Layout = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	tracer: { mX: number },
 ): DeepWriteable<TreeWithLayout> => {
-	const tc = tree.children
+	const tc = tree[C]
 	const children = tc?.map((child) => ({
-		edgeData: child.edgeData,
-		node: _computeCenter2Layout(child.node, depth + 1, offsets, tracer),
+		eData: child.eData,
+		node: _computeSmartLayout(child.node, depth + 1, offsets, tracer),
 	}))
 
 	let x: number
@@ -84,12 +89,12 @@ const _computeCenter2Layout = (
 		x = offsets[depth] ?? 0
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		x = children![0]!.node.meta.pos.x
+		x = _getPosX(children![0]!)
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-			(children![0]!.node.meta.pos.x +
+			(_getPosX(children![0]!) +
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-				children![numChildren - 1]!.node.meta.pos.x) *
+				_getPosX(children![numChildren - 1]!)) *
 			0.5
 		x = M(offsets[depth] ?? 0, c)
 		m = x - c
@@ -126,12 +131,12 @@ const _inPlaceEvenSpacingUpdate = (
 		tmp.x += shift
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		tmp.x = tree.children![0]!.node.meta.pos.x
+		tmp.x = _getPosX(tree[C]![0]!)
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-			(tree.children![0]!.node.meta.pos.x +
+			(_getPosX(tree[C]![0]!) +
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-				tree.children![numChildren - 1]!.node.meta.pos.x) *
+				_getPosX(tree[C]![numChildren - 1]!)) *
 			0.5
 		tmp.x = M(offsets[depth] ?? 0, c)
 	}
@@ -151,18 +156,18 @@ const _siblingsEvenSpacing = (
 	shift = 0,
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 ): void => {
-	const tc = tree.children
+	const tc = tree[C]
 	const numChildren = tc?.length ?? 0
 	let lastFixedIdx: number | undefined
 	let maxSpacing = 1
 	for (const [idx, { node }] of (tc ?? []).entries()) {
-		const isFixed = (node.children?.length ?? 0) > 0
+		const isFixed = (node[C]?.length ?? 0) > 0
 		if (isFixed) {
 			if (lastFixedIdx !== undefined) {
 				const spacing =
 					(node.meta.pos.x -
 						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						tc![lastFixedIdx]!.node.meta.pos.x) /
+						_getPosX(tc![lastFixedIdx]!)) /
 					(idx - lastFixedIdx)
 				maxSpacing = M(maxSpacing, spacing)
 			}
@@ -178,7 +183,7 @@ const _siblingsEvenSpacing = (
 					0,
 					shift +
 						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						tc![1]!.node.meta.pos.x -
+						_getPosX(tc![1]!) -
 						maxSpacing -
 						node.meta.pos.x,
 				)
@@ -189,7 +194,7 @@ const _siblingsEvenSpacing = (
 				M(
 					0,
 					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-					tc![idx - 1]!.node.meta.pos.x + maxSpacing - node.meta.pos.x,
+					_getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x,
 				)
 		}
 		_siblingsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
@@ -208,7 +213,7 @@ const _cousinsEvenSpacing = (
 	depth = 0,
 	shift = 0,
 ): void => {
-	const tc = tree.children
+	const tc = tree[C]
 	const numChildren = tc?.length ?? 0
 
 	const nextOffset = offsets[depth + 1]
@@ -217,12 +222,12 @@ const _cousinsEvenSpacing = (
 		numChildren >= 2 &&
 		nextOffset !== undefined &&
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		(tc![0]!.node.children?.length ?? 0) === 0
+		(tc![0]!.node[C]?.length ?? 0) === 0
 	) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		const mid = tc![1]!.node.meta.pos.x - 1
+		const mid = _getPosX(tc![1]!) - 1
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		accShift = shift + M(0, mid - tc![0]!.node.meta.pos.x)
+		accShift = shift + M(0, mid - _getPosX(tc![0]!))
 	}
 
 	for (const [idx, { node }] of (tc ?? []).entries()) {
@@ -242,7 +247,7 @@ export const computeSmartLayout = (
 	const offsets: number[] = []
 	const tracer = { mX: 0 }
 
-	const t = _computeCenter2Layout(tree, 0, offsets, tracer)
+	const t = _computeSmartLayout(tree, 0, offsets, tracer)
 	_addMods(t, 0, tracer)
 
 	_cousinsEvenSpacing(t, [], tracer)

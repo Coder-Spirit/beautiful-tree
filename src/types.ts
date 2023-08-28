@@ -1,6 +1,6 @@
 export interface TreeChild<T extends Tree = Tree> {
 	readonly node: T
-	readonly edgeData?: Readonly<Record<string, unknown>> | undefined
+	readonly eData?: Readonly<Record<string, unknown>> | undefined
 }
 
 export interface Node {
@@ -35,5 +35,5 @@ export interface Edge {
 		readonly x: number
 		readonly y: number
 	}
-	readonly edgeData?: Readonly<Record<string, unknown>> | undefined
+	readonly eData?: Readonly<Record<string, unknown>> | undefined
 }

@@ -22,7 +22,7 @@ export function* edgesIterator(
 		yield {
 			start: tree.meta.pos,
 			end: child.node.meta.pos,
-			edgeData: child.edgeData,
+			eData: child.eData,
 		}
 		yield* edgesIterator(child.node)
 	}

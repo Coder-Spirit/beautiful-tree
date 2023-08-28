@@ -43,7 +43,7 @@ describe('computeNaiveLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 			],
@@ -56,7 +56,7 @@ describe('computeNaiveLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -81,11 +81,11 @@ describe('computeNaiveLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 44 } },
 				},
 			],
@@ -98,7 +98,7 @@ describe('computeNaiveLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -109,7 +109,7 @@ describe('computeNaiveLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							meta: {
@@ -134,28 +134,28 @@ describe('computeNaiveLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -171,12 +171,12 @@ describe('computeNaiveLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -187,7 +187,7 @@ describe('computeNaiveLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -206,12 +206,12 @@ describe('computeNaiveLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {
@@ -244,28 +244,28 @@ describe('computeNaiveLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -281,12 +281,12 @@ describe('computeNaiveLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -305,12 +305,12 @@ describe('computeNaiveLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -321,7 +321,7 @@ describe('computeNaiveLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {
@@ -392,7 +392,7 @@ describe('computeSmartLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 			],
@@ -405,7 +405,7 @@ describe('computeSmartLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -430,11 +430,11 @@ describe('computeSmartLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 43 } },
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: { data: { v: 44 } },
 				},
 			],
@@ -447,7 +447,7 @@ describe('computeSmartLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							meta: {
@@ -458,7 +458,7 @@ describe('computeSmartLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							meta: {
@@ -483,28 +483,28 @@ describe('computeSmartLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -520,12 +520,12 @@ describe('computeSmartLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 45 },
@@ -537,7 +537,7 @@ describe('computeSmartLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 46 },
@@ -557,12 +557,12 @@ describe('computeSmartLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										children: undefined,
 										data: { v: 47 },
@@ -596,28 +596,28 @@ describe('computeSmartLayout', () => {
 			data: { v: 42 },
 			children: [
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 43 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 45 } },
 							},
 						],
 					},
 				},
 				{
-					edgeData: {},
+					eData: {},
 					node: {
 						data: { v: 44 },
 						children: [
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 46 } },
 							},
 							{
-								edgeData: {},
+								eData: {},
 								node: { data: { v: 47 } },
 							},
 						],
@@ -633,12 +633,12 @@ describe('computeSmartLayout', () => {
 				data: { v: 42 },
 				children: [
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 43 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 45 },
 										meta: {
@@ -657,12 +657,12 @@ describe('computeSmartLayout', () => {
 						},
 					},
 					{
-						edgeData: {},
+						eData: {},
 						node: {
 							data: { v: 44 },
 							children: [
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 46 },
 										meta: {
@@ -673,7 +673,7 @@ describe('computeSmartLayout', () => {
 									},
 								},
 								{
-									edgeData: {},
+									eData: {},
 									node: {
 										data: { v: 47 },
 										meta: {

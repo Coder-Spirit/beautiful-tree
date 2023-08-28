@@ -58,16 +58,14 @@ export function BeautifulTree({
 			}}
 			className={'beautiful-tree-react'}
 		>
-			<style>
-				{'line { stroke: black; } circle { stroke: black; fill: white; }'}
-			</style>
+			<style>{'line{stroke:black;}circle{stroke:black;fill:white;}'}</style>
 			{Array.from(edgesIterator(treeWithLayout), (edge, idx) => {
 				return (
 					<line
 						key={`${id}-edge-${idx}`}
 						className={`beautiful-tree-edge${runClassesGetter(
 							edgeClassesInferrer,
-							edge.edgeData,
+							edge.eData,
 						)}`}
 						x1={(edge.start.x + 1) * xCoef}
 						y1={(edge.start.y + 1) * yCoef}

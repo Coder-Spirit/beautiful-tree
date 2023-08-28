@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>
 
 const mirrorTree = (tree: Tree): Tree => {
 	const children = tree.children?.map((child) => ({
-		edgeData: child.edgeData,
+		eData: child.eData,
 		node: mirrorTree(child.node),
 	}))
 	return {
@@ -239,7 +239,7 @@ const wideTree_D: Tree = {
 				data: { v: -1 },
 				children: [
 					{
-						edgeData: { e: 1 },
+						eData: { e: 1 },
 						node: {
 							data: { v: -2 },
 							children: [
@@ -248,7 +248,7 @@ const wideTree_D: Tree = {
 										data: { v: -3 },
 										children: [
 											{ node: { data: { v: -4 } } },
-											{ edgeData: { e: 1 }, node: { data: { v: -2.5 } } },
+											{ eData: { e: 1 }, node: { data: { v: -2.5 } } },
 										],
 									},
 								},
