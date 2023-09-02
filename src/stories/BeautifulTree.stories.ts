@@ -422,3 +422,29 @@ export const Centered3_Wide_Tree_D: Story = {
 		getEdgeClass: getCssFromEdgeData,
 	},
 }
+
+const buildRandomTree = (maxDepth = 4): Readonly<Tree> => {
+	const numChildren = maxDepth > 0 ? Math.floor(Math.random() * 4) : 0
+	const tree: Tree = {
+		// eslint-disable-next-line prefer-spread
+		children: Array.apply(undefined, { length: numChildren } as unknown[]).map(
+			() => ({ node: buildRandomTree(maxDepth - 1) }),
+		),
+	}
+
+	return tree
+}
+
+export const Centered3_Wide_Tree_Random: Story = {
+	args: {
+		id: 'centered3-wide-tree-random',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: buildRandomTree(),
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
