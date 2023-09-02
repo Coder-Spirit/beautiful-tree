@@ -57,11 +57,11 @@ const _addMods = (
 ): void => {
 	meta.pos.x += modsum
 	tracer.mX = M(tracer.mX, meta.pos.x)
-	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	modsum += meta.m! // We know it's defined because we control when it's called
+	modsum += meta.m ?? 0
 	for (const child of children ?? []) {
 		_addMods(child.node, modsum, tracer)
 	}
+	delete meta.m
 }
 
 const _getPosX = (v: { readonly node: Readonly<TreeWithLayout> }): number => {
@@ -129,9 +129,11 @@ const _inPlaceEvenSpacingUpdate = (
 	const tmp = tm.pos
 	if (numChildren === 0) {
 		tmp.x += shift
+		delete tm.m
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		tmp.x = _getPosX(tree[C]![0]!)
+		delete tm.m
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			(_getPosX(tree[C]![0]!) +
@@ -139,8 +141,8 @@ const _inPlaceEvenSpacingUpdate = (
 				_getPosX(tree[C]![numChildren - 1]!)) *
 			0.5
 		tmp.x = M(offsets[depth] ?? 0, c)
+		tm.m = tmp.x - c
 	}
-	delete tm.m
 	tracer.mX = M(tracer.mX, tmp.x)
 	offsets[depth] = 1 + tmp.x
 }
@@ -251,7 +253,10 @@ export const computeSmartLayout = (
 	_addMods(t, 0, tracer)
 
 	_cousinsEvenSpacing(t, [], tracer)
+	_addMods(t, 0, tracer)
+
 	_siblingsEvenSpacing(t, [], tracer)
+	_addMods(t, 0, tracer)
 
 	return {
 		tree: t,

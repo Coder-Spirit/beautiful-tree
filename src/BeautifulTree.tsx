@@ -1,4 +1,5 @@
 import { edgesIterator, postOrderIterator } from './traversal'
+import { Fragment } from 'react'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
 export { computeNaiveLayout, computeSmartLayout } from './layouts'
@@ -107,10 +108,10 @@ export function BeautifulTree({
 				}${runClassesGetter(getNodeClass, node.data)}`
 
 				return (
-					<>
+					<Fragment key={`${id}-node-w-${idx}`}>
 						{_nodeShape === 'rect' ? (
 							<rect
-								key={`${id}-node-${idx}`}
+								key={`${id}-node-r-${idx}`}
 								className={`beautiful-tree-node${
 									nm.isRoot ? ' beautiful-tree-root' : ''
 								}${nm.isLeaf ? ' beautiful-tree-leaf' : ''}${runClassesGetter(
@@ -124,7 +125,7 @@ export function BeautifulTree({
 							/>
 						) : (
 							<circle
-								key={`${id}-node-${idx}`}
+								key={`${id}-node-c-${idx}`}
 								className={`beautiful-tree-node${_nodeClass}`}
 								cx={(nm.pos.x + 1) * xCoef}
 								cy={(nm.pos.y + 1) * yCoef}
@@ -133,18 +134,21 @@ export function BeautifulTree({
 						)}
 						{getNodeContent ? (
 							<foreignObject
-								key={`${id}-node-content-${idx}`}
+								key={`${id}-node-fo-${idx}`}
 								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
 								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
 								width={maxNodeWidth}
 								height={maxNodeHeight}
 							>
-								<div className={`beautiful-tree-node-content${_nodeClass}`}>
+								<div
+									key={`${id}-node-div-${idx}`}
+									className={`beautiful-tree-node-content${_nodeClass}`}
+								>
 									{getNodeContent(node.data)}
 								</div>
 							</foreignObject>
 						) : undefined}
-					</>
+					</Fragment>
 				)
 			})}
 		</svg>

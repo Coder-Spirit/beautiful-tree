@@ -288,6 +288,34 @@ const wideTree_D: Tree = {
 	],
 }
 
+const wideTree_E: Tree = {
+	children: [
+		{
+			node: {
+				children: [
+					{ node: {} },
+					{
+						node: {
+							children: [
+								{ node: {} },
+								{ node: { children: [{ node: {} }, { node: {} }] } },
+								{
+									node: {
+										children: [{ node: {} }, { node: {} }, { node: {} }],
+									},
+								},
+							],
+						},
+					},
+					{ node: {} },
+				],
+			},
+		},
+		{ node: { children: [{ node: {} }] } },
+		{ node: {} },
+	],
+}
+
 const getCssFromNodeData = (
 	data?: Readonly<Record<string, unknown>>,
 ): string[] => {
@@ -417,6 +445,20 @@ export const Centered3_Wide_Tree_D: Story = {
 			height: 100,
 		},
 		tree: wideTree_D,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const Centered3_Wide_Tree_E: Story = {
+	args: {
+		id: 'centered3-wide-tree-e',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: wideTree_E,
 		computeLayout: computeSmartLayout,
 		getNodeClass: getCssFromNodeData,
 		getEdgeClass: getCssFromEdgeData,
