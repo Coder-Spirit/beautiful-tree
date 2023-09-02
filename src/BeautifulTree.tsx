@@ -11,6 +11,10 @@ export type NodeShapeGetter = (
 	data?: Readonly<Record<string, unknown>> | undefined,
 ) => { type: 'circle' | 'rect' }
 
+export type NodeContentGetter = (
+	data?: Readonly<Record<string, unknown>> | undefined,
+) => JSX.Element | string
+
 export interface BeautifulTreeProps {
 	readonly id: string
 	readonly svgProps: {
@@ -26,6 +30,7 @@ export interface BeautifulTreeProps {
 	) => Readonly<WrappedTreeWithLayout>
 	readonly getNodeClass?: CssClassesGetter | undefined
 	readonly getNodeShape?: NodeShapeGetter | undefined
+	readonly getNodeContent?: NodeContentGetter | undefined
 	readonly getEdgeClass?: CssClassesGetter | undefined
 }
 
@@ -46,6 +51,7 @@ export function BeautifulTree({
 	computeLayout,
 	getNodeClass,
 	getNodeShape,
+	getNodeContent,
 	getEdgeClass,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
 	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
@@ -71,7 +77,11 @@ export function BeautifulTree({
 			className={'beautiful-tree-react'}
 		>
 			<style>
-				{'line{stroke:black;}circle,rect{stroke:black;fill:white;}'}
+				{`line{stroke:black;}
+					circle,rect{stroke:black;fill:white;}
+					div.beautiful-tree-node-content{margin:0;height:100%;width:100%;text-align:center;line-height:${maxNodeHeight}${sizeUnit};font-size:${
+						maxNodeHeight * 0.5
+					}${sizeUnit};}`}
 			</style>
 			{Array.from(edgesIterator(treeWithLayout), (edge, idx) => {
 				return (
@@ -92,34 +102,49 @@ export function BeautifulTree({
 				const nm = node.meta
 
 				const _nodeShape = getNodeShape?.(node.data) ?? nodeShape ?? 'circle'
+				const _nodeClass = `${nm.isRoot ? ' beautiful-tree-root' : ''}${
+					nm.isLeaf ? ' beautiful-tree-leaf' : ''
+				}${runClassesGetter(getNodeClass, node.data)}`
 
-				return _nodeShape === 'rect' ? (
-					<rect
-						key={`${id}-node-${idx}`}
-						className={`beautiful-tree-node${
-							nm.isRoot ? ' beautiful-tree-root' : ''
-						}${nm.isLeaf ? ' beautiful-tree-leaf' : ''}${runClassesGetter(
-							getNodeClass,
-							node.data,
-						)}`}
-						x={(nm.pos.x + 1) * xCoef - widthCenterShift}
-						y={(nm.pos.y + 1) * yCoef - heightCenterShift}
-						width={maxNodeWidth}
-						height={maxNodeHeight}
-					/>
-				) : (
-					<circle
-						key={`${id}-node-${idx}`}
-						className={`beautiful-tree-node${
-							nm.isRoot ? ' beautiful-tree-root' : ''
-						}${nm.isLeaf ? ' beautiful-tree-leaf' : ''}${runClassesGetter(
-							getNodeClass,
-							node.data,
-						)}`}
-						cx={(nm.pos.x + 1) * xCoef}
-						cy={(nm.pos.y + 1) * yCoef}
-						r={maxNodeRadius}
-					/>
+				return (
+					<>
+						{_nodeShape === 'rect' ? (
+							<rect
+								key={`${id}-node-${idx}`}
+								className={`beautiful-tree-node${
+									nm.isRoot ? ' beautiful-tree-root' : ''
+								}${nm.isLeaf ? ' beautiful-tree-leaf' : ''}${runClassesGetter(
+									getNodeClass,
+									node.data,
+								)}`}
+								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
+								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								width={maxNodeWidth}
+								height={maxNodeHeight}
+							/>
+						) : (
+							<circle
+								key={`${id}-node-${idx}`}
+								className={`beautiful-tree-node${_nodeClass}`}
+								cx={(nm.pos.x + 1) * xCoef}
+								cy={(nm.pos.y + 1) * yCoef}
+								r={maxNodeRadius}
+							/>
+						)}
+						{getNodeContent ? (
+							<foreignObject
+								key={`${id}-node-content-${idx}`}
+								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
+								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								width={maxNodeWidth}
+								height={maxNodeHeight}
+							>
+								<div className={`beautiful-tree-node-content${_nodeClass}`}>
+									{getNodeContent(node.data)}
+								</div>
+							</foreignObject>
+						) : undefined}
+					</>
 				)
 			})}
 		</svg>

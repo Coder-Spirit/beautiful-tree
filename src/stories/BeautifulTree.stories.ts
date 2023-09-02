@@ -362,6 +362,7 @@ export const Centered3_Wide_Tree_A: Story = {
 		tree: wideTree_A,
 		computeLayout: computeSmartLayout,
 		getNodeClass: getCssFromNodeData,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
 		getEdgeClass: getCssFromEdgeData,
 	},
 }
