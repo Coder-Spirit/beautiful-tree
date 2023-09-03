@@ -1,9 +1,11 @@
 # Beautiful-Tree
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" id="centered3-small-tree" viewBox="0 0 400 400" class="beautiful-tree-react" style="width: 300px; height: 300px;"><style>line{stroke:green;}
-					circle,rect{stroke:green;fill:white;}
-					div.beautiful-tree-node-content{margin:0;height:100%;width:100%;text-align:center;line-height:50px;font-size:25px;}</style><line class="beautiful-tree-edge" x1="175" y1="100" x2="100" y2="200"></line><line class="beautiful-tree-edge" x1="100" y1="200" x2="100" y2="300"></line><line class="beautiful-tree-edge" x1="175" y1="100" x2="250" y2="200"></line><line class="beautiful-tree-edge" x1="250" y1="200" x2="200" y2="300"></line><line class="beautiful-tree-edge" x1="250" y1="200" x2="300" y2="300"></line><circle class="beautiful-tree-node beautiful-tree-leaf" cx="100" cy="300" r="25"></circle><foreignObject x="75" y="275" width="50" height="50"><div class="beautiful-tree-node-content beautiful-tree-leaf">C</div></foreignObject><circle class="beautiful-tree-node" cx="100" cy="200" r="25"></circle><foreignObject x="75" y="175" width="50" height="50"><div class="beautiful-tree-node-content">B</div></foreignObject><circle class="beautiful-tree-node beautiful-tree-leaf" cx="200" cy="300" r="25"></circle><foreignObject x="175" y="275" width="50" height="50"><div class="beautiful-tree-node-content beautiful-tree-leaf">E</div></foreignObject><circle class="beautiful-tree-node beautiful-tree-leaf" cx="300" cy="300" r="25"></circle><foreignObject x="275" y="275" width="50" height="50"><div class="beautiful-tree-node-content beautiful-tree-leaf">F</div></foreignObject><circle class="beautiful-tree-node" cx="250" cy="200" r="25"></circle><foreignObject x="225" y="175" width="50" height="50"><div class="beautiful-tree-node-content">D</div></foreignObject><circle class="beautiful-tree-node beautiful-tree-root" cx="175" cy="100" r="25"></circle><foreignObject x="150" y="75" width="50" height="50"><div class="beautiful-tree-node-content beautiful-tree-root">A</div></foreignObject></svg>
+<img
+  src="docs/example1.svg"
+	style="height:300px;width:300px;"
+	alt="Tree rendered with BeautifulTree"
+/>
 </p>
 
 Beautiful-Tree is a lightweight & flexible library to draw trees as SVG images.
