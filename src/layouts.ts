@@ -57,11 +57,11 @@ const _addMods = (
 ): void => {
 	meta.pos.x += modsum
 	tracer.mX = M(tracer.mX, meta.pos.x)
-	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	modsum += meta.m! // We know it's defined because we control when it's called
+	modsum += meta.m ?? 0
 	for (const child of children ?? []) {
 		_addMods(child.node, modsum, tracer)
 	}
+	delete meta.m
 }
 
 const _getPosX = (v: { readonly node: Readonly<TreeWithLayout> }): number => {
@@ -118,7 +118,6 @@ const _inPlaceEvenSpacingUpdate = (
 	numChildren: number,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	tree: DeepWriteable<TreeWithLayout>,
-	shift: number,
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	offsets: number[],
 	depth: number,
@@ -128,10 +127,13 @@ const _inPlaceEvenSpacingUpdate = (
 	const tm = tree.meta
 	const tmp = tm.pos
 	if (numChildren === 0) {
-		tmp.x += shift
+		tmp.x = M(offsets[depth] ?? 0, tmp.x)
+		delete tm.m
 	} else if (numChildren === 1) {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		tmp.x = _getPosX(tree[C]![0]!)
+		const c = _getPosX(tree[C]![0]!)
+		tmp.x = M(offsets[depth] ?? 0, c)
+		tm.m = tmp.x - c
 	} else {
 		const c = // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			(_getPosX(tree[C]![0]!) +
@@ -139,10 +141,39 @@ const _inPlaceEvenSpacingUpdate = (
 				_getPosX(tree[C]![numChildren - 1]!)) *
 			0.5
 		tmp.x = M(offsets[depth] ?? 0, c)
+		tm.m = tmp.x - c
 	}
-	delete tm.m
 	tracer.mX = M(tracer.mX, tmp.x)
 	offsets[depth] = 1 + tmp.x
+
+	if (numChildren > 0) {
+		offsets[depth + 1] = M(
+			offsets[depth + 1] ?? 0,
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			tree[C]![numChildren - 1]!.node.meta.pos.x + 1,
+		)
+
+		if ((tm.m ?? 0) > 0) {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			_propagatePartialMod(tree[C], depth + 1, tm.m!, offsets)
+		}
+	}
+}
+
+const _propagatePartialMod = (
+	tc: Readonly<Required<TreeChild<TreeWithLayout>>[]> | undefined,
+	depth: number,
+	mod: number,
+	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+	offsets: number[],
+): void => {
+	while ((tc?.length ?? 0) > 0) {
+		offsets[depth] = (offsets[depth] ?? 0) + mod
+
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		tc = tc![tc!.length - 1]?.node[C]
+		depth += 1
+	}
 }
 
 const _siblingsEvenSpacing = (
@@ -153,11 +184,16 @@ const _siblingsEvenSpacing = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	tracer: { mX: number },
 	depth = 0,
-	shift = 0,
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 ): void => {
 	const tc = tree[C]
 	const numChildren = tc?.length ?? 0
+	const oldNextOffset = offsets[depth + 1] ?? 0
+
+	for (const { node } of tc ?? []) {
+		_siblingsEvenSpacing(node, offsets, tracer, depth + 1)
+	}
+
 	let lastFixedIdx: number | undefined
 	let maxSpacing = 1
 	for (const [idx, { node }] of (tc ?? []).entries()) {
@@ -175,70 +211,32 @@ const _siblingsEvenSpacing = (
 		}
 	}
 
-	let accShift = shift
+	let accShift = 0
 	for (const [idx, { node }] of (tc ?? []).entries()) {
 		if (idx === 0) {
-			if (numChildren > 1) {
-				accShift = M(
-					0,
-					shift +
-						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						_getPosX(tc![1]!) -
-						maxSpacing -
-						node.meta.pos.x,
-				)
-			}
-		} else {
 			accShift =
-				shift +
-				M(
-					0,
-					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-					_getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x,
-				)
-		}
-		_siblingsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
-	}
-
-	_inPlaceEvenSpacingUpdate(numChildren, tree, shift, offsets, depth, tracer)
-}
-
-const _cousinsEvenSpacing = (
-	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tree: DeepWriteable<TreeWithLayout>,
-	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	offsets: number[],
-	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-	tracer: { mX: number },
-	depth = 0,
-	shift = 0,
-): void => {
-	const tc = tree[C]
-	const numChildren = tc?.length ?? 0
-
-	const nextOffset = offsets[depth + 1]
-	let accShift = shift
-	if (
-		numChildren >= 2 &&
-		nextOffset !== undefined &&
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		(tc![0]!.node[C]?.length ?? 0) === 0
-	) {
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		const mid = _getPosX(tc![1]!) - 1
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		accShift = shift + M(0, mid - _getPosX(tc![0]!))
-	}
-
-	for (const [idx, { node }] of (tc ?? []).entries()) {
-		if (idx === 0) {
-			_cousinsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
+				numChildren > 1
+					? M(
+							0,
+							// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+							_getPosX(tc![1]!) - maxSpacing - node.meta.pos.x,
+							oldNextOffset - node.meta.pos.x,
+					  )
+					: M(0, oldNextOffset - node.meta.pos.x)
 		} else {
-			_cousinsEvenSpacing(node, offsets, tracer, depth + 1, shift)
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			accShift = _getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x
+		}
+
+		node.meta.pos.x += accShift
+		node.meta.m = (node.meta.m ?? 0) + accShift
+
+		if (accShift > 0) {
+			_propagatePartialMod(node[C], depth + 2, accShift, offsets)
 		}
 	}
 
-	_inPlaceEvenSpacingUpdate(numChildren, tree, shift, offsets, depth, tracer)
+	_inPlaceEvenSpacingUpdate(numChildren, tree, offsets, depth, tracer)
 }
 
 export const computeSmartLayout = (
@@ -250,8 +248,8 @@ export const computeSmartLayout = (
 	const t = _computeSmartLayout(tree, 0, offsets, tracer)
 	_addMods(t, 0, tracer)
 
-	_cousinsEvenSpacing(t, [], tracer)
 	_siblingsEvenSpacing(t, [], tracer)
+	_addMods(t, 0, tracer)
 
 	return {
 		tree: t,
