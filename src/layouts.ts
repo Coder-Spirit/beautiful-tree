@@ -145,6 +145,14 @@ const _inPlaceEvenSpacingUpdate = (
 	}
 	tracer.mX = M(tracer.mX, tmp.x)
 	offsets[depth] = 1 + tmp.x
+
+	if (numChildren > 0) {
+		offsets[depth + 1] = M(
+			offsets[depth + 1] ?? 0,
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			tree[C]![numChildren - 1]!.node.meta.pos.x + 1 + (tm.m ?? 0),
+		)
+	}
 }
 
 const _siblingsEvenSpacing = (
@@ -198,13 +206,6 @@ const _siblingsEvenSpacing = (
 
 		node.meta.pos.x += accShift
 		node.meta.m = (node.meta.m ?? 0) + accShift
-	}
-	if (numChildren > 0) {
-		offsets[depth + 1] = M(
-			offsets[depth + 1] ?? 0,
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-			tc![numChildren - 1]!.node.meta.pos.x + 1,
-		)
 	}
 
 	_inPlaceEvenSpacingUpdate(numChildren, tree, offsets, depth, tracer)
