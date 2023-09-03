@@ -39,8 +39,8 @@ export const LeftShifted_Tree: Story = {
 	args: {
 		id: 'leftshifted-small-tree',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: smallTree,
 		computeLayout: computeNaiveLayout,
@@ -51,8 +51,8 @@ export const LeftShifted_Big_Tree: Story = {
 	args: {
 		id: 'leftshifted-big-tree',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: bigTree,
 		computeLayout: computeNaiveLayout,
@@ -63,8 +63,8 @@ export const Centered3_Tree: Story = {
 	args: {
 		id: 'centered3-small-tree',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: smallTree,
 		computeLayout: computeSmartLayout,
@@ -77,8 +77,8 @@ export const Centered3_Big_Tree: Story = {
 	args: {
 		id: 'centered3-big-tree',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: bigTree,
 		computeLayout: computeSmartLayout,
@@ -91,8 +91,8 @@ export const Centered3_Wide_Tree_A: Story = {
 	args: {
 		id: 'centered3-wide-tree-a',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: wideTree_A,
 		computeLayout: computeSmartLayout,
@@ -106,8 +106,8 @@ export const Centered3_Wide_Tree_B: Story = {
 	args: {
 		id: 'centered3-wide-tree-b',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: wideTree_B,
 		computeLayout: computeSmartLayout,
@@ -120,8 +120,8 @@ export const Centered3_Wide_Tree_Bm: Story = {
 	args: {
 		id: 'centered3-wide-tree-bm',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: wideTree_Bm,
 		computeLayout: computeSmartLayout,
@@ -134,8 +134,8 @@ export const Centered3_Wide_Tree_C: Story = {
 	args: {
 		id: 'centered3-wide-tree-c',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: wideTree_C,
 		computeLayout: computeSmartLayout,
@@ -148,8 +148,8 @@ export const Centered3_Wide_Tree_D: Story = {
 	args: {
 		id: 'centered3-wide-tree-d',
 		svgProps: {
-			width: 100,
-			height: 100,
+			width: 400,
+			height: 400,
 		},
 		tree: wideTree_D,
 		computeLayout: computeSmartLayout,

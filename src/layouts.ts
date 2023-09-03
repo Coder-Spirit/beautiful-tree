@@ -155,11 +155,15 @@ const _siblingsEvenSpacing = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	tracer: { mX: number },
 	depth = 0,
-	shift = 0,
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 ): void => {
 	const tc = tree[C]
 	const numChildren = tc?.length ?? 0
+
+	for (const { node } of tc ?? []) {
+		_siblingsEvenSpacing(node, offsets, tracer, depth + 1)
+	}
+
 	let lastFixedIdx: number | undefined
 	let maxSpacing = 1
 	for (const [idx, { node }] of (tc ?? []).entries()) {
@@ -177,32 +181,26 @@ const _siblingsEvenSpacing = (
 		}
 	}
 
-	let accShift = shift
+	let accShift = 0
 	for (const [idx, { node }] of (tc ?? []).entries()) {
 		if (idx === 0) {
 			if (numChildren > 1) {
 				accShift = M(
 					0,
-					shift +
-						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						_getPosX(tc![1]!) -
-						maxSpacing -
-						node.meta.pos.x,
+					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+					_getPosX(tc![1]!) - maxSpacing - node.meta.pos.x,
 				)
 			}
 		} else {
-			accShift =
-				shift +
-				M(
-					0,
-					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-					_getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x,
-				)
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			accShift = _getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x
 		}
-		_siblingsEvenSpacing(node, offsets, tracer, depth + 1, accShift)
+
+		node.meta.pos.x += accShift
+		node.meta.m = (node.meta.m ?? 0) + accShift
 	}
 
-	_inPlaceEvenSpacingUpdate(numChildren, tree, shift, offsets, depth, tracer)
+	_inPlaceEvenSpacingUpdate(numChildren, tree, 0, offsets, depth, tracer)
 }
 
 const _cousinsEvenSpacing = (
