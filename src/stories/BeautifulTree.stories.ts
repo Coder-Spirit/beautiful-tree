@@ -69,8 +69,7 @@ export const Centered3_Tree: Story = {
 		},
 		tree: smallTree,
 		computeLayout: computeSmartLayout,
-		getNodeClass: getCssFromNodeData,
-		getEdgeClass: getCssFromEdgeData,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
 	},
 }
 

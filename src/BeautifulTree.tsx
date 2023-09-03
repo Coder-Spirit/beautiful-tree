@@ -2,6 +2,7 @@ import { edgesIterator, postOrderIterator } from './traversal'
 import { Fragment } from 'react'
 import type { Tree } from './types'
 import type { WrappedTreeWithLayout } from './layouts'
+import { computeSmartLayout } from './layouts'
 export { computeNaiveLayout, computeSmartLayout } from './layouts'
 
 export type CssClassesGetter = (
@@ -49,7 +50,7 @@ export function BeautifulTree({
 	nodeShape,
 	hCoef = 1,
 	tree,
-	computeLayout,
+	computeLayout = computeSmartLayout,
 	getNodeClass,
 	getNodeShape,
 	getNodeContent,

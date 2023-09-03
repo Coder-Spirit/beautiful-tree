@@ -24,27 +24,27 @@ export const getCssFromEdgeData = (
 }
 
 export const smallTree: Tree = {
-	data: { v: 42 },
+	data: { v: 'A' },
 	children: [
 		{
 			node: {
-				data: { v: 43 },
+				data: { v: 'B' },
 				children: [
 					{
-						node: { data: { v: 45 } },
+						node: { data: { v: 'C' } },
 					},
 				],
 			},
 		},
 		{
 			node: {
-				data: { v: 44 },
+				data: { v: 'D' },
 				children: [
 					{
-						node: { data: { v: 46 } },
+						node: { data: { v: 'E' } },
 					},
 					{
-						node: { data: { v: 47 } },
+						node: { data: { v: 'F' } },
 					},
 				],
 			},
