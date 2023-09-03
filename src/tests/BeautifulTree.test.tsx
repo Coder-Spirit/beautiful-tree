@@ -14,6 +14,7 @@ import {
 	wideTree_C,
 	wideTree_D,
 	wideTree_E,
+	wideTree_M,
 } from '../stories/treeFixtures'
 import { describe, expect, it } from 'vitest'
 import { render } from '@testing-library/react'
@@ -194,6 +195,26 @@ describe('BeautifulTree : Smart Layout', () => {
 					height: 400,
 				}}
 				tree={wideTree_E}
+				computeLayout={computeSmartLayout}
+				nodeShape="rect"
+				getNodeContent={(data): string => data?.['v']?.toString() ?? ''}
+				getNodeClass={getCssFromNodeData}
+				getEdgeClass={getCssFromEdgeData}
+			/>,
+		)
+
+		expect(rendered).toMatchSnapshot()
+	})
+
+	it('renders wide tree M, with rect shape, node content display, and dynamic css classes', () => {
+		const rendered = render(
+			<BeautifulTree
+				id="smart-wide-m-tree"
+				svgProps={{
+					width: 400,
+					height: 400,
+				}}
+				tree={wideTree_M}
 				computeLayout={computeSmartLayout}
 				nodeShape="rect"
 				getNodeContent={(data): string => data?.['v']?.toString() ?? ''}

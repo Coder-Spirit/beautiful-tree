@@ -150,8 +150,29 @@ const _inPlaceEvenSpacingUpdate = (
 		offsets[depth + 1] = M(
 			offsets[depth + 1] ?? 0,
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-			tree[C]![numChildren - 1]!.node.meta.pos.x + 1 + (tm.m ?? 0),
+			tree[C]![numChildren - 1]!.node.meta.pos.x + 1,
 		)
+
+		if ((tm.m ?? 0) > 0) {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			_propagatePartialMod(tree[C], depth + 1, tm.m!, offsets)
+		}
+	}
+}
+
+const _propagatePartialMod = (
+	tc: Readonly<Required<TreeChild<TreeWithLayout>>[]> | undefined,
+	depth: number,
+	mod: number,
+	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+	offsets: number[],
+): void => {
+	while ((tc?.length ?? 0) > 0) {
+		offsets[depth] = (offsets[depth] ?? 0) + mod
+
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		tc = tc![tc!.length - 1]?.node[C]
+		depth += 1
 	}
 }
 
@@ -167,6 +188,7 @@ const _siblingsEvenSpacing = (
 ): void => {
 	const tc = tree[C]
 	const numChildren = tc?.length ?? 0
+	const oldNextOffset = offsets[depth + 1] ?? 0
 
 	for (const { node } of tc ?? []) {
 		_siblingsEvenSpacing(node, offsets, tracer, depth + 1)
@@ -192,13 +214,15 @@ const _siblingsEvenSpacing = (
 	let accShift = 0
 	for (const [idx, { node }] of (tc ?? []).entries()) {
 		if (idx === 0) {
-			if (numChildren > 1) {
-				accShift = M(
-					0,
-					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-					_getPosX(tc![1]!) - maxSpacing - node.meta.pos.x,
-				)
-			}
+			accShift =
+				numChildren > 1
+					? M(
+							0,
+							// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+							_getPosX(tc![1]!) - maxSpacing - node.meta.pos.x,
+							oldNextOffset - node.meta.pos.x,
+					  )
+					: M(0, oldNextOffset - node.meta.pos.x)
 		} else {
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			accShift = _getPosX(tc![idx - 1]!) + maxSpacing - node.meta.pos.x
@@ -206,6 +230,10 @@ const _siblingsEvenSpacing = (
 
 		node.meta.pos.x += accShift
 		node.meta.m = (node.meta.m ?? 0) + accShift
+
+		if (accShift > 0) {
+			_propagatePartialMod(node[C], depth + 2, accShift, offsets)
+		}
 	}
 
 	_inPlaceEvenSpacingUpdate(numChildren, tree, offsets, depth, tracer)

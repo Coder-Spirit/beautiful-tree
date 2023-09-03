@@ -15,6 +15,7 @@ import {
 	wideTree_C,
 	wideTree_D,
 	wideTree_E,
+	wideTree_M,
 } from './treeFixtures'
 import type { Tree } from '../types'
 
@@ -166,6 +167,20 @@ export const Centered3_Wide_Tree_E: Story = {
 			height: 400,
 		},
 		tree: wideTree_E,
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const Centered3_Wide_Tree_M: Story = {
+	args: {
+		id: 'centered3-wide-tree-m',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: wideTree_M,
 		computeLayout: computeSmartLayout,
 		getNodeClass: getCssFromNodeData,
 		getEdgeClass: getCssFromEdgeData,

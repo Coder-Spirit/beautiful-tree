@@ -304,3 +304,49 @@ export const wideTree_E: Tree = {
 		{ node: {} },
 	],
 }
+
+export const wideTree_M: Tree = {
+	children: [
+		{
+			node: {
+				children: [
+					{ node: {} },
+					{
+						node: {
+							children: [{ node: { children: [{ node: {} }] } }, { node: {} }],
+						},
+					},
+					{
+						node: {
+							children: [
+								{
+									node: {
+										children: [{ node: {} }, { node: {} }, { node: {} }],
+									},
+								},
+							],
+						},
+					},
+				],
+			},
+		},
+		{
+			node: {
+				children: [
+					{
+						node: {
+							children: [
+								{
+									node: {
+										children: [{ node: {} }, { node: {} }, { node: {} }],
+									},
+								},
+							],
+						},
+					},
+				],
+			},
+		},
+		{ node: { children: [{ node: {} }, { node: {} }] } },
+	],
+}
