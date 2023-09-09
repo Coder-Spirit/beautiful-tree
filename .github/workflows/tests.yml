@@ -42,3 +42,5 @@ jobs:
       run: pnpm build
     - name: Run Tests
       run: pnpm test:coverage
+    - name: Publint
+      run: pnpm publint

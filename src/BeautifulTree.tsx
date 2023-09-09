@@ -27,9 +27,9 @@ export interface BeautifulTreeProps {
 	readonly nodeShape?: 'circle' | 'rect'
 	readonly hCoef?: number
 	readonly tree: Tree
-	readonly computeLayout: (
-		tree: Readonly<Tree>,
-	) => Readonly<WrappedTreeWithLayout>
+	readonly computeLayout?:
+		| ((tree: Readonly<Tree>) => Readonly<WrappedTreeWithLayout>)
+		| undefined
 	readonly getNodeClass?: CssClassesGetter | undefined
 	readonly getNodeShape?: NodeShapeGetter | undefined
 	readonly getNodeContent?: NodeContentGetter | undefined
@@ -50,12 +50,14 @@ export function BeautifulTree({
 	nodeShape,
 	hCoef = 1,
 	tree,
-	computeLayout = computeSmartLayout,
+	computeLayout,
 	getNodeClass,
 	getNodeShape,
 	getNodeContent,
 	getEdgeClass,
 }: Readonly<BeautifulTreeProps>): JSX.Element {
+	computeLayout ??= computeSmartLayout
+
 	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
