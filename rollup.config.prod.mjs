@@ -80,7 +80,10 @@ export default defineConfig([
 	},
 	{
 		input,
-		output: [{ file: 'dist/beautiful-tree.d.ts' }],
+		output: [
+			{ format: 'cjs', file: 'dist/beautiful-tree.d.cts' },
+			{ format: 'es', file: 'dist/beautiful-tree.d.mts' },
+		],
 		external,
 		plugins: [dts()],
 	},
