@@ -43,4 +43,4 @@ jobs:
     - name: Run Tests
       run: pnpm test:coverage
     - name: Publint
-      run: pnpm publint
+      run: pnpm publint --strict
