@@ -2,7 +2,7 @@
 
 <p align="center">
 <img
-  src="docs/example1.svg"
+  src="https://raw.githubusercontent.com/Coder-Spirit/beautiful-tree/main/docs/example1.svg"
 	style="height:300px;width:300px;"
 	alt="Tree rendered with BeautifulTree"
 />
