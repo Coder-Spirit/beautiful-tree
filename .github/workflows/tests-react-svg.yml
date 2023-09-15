@@ -35,10 +35,10 @@ jobs:
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm --filter react install
+    - name: Build Library
+      run: pnpm --filter react run build
     - name: Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter react run lint
-    - name: Build Library
-      run: pnpm --filter react run build
     - name: Run Tests
       run: pnpm --filter react run test:coverage
