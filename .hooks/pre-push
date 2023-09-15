@@ -3,6 +3,5 @@
 set -eu
 set -o pipefail
 
-pnpm run lint
-pnpm publint
-pnpm test:coverage
+pnpm run -r lint
+pnpm run -r test:coverage
