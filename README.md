@@ -1,3 +1,10 @@
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version](https://img.shields.io/badge/Version-0.1.3-blue.svg)
+![Contributors](https://img.shields.io/github/contributors/Coder-Spirit/beautiful-tree.svg)
+![Open Pull Requests](https://img.shields.io/github/issues-pr/Coder-Spirit/beautiful-tree.svg)
+![Last Commit](https://img.shields.io/github/last-commit/Coder-Spirit/beautiful-tree.svg)
+[![Open Issues](https://img.shields.io/badge/Open%20Issues-Your%20Number%20Here-4dc71fff)](https://github.com/Coder-Spirit/beautiful-tree/issues)
+
 # Beautiful-Tree
 
 <p align="center">
