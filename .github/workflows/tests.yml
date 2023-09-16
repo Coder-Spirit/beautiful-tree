@@ -43,6 +43,17 @@ jobs:
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter types run lint
 
+    # @beautiful-tree/algorithms
+    - name: (Algorithms) Install dependencies
+      run: pnpm --filter algorithms install
+    - name: (Algorithms) Build Library
+      run: pnpm --filter algorithms run build
+    - name: (Algorithms) Run Linters
+      if: ${{ matrix.os == 'ubuntu-22.04' }}
+      run: pnpm --filter algorithms run lint
+    - name: (Algorithms) Run Tests
+      run: pnpm --filter algorithms run test:coverage
+
     # @beautiful-tree/react
     - name: (React SVG) Install dependencies
       run: pnpm --filter react install
