@@ -1,4 +1,4 @@
-import type { Tree } from '../types'
+import type { Tree } from '@beautiful-tree/types'
 
 const mirrorTree = (tree: Tree): Tree => {
 	const children = tree.children?.map((child) => ({

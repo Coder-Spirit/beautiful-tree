@@ -33,14 +33,34 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - name: Install dependencies
-      run: pnpm install
-    - name: Run Linters
+
+    # @beautiful-tree/types
+    - name: (Types) Install dependencies
+      run: pnpm --filter types install
+    - name: (Types) Build Library
+      run: pnpm --filter types run build
+    - name: (Types) Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm lint
-    - name: Build Library
-      run: pnpm build
-    - name: Run Tests
-      run: pnpm test:coverage
-    - name: Publint
-      run: pnpm publint --strict
+      run: pnpm --filter types run lint
+
+    # @beautiful-tree/algorithms
+    - name: (Algorithms) Install dependencies
+      run: pnpm --filter algorithms install
+    - name: (Algorithms) Build Library
+      run: pnpm --filter algorithms run build
+    - name: (Algorithms) Run Linters
+      if: ${{ matrix.os == 'ubuntu-22.04' }}
+      run: pnpm --filter algorithms run lint
+    - name: (Algorithms) Run Tests
+      run: pnpm --filter algorithms run test:coverage
+
+    # @beautiful-tree/react
+    - name: (React SVG) Install dependencies
+      run: pnpm --filter react install
+    - name: (React SVG) Build Library
+      run: pnpm --filter react run build
+    - name: (React SVG) Run Linters
+      if: ${{ matrix.os == 'ubuntu-22.04' }}
+      run: pnpm --filter react run lint
+    - name: (React SVG) Run Tests
+      run: pnpm --filter react run test:coverage

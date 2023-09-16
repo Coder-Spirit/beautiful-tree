@@ -3,5 +3,4 @@
 set -eu
 set -o pipefail
 
-pnpm run lint
-pnpm publint
+pnpm run -r lint

@@ -1,9 +1,15 @@
-import { edgesIterator, postOrderIterator } from './traversal'
+import {
+	computeSmartLayout,
+	edgesIterator,
+	postOrderIterator,
+} from '@beautiful-tree/algorithms'
 import { Fragment } from 'react'
-import type { Tree } from './types'
-import type { WrappedTreeWithLayout } from './layouts'
-import { computeSmartLayout } from './layouts'
-export { computeNaiveLayout, computeSmartLayout } from './layouts'
+import type { Tree } from '@beautiful-tree/types'
+import type { WrappedTreeWithLayout } from '@beautiful-tree/algorithms'
+export {
+	computeNaiveLayout,
+	computeSmartLayout,
+} from '@beautiful-tree/algorithms'
 
 export type CssClassesGetter = (
 	data?: Readonly<Record<string, unknown>> | undefined,

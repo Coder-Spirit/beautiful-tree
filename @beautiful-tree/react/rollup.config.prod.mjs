@@ -1,8 +1,10 @@
 import { defineConfig } from 'rollup'
 import dts from 'rollup-plugin-dts'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import pluginTs from '@rollup/plugin-typescript'
 import terser from '@rollup/plugin-terser'
 
+const name = 'BeautifulTree'
 const input = 'src/BeautifulTree.tsx'
 const external = ['react', 'react-dom', 'react/jsx-runtime']
 const globals = {
@@ -16,75 +18,82 @@ export default defineConfig([
 		input,
 		output: [
 			{
-				file: 'dist/beautiful-tree.cjs',
+				file: 'dist/main.big.cjs',
 				format: 'cjs',
 				globals,
 				sourcemap: true,
 			},
 			{
-				file: 'dist/beautiful-tree.mjs',
+				file: 'dist/main.big.mjs',
 				format: 'es',
 				globals,
 				sourcemap: true,
 			},
 			{
-				name: 'BeautifulTree',
-				file: 'dist/beautiful-tree.iife.js',
+				name,
+				file: 'dist/main.big.iife.js',
 				format: 'iife',
 				globals,
 				sourcemap: true,
 			},
 			{
-				name: 'BeautifulTree',
-				file: 'dist/beautiful-tree.umd.js',
+				name,
+				file: 'dist/main.big.umd.js',
 				format: 'umd',
 				globals,
 				sourcemap: true,
 			},
 		],
 		external,
-		plugins: [pluginTs()],
+		plugins: [
+			nodeResolve({ resolveOnly: ['@beautiful-tree/algorithms'] }),
+			pluginTs(),
+		],
 	},
 	{
 		input,
 		output: [
 			{
-				file: 'dist/beautiful-tree.min.cjs',
+				file: 'dist/main.min.cjs',
 				format: 'cjs',
 				globals,
 				sourcemap: true,
 			},
 			{
-				file: 'dist/beautiful-tree.min.mjs',
+				file: 'dist/main.min.mjs',
 				format: 'es',
 				globals,
 				sourcemap: true,
 			},
 			{
-				name: 'BeautifulTree',
-				file: 'dist/beautiful-tree.min.iife.js',
+				name,
+				file: 'dist/main.min.iife.js',
 				format: 'iife',
 				globals,
 				sourcemap: true,
 			},
 			{
-				name: 'BeautifulTree',
-				file: 'dist/beautiful-tree.min.umd.js',
+				name,
+				file: 'dist/main.min.umd.js',
 				format: 'umd',
 				globals,
 				sourcemap: true,
 			},
 		],
 		external,
-		plugins: [pluginTs(), terser()],
+		plugins: [
+			nodeResolve({ resolveOnly: ['@beautiful-tree/algorithms'] }),
+			pluginTs(),
+			terser(),
+		],
 	},
 	{
 		input,
 		output: [
-			{ format: 'cjs', file: 'dist/beautiful-tree.d.cts' },
-			{ format: 'es', file: 'dist/beautiful-tree.d.mts' },
+			{ format: 'cjs', file: 'dist/main.d.cts' },
+			{ format: 'es', file: 'dist/main.d.mts' },
 		],
 		external,
-		plugins: [dts()],
+		plugins: [dts({ respectExternal: true })],
 	},
 ])

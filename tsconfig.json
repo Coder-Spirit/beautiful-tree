@@ -7,8 +7,6 @@
 		"module": "ES2020",
 		"moduleResolution": "Bundler",
 
-		"jsx": "react-jsx",
-		"baseUrl": "./src",
 		"noEmit": true,
 	},
 	"exclude": [

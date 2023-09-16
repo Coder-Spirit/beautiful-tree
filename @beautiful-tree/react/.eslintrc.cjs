@@ -8,11 +8,11 @@ module.exports = {
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-    ecmaVersion: 2020,
+		ecmaVersion: 2020,
 		sourceType: 'module',
-    tsConfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
-  },
+		tsConfigRootDir: __dirname,
+		project: ['./tsconfig.json'],
+	},
 	plugins: [
 		'react-refresh',
 	],
@@ -24,10 +24,10 @@ module.exports = {
 		'plugin:storybook/recommended',
 	],
 	settings: {
-    react: {
-      version: 'detect'
-    },
-  },
+		react: {
+			version: 'detect'
+		},
+	},
 	ignorePatterns: [
 		'.eslintrc.cjs',
 		'dist/**/*',
