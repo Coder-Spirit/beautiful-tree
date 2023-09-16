@@ -20,7 +20,9 @@ technologies such as Vue.
 
 ## Packages in this repository:
 
+- [@beautiful-tree/algorithms](@beautiful-tree/algorithms/README.md)
 - [@beautiful-tree/react](@beautiful-tree/react/README.md)
+- [@beautiful-tree/types](@beautiful-tree/types/README.md)
 
 ## Community
 

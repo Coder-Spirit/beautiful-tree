@@ -15,7 +15,7 @@ Some of its hightlights:
 - Very lightweight (3.9Kb in its minimised ESM form, and 4.2Kb in its UMD form)
 - The generated trees can be styled with CSS
 
-## React Variant
+## Other members of the family
 
 This is the "React variant" of the BeautifulTree library. If you are looking
 for integration with other technologies such as Vue, check the
