@@ -85,6 +85,6 @@ export default defineConfig([
 			{ format: 'es', file: 'dist/beautiful-tree.d.mts' },
 		],
 		external,
-		plugins: [dts()],
+		plugins: [dts({ respectExternal: true })],
 	},
 ])

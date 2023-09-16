@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { edgesIterator, postOrderIterator } from '../traversal'
-import type { TreeWithLayout } from '../types'
+import type { TreeWithLayout } from '@beautiful-tree/types'
 
 describe('postOrderIterator', () => {
 	const testTree = {

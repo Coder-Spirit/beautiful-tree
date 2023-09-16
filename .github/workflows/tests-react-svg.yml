@@ -1,4 +1,4 @@
-name: Tests (React SVG)
+name: Tests
 
 on:
   push:
@@ -33,12 +33,23 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - name: Install dependencies
+
+    # @beautiful-tree/types
+    - name: (Types) Install dependencies
+      run: pnpm --filter types install
+    - name: (Types) Build Library
+      run: pnpm --filter types run build
+    - name: (Types) Run Linters
+      if: ${{ matrix.os == 'ubuntu-22.04' }}
+      run: pnpm --filter types run lint
+
+    # @beautiful-tree/react
+    - name: (React SVG) Install dependencies
       run: pnpm --filter react install
-    - name: Build Library
+    - name: (React SVG) Build Library
       run: pnpm --filter react run build
-    - name: Run Linters
+    - name: (React SVG) Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter react run lint
-    - name: Run Tests
+    - name: (React SVG) Run Tests
       run: pnpm --filter react run test:coverage

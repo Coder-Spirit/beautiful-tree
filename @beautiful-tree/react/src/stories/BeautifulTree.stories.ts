@@ -17,7 +17,7 @@ import {
 	wideTree_E,
 	wideTree_M,
 } from './treeFixtures'
-import type { Tree } from '../types'
+import type { Tree } from '@beautiful-tree/types'
 
 const meta = {
 	title: 'BeautifulTree',

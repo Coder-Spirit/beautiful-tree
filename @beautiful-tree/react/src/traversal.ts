@@ -1,4 +1,4 @@
-import type { Edge, Tree, TreeWithLayout } from './types'
+import type { Edge, Tree, TreeWithLayout } from '@beautiful-tree/types'
 
 export function* postOrderIterator<T extends Tree | TreeWithLayout = Tree>(
 	tree: Readonly<T>,

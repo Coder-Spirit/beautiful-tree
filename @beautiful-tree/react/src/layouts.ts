@@ -1,4 +1,4 @@
-import type { Tree, TreeChild, TreeWithLayout } from './types'
+import type { Tree, TreeChild, TreeWithLayout } from '@beautiful-tree/types'
 
 export interface WrappedTreeWithLayout {
 	readonly tree: Readonly<TreeWithLayout>

@@ -1,19 +1,10 @@
 {
-	"extends": "@coderspirit/eslint-config/tsconfig",
+	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"target": "es2020",
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-
-		"module": "ES2020",
-		"moduleResolution": "Bundler",
-
 		"jsx": "react-jsx",
 		"baseUrl": "./src",
-		"noEmit": true,
 	},
 	"exclude": [
-		".github/**/*",
-		".hooks/**/*",
 		"coverage/**/*",
 		"dist/**/*",
 		"node_modules/**/*",
