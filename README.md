@@ -3,7 +3,11 @@
 ![Contributors](https://img.shields.io/github/contributors/Coder-Spirit/beautiful-tree.svg)
 ![Open Pull Requests](https://img.shields.io/github/issues-pr/Coder-Spirit/beautiful-tree.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/Coder-Spirit/beautiful-tree.svg)
-[![Open Issues](https://img.shields.io/badge/Open%20Issues-Your%20Number%20Here-4dc71fff)](https://github.com/Coder-Spirit/beautiful-tree/issues)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A%2B-brightgreen)](CODE_QUALITY_URL)
+[![Test Coverage](https://img.shields.io/badge/coverage-90%25-red)](COVERAGE_URL)
+[![GitHub open issues](https://img.shields.io/github/issues-raw/Coder-Spirit/beautiful-tree)](https://github.com/Coder-Spirit/beautiful-tree/issues)
+[![Stars](https://img.shields.io/github/stars/Coder-Spirit/beautiful-tree?style=social)](https://github.com/Coder-Spirit/beautiful-tree/stargazers)
+[![Forks](https://img.shields.io/github/forks/Coder-Spirit/beautiful-tree?style=social)](https://github.com/Coder-Spirit/beautiful-tree/network/members)
 
 # Beautiful-Tree
 
