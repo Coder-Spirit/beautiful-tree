@@ -1,10 +1,12 @@
 {
   "name": "beautiful-tree",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "private": true,
   "author": "Andres Correa Casablanca <castarco@coderspirit.xyz>",
   "license": "MIT",
   "scripts": {
-    "install-githooks": "if [ -d .git ]; then git config core.hooksPath .hooks; fi"
+    "build": "pnpm -r run build",
+    "install-githooks": "if [ -d .git ]; then git config core.hooksPath .hooks; fi",
+    "test": "pnpm -r run test"
   }
 }
