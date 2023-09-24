@@ -2302,6 +2302,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -2321,6 +2322,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -2340,6 +2342,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -2359,6 +2362,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -2378,6 +2382,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -2397,6 +2402,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -2416,6 +2422,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -2435,6 +2442,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -2454,6 +2462,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -2473,6 +2482,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -2492,6 +2502,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -2597,6 +2608,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           48
         </div>
@@ -2616,6 +2628,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           49
         </div>
@@ -2635,6 +2648,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           45
         </div>
@@ -2654,6 +2668,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           43
         </div>
@@ -2673,6 +2688,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           46
         </div>
@@ -2692,6 +2708,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           50
         </div>
@@ -2711,6 +2728,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           51
         </div>
@@ -2730,6 +2748,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           47
         </div>
@@ -2749,6 +2768,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           44
         </div>
@@ -2768,6 +2788,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           52
         </div>
@@ -2787,6 +2808,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree A, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           42
         </div>
@@ -3397,6 +3419,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -3416,6 +3439,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -3435,6 +3459,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -3454,6 +3479,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -3473,6 +3499,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -3492,6 +3519,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -3511,6 +3539,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -3530,6 +3559,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -3549,6 +3579,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -3568,6 +3599,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -3587,6 +3619,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -3740,6 +3773,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -3759,6 +3793,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -3778,6 +3813,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -3797,6 +3833,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -3816,6 +3853,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -3835,6 +3873,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -3854,6 +3893,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -3873,6 +3913,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -3892,6 +3933,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -3911,6 +3953,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -3930,6 +3973,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -3949,6 +3993,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -3968,6 +4013,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -3987,6 +4033,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -4006,6 +4053,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -4025,6 +4073,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -4044,6 +4093,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -4063,6 +4113,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -4217,6 +4268,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           48
         </div>
@@ -4236,6 +4288,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           49
         </div>
@@ -4255,6 +4308,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           45
         </div>
@@ -4274,6 +4328,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           43
         </div>
@@ -4293,6 +4348,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           61
         </div>
@@ -4312,6 +4368,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           46
         </div>
@@ -4331,6 +4388,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           55
         </div>
@@ -4350,6 +4408,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           56
         </div>
@@ -4369,6 +4428,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           57
         </div>
@@ -4388,6 +4448,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           58
         </div>
@@ -4407,6 +4468,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           59
         </div>
@@ -4426,6 +4488,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           60
         </div>
@@ -4445,6 +4508,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           50
         </div>
@@ -4464,6 +4528,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           51
         </div>
@@ -4483,6 +4548,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           47
         </div>
@@ -4502,6 +4568,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           44
         </div>
@@ -4521,6 +4588,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           52
         </div>
@@ -4540,6 +4608,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree B, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           42
         </div>
@@ -5150,6 +5219,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -5169,6 +5239,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -5188,6 +5259,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -5207,6 +5279,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -5226,6 +5299,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -5245,6 +5319,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -5264,6 +5339,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -5283,6 +5359,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -5302,6 +5379,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -5321,6 +5399,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -5340,6 +5419,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -5493,6 +5573,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -5512,6 +5593,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -5531,6 +5613,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -5550,6 +5633,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -5569,6 +5653,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -5588,6 +5673,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -5607,6 +5693,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -5626,6 +5713,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -5645,6 +5733,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -5664,6 +5753,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -5683,6 +5773,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -5702,6 +5793,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -5721,6 +5813,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -5740,6 +5833,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -5759,6 +5853,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -5778,6 +5873,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -5797,6 +5893,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -5816,6 +5913,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -5969,6 +6067,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -5988,6 +6087,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -6007,6 +6107,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -6026,6 +6127,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -6045,6 +6147,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -6064,6 +6167,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -6083,6 +6187,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -6102,6 +6207,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -6121,6 +6227,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -6140,6 +6247,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -6159,6 +6267,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -6178,6 +6287,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -6197,6 +6307,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -6216,6 +6327,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -6235,6 +6347,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -6254,6 +6367,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -6273,6 +6387,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -6292,6 +6407,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -6446,6 +6562,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           52
         </div>
@@ -6465,6 +6582,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           51
         </div>
@@ -6484,6 +6602,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           50
         </div>
@@ -6503,6 +6622,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           60
         </div>
@@ -6522,6 +6642,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           59
         </div>
@@ -6541,6 +6662,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           58
         </div>
@@ -6560,6 +6682,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           57
         </div>
@@ -6579,6 +6702,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           56
         </div>
@@ -6598,6 +6722,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           55
         </div>
@@ -6617,6 +6742,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           47
         </div>
@@ -6636,6 +6762,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           46
         </div>
@@ -6655,6 +6782,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           44
         </div>
@@ -6674,6 +6802,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           61
         </div>
@@ -6693,6 +6822,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           49
         </div>
@@ -6712,6 +6842,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           48
         </div>
@@ -6731,6 +6862,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           45
         </div>
@@ -6750,6 +6882,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           43
         </div>
@@ -6769,6 +6902,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree Bm, with rect shape, n
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           42
         </div>
@@ -7379,6 +7513,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -7398,6 +7533,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -7417,6 +7553,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -7436,6 +7573,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -7455,6 +7593,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -7474,6 +7613,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -7493,6 +7633,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -7512,6 +7653,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -7531,6 +7673,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -7550,6 +7693,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -7569,6 +7713,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -7722,6 +7867,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -7741,6 +7887,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -7760,6 +7907,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -7779,6 +7927,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -7798,6 +7947,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -7817,6 +7967,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -7836,6 +7987,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -7855,6 +8007,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -7874,6 +8027,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -7893,6 +8047,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -7912,6 +8067,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -7931,6 +8087,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -7950,6 +8107,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -7969,6 +8127,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -7988,6 +8147,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -8007,6 +8167,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -8026,6 +8187,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -8045,6 +8207,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -8198,6 +8361,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -8217,6 +8381,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -8236,6 +8401,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -8255,6 +8421,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -8274,6 +8441,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -8293,6 +8461,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -8312,6 +8481,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -8331,6 +8501,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -8350,6 +8521,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -8369,6 +8541,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -8388,6 +8561,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -8407,6 +8581,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -8426,6 +8601,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -8445,6 +8621,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -8464,6 +8641,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -8483,6 +8661,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -8502,6 +8681,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -8521,6 +8701,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -8625,6 +8806,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -8644,6 +8826,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -8663,6 +8846,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -8682,6 +8866,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -8701,6 +8886,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -8720,6 +8906,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -8739,6 +8926,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -8758,6 +8946,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -8777,6 +8966,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -8796,6 +8986,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -8815,6 +9006,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -8920,6 +9112,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -3
         </div>
@@ -8939,6 +9132,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -1.5
         </div>
@@ -8958,6 +9152,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -2
         </div>
@@ -8977,6 +9172,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -0.5
         </div>
@@ -8996,6 +9192,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -1
         </div>
@@ -9015,6 +9212,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           0.5
         </div>
@@ -9034,6 +9232,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           1.5
         </div>
@@ -9053,6 +9252,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           3
         </div>
@@ -9072,6 +9272,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           2
         </div>
@@ -9091,6 +9292,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           1
         </div>
@@ -9110,6 +9312,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree C, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           0
         </div>
@@ -9720,6 +9923,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -9739,6 +9943,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -9758,6 +9963,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -9777,6 +9983,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -9796,6 +10003,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -9815,6 +10023,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -9834,6 +10043,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -9853,6 +10063,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -9872,6 +10083,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -9891,6 +10103,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -9910,6 +10123,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -10063,6 +10277,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -10082,6 +10297,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -10101,6 +10317,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -10120,6 +10337,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -10139,6 +10357,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -10158,6 +10377,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -10177,6 +10397,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -10196,6 +10417,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -10215,6 +10437,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -10234,6 +10457,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -10253,6 +10477,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -10272,6 +10497,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -10291,6 +10517,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -10310,6 +10537,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -10329,6 +10557,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -10348,6 +10577,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -10367,6 +10597,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -10386,6 +10617,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -10539,6 +10771,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -10558,6 +10791,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -10577,6 +10811,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -10596,6 +10831,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -10615,6 +10851,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -10634,6 +10871,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -10653,6 +10891,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -10672,6 +10911,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -10691,6 +10931,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -10710,6 +10951,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -10729,6 +10971,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -10748,6 +10991,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -10767,6 +11011,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -10786,6 +11031,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -10805,6 +11051,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -10824,6 +11071,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -10843,6 +11091,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -10862,6 +11111,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -10966,6 +11216,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -10985,6 +11236,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -11004,6 +11256,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -11023,6 +11276,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -11042,6 +11296,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -11061,6 +11316,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -11080,6 +11336,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -11099,6 +11356,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -11118,6 +11376,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -11137,6 +11396,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -11156,6 +11416,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -11288,6 +11549,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -4
           </div>
@@ -11307,6 +11569,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2.5
           </div>
@@ -11326,6 +11589,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -11345,6 +11609,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -11364,6 +11629,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -11383,6 +11649,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -11402,6 +11669,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -11421,6 +11689,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -11440,6 +11709,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -11459,6 +11729,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2.5
           </div>
@@ -11478,6 +11749,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             4
           </div>
@@ -11497,6 +11769,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -11516,6 +11789,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -11535,6 +11809,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -11554,6 +11829,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -11687,6 +11963,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -4
         </div>
@@ -11706,6 +11983,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -2.5
         </div>
@@ -11725,6 +12003,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -3
         </div>
@@ -11744,6 +12023,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -1.5
         </div>
@@ -11763,6 +12043,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -2
         </div>
@@ -11782,6 +12063,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -0.5
         </div>
@@ -11801,6 +12083,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           -1
         </div>
@@ -11820,6 +12103,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           0.5
         </div>
@@ -11839,6 +12123,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           1.5
         </div>
@@ -11858,6 +12143,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           2.5
         </div>
@@ -11877,6 +12163,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           4
         </div>
@@ -11896,6 +12183,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           3
         </div>
@@ -11915,6 +12203,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           2
         </div>
@@ -11934,6 +12223,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           1
         </div>
@@ -11953,6 +12243,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree D, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root even"
+          xmlns="http://www.w3.org/1999/xhtml"
         >
           0
         </div>
@@ -12563,6 +12854,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -12582,6 +12874,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -12601,6 +12894,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -12620,6 +12914,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -12639,6 +12934,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -12658,6 +12954,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -12677,6 +12974,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -12696,6 +12994,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -12715,6 +13014,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -12734,6 +13034,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -12753,6 +13054,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -12906,6 +13208,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -12925,6 +13228,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -12944,6 +13248,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -12963,6 +13268,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -12982,6 +13288,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -13001,6 +13308,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -13020,6 +13328,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -13039,6 +13348,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -13058,6 +13368,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -13077,6 +13388,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -13096,6 +13408,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -13115,6 +13428,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -13134,6 +13448,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -13153,6 +13468,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -13172,6 +13488,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -13191,6 +13508,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -13210,6 +13528,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -13229,6 +13548,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -13382,6 +13702,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -13401,6 +13722,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -13420,6 +13742,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -13439,6 +13762,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -13458,6 +13782,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -13477,6 +13802,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -13496,6 +13822,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -13515,6 +13842,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -13534,6 +13862,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -13553,6 +13882,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -13572,6 +13902,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -13591,6 +13922,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -13610,6 +13942,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -13629,6 +13962,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -13648,6 +13982,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -13667,6 +14002,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -13686,6 +14022,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -13705,6 +14042,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -13809,6 +14147,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -13828,6 +14167,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -13847,6 +14187,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -13866,6 +14207,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -13885,6 +14227,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -13904,6 +14247,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -13923,6 +14267,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -13942,6 +14287,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -13961,6 +14307,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -13980,6 +14327,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -13999,6 +14347,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -14131,6 +14480,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -4
           </div>
@@ -14150,6 +14500,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2.5
           </div>
@@ -14169,6 +14520,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -14188,6 +14540,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -14207,6 +14560,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -14226,6 +14580,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -14245,6 +14600,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -14264,6 +14620,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -14283,6 +14640,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -14302,6 +14660,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2.5
           </div>
@@ -14321,6 +14680,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             4
           </div>
@@ -14340,6 +14700,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -14359,6 +14720,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -14378,6 +14740,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -14397,6 +14760,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -14536,6 +14900,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14553,6 +14918,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14570,6 +14936,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14587,6 +14954,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14604,6 +14972,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14621,6 +14990,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14638,6 +15008,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14655,6 +15026,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14672,6 +15044,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14689,6 +15062,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14706,6 +15080,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14723,6 +15098,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14740,6 +15116,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14757,6 +15134,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14774,6 +15152,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -14791,6 +15170,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
       </svg>
@@ -14929,6 +15309,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -14946,6 +15327,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -14963,6 +15345,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -14980,6 +15363,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -14997,6 +15381,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15014,6 +15399,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15031,6 +15417,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15048,6 +15435,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15065,6 +15453,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15082,6 +15471,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15099,6 +15489,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15116,6 +15507,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15133,6 +15525,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15150,6 +15543,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15167,6 +15561,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -15184,6 +15579,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree E, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
     </svg>
@@ -15792,6 +16188,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -15811,6 +16208,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -15830,6 +16228,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -15849,6 +16248,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -15868,6 +16268,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -15887,6 +16288,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -15906,6 +16308,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -15925,6 +16328,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -15944,6 +16348,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -15963,6 +16368,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -15982,6 +16388,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -16135,6 +16542,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -16154,6 +16562,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -16173,6 +16582,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -16192,6 +16602,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -16211,6 +16622,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -16230,6 +16642,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -16249,6 +16662,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -16268,6 +16682,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -16287,6 +16702,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -16306,6 +16722,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -16325,6 +16742,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -16344,6 +16762,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -16363,6 +16782,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -16382,6 +16802,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -16401,6 +16822,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -16420,6 +16842,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -16439,6 +16862,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -16458,6 +16882,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -16611,6 +17036,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             52
           </div>
@@ -16630,6 +17056,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             51
           </div>
@@ -16649,6 +17076,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             50
           </div>
@@ -16668,6 +17096,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             60
           </div>
@@ -16687,6 +17116,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             59
           </div>
@@ -16706,6 +17136,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             58
           </div>
@@ -16725,6 +17156,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             57
           </div>
@@ -16744,6 +17176,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             56
           </div>
@@ -16763,6 +17196,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             55
           </div>
@@ -16782,6 +17216,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             47
           </div>
@@ -16801,6 +17236,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             46
           </div>
@@ -16820,6 +17256,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             44
           </div>
@@ -16839,6 +17276,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             61
           </div>
@@ -16858,6 +17296,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             49
           </div>
@@ -16877,6 +17316,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             48
           </div>
@@ -16896,6 +17336,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             45
           </div>
@@ -16915,6 +17356,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             43
           </div>
@@ -16934,6 +17376,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             42
           </div>
@@ -17038,6 +17481,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -17057,6 +17501,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -17076,6 +17521,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -17095,6 +17541,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -17114,6 +17561,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -17133,6 +17581,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -17152,6 +17601,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -17171,6 +17621,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -17190,6 +17641,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -17209,6 +17661,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -17228,6 +17681,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -17360,6 +17814,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -4
           </div>
@@ -17379,6 +17834,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2.5
           </div>
@@ -17398,6 +17854,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -3
           </div>
@@ -17417,6 +17874,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1.5
           </div>
@@ -17436,6 +17894,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -2
           </div>
@@ -17455,6 +17914,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -0.5
           </div>
@@ -17474,6 +17934,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             -1
           </div>
@@ -17493,6 +17954,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0.5
           </div>
@@ -17512,6 +17974,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1.5
           </div>
@@ -17531,6 +17994,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2.5
           </div>
@@ -17550,6 +18014,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             4
           </div>
@@ -17569,6 +18034,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             3
           </div>
@@ -17588,6 +18054,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             2
           </div>
@@ -17607,6 +18074,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             1
           </div>
@@ -17626,6 +18094,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root even"
+            xmlns="http://www.w3.org/1999/xhtml"
           >
             0
           </div>
@@ -17765,6 +18234,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17782,6 +18252,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17799,6 +18270,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17816,6 +18288,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17833,6 +18306,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17850,6 +18324,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17867,6 +18342,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17884,6 +18360,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17901,6 +18378,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17918,6 +18396,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17935,6 +18414,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17952,6 +18432,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17969,6 +18450,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -17986,6 +18468,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18003,6 +18486,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18020,6 +18504,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
       </svg>
@@ -18192,6 +18677,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18209,6 +18695,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18226,6 +18713,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18243,6 +18731,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18260,6 +18749,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18277,6 +18767,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18294,6 +18785,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18311,6 +18803,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18328,6 +18821,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18345,6 +18839,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18362,6 +18857,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18379,6 +18875,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18396,6 +18893,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18413,6 +18911,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18430,6 +18929,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18447,6 +18947,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18464,6 +18965,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18481,6 +18983,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18498,6 +19001,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18515,6 +19019,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
         <rect
@@ -18532,6 +19037,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
         >
           <div
             class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
           />
         </foreignobject>
       </svg>
@@ -18705,6 +19211,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18722,6 +19229,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18739,6 +19247,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18756,6 +19265,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18773,6 +19283,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18790,6 +19301,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18807,6 +19319,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18824,6 +19337,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18841,6 +19355,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18858,6 +19373,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18875,6 +19391,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18892,6 +19409,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18909,6 +19427,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18926,6 +19445,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18943,6 +19463,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18960,6 +19481,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18977,6 +19499,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -18994,6 +19517,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -19011,6 +19535,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -19028,6 +19553,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
       <rect
@@ -19045,6 +19571,7 @@ exports[`BeautifulTree : Smart Layout > renders wide tree M, with rect shape, no
       >
         <div
           class="beautiful-tree-node-content beautiful-tree-root"
+          xmlns="http://www.w3.org/1999/xhtml"
         />
       </foreignobject>
     </svg>
