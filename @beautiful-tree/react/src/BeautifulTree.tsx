@@ -42,6 +42,13 @@ export interface BeautifulTreeProps {
 	readonly getEdgeClass?: CssClassesGetter | undefined
 }
 
+declare module 'react' {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	interface HTMLAttributes<T> {
+		xmlns?: string
+	}
+}
+
 function runClassesGetter(
 	classesGetter?: CssClassesGetter | undefined,
 	data?: Readonly<Record<string, unknown>> | undefined,
@@ -152,6 +159,7 @@ export function BeautifulTree({
 								<div
 									key={`${id}-node-div-${idx}`}
 									className={`beautiful-tree-node-content${_nodeClass}`}
+									xmlns="http://www.w3.org/1999/xhtml"
 								>
 									{getNodeContent(node.data)}
 								</div>
