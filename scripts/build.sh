@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e # Halts when a command fails
 set -u # Halts when using undefined variables

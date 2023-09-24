@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "../../scripts/build.sh types",
+    "build:ci": "rollup --config rollup.config.prod.mjs",
     "lint": "tsc && eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0 && publint",
     "lint:eslint": "eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:publint": "publint",

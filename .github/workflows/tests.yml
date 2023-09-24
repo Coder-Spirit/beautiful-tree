@@ -38,7 +38,7 @@ jobs:
     - name: (Types) Install dependencies
       run: pnpm --filter types install
     - name: (Types) Build Library
-      run: pnpm --filter types run build
+      run: pnpm --filter types run build:ci
     - name: (Types) Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter types run lint
@@ -47,7 +47,7 @@ jobs:
     - name: (Algorithms) Install dependencies
       run: pnpm --filter algorithms install
     - name: (Algorithms) Build Library
-      run: pnpm --filter algorithms run build
+      run: pnpm --filter algorithms run build:ci
     - name: (Algorithms) Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter algorithms run lint
@@ -58,7 +58,7 @@ jobs:
     - name: (React SVG) Install dependencies
       run: pnpm --filter react install
     - name: (React SVG) Build Library
-      run: pnpm --filter react run build
+      run: pnpm --filter react run build:ci
     - name: (React SVG) Run Linters
       if: ${{ matrix.os == 'ubuntu-22.04' }}
       run: pnpm --filter react run lint
