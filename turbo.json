@@ -7,7 +7,8 @@
 			"dependsOn": [
 				"@beautiful-tree/types#build",
 				"^build"
-			]
+			],
+			"outputs": ["dist/**"]
 		},
 		"@beautiful-tree/algorithms#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
@@ -44,7 +45,8 @@
 				"@beautiful-tree/types#build",
 				"@beautiful-tree/algorithms#build",
 				"^build"
-			]
+			],
+			"outputs": ["dist/**"]
 		},
 		"@beautiful-tree/react#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
@@ -82,7 +84,8 @@
 			"inputs": ["src/**", "package.json", "rollup.config.prod.mjs", "tsconfig.json"],
 			"dependsOn": [
 				"^build"
-			]
+			],
+			"outputs": ["dist/**"]
 		},
 		"@beautiful-tree/types#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
