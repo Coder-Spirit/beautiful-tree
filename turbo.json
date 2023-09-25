@@ -124,8 +124,7 @@
 		},
 		"lint:eslint": {
 			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
-			"dependsOn": ["^lint:eslint"],
-			"outputs": [".eslintcache"]
+			"dependsOn": ["^lint:eslint"]
 		},
     "lint:publint": {
 			"dependsOn": [
