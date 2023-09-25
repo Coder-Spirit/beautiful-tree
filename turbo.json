@@ -1,0 +1,32 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"all": {
+			"dependsOn": ["build", "lint", "test:coverage"]
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
+		},
+		"lint": {
+			"dependsOn": ["lint:eslint", "lint:publint", "lint:tsc"]
+		},
+		"lint:eslint": {
+			"dependsOn": ["^lint:eslint"],
+			"outputs": [".eslintcache"]
+		},
+    "lint:publint": {
+			"dependsOn": ["build", "^lint:publint"]
+		},
+    "lint:tsc": {
+			"dependsOn": ["^lint:tsc"]
+		},
+		"test": {
+			"dependsOn": ["^test"]
+		},
+		"test:coverage": {
+			"dependsOn": ["^test:coverage"],
+			"outputs": ["coverage/**"]
+		}
+	}
+}

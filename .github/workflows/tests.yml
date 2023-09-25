@@ -37,28 +37,37 @@ jobs:
     # All
     - name: (All) Install dependencies
       run: pnpm install
+    - name: (All) Cache # v3.3.2
+      uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
+      with:
+        path: |
+          ./@beautiful-tree/*/.eslintcache
+          ./@beautiful-tree/*/.turbo
+        key: cache-${{ matrix.node-version }}-${{ matrix.os }}
+    - name: (All) Run All Tasks
+      run: pnpm turbo all
 
-    # @beautiful-tree/types
-    - name: (Types) Build Library
-      run: pnpm --filter types run build:ci
-    - name: (Types) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter types run lint
+    # # @beautiful-tree/types
+    # - name: (Types) Build Library
+    #   run: pnpm --filter types run build
+    # - name: (Types) Run Linters
+    #   if: ${{ matrix.os == 'ubuntu-22.04' }}
+    #   run: pnpm --filter types run lint
 
-    # @beautiful-tree/algorithms
-    - name: (Algorithms) Build Library
-      run: pnpm --filter algorithms run build:ci
-    - name: (Algorithms) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter algorithms run lint
-    - name: (Algorithms) Run Tests
-      run: pnpm --filter algorithms run test:coverage
+    # # @beautiful-tree/algorithms
+    # - name: (Algorithms) Build Library
+    #   run: pnpm --filter algorithms run build
+    # - name: (Algorithms) Run Linters
+    #   if: ${{ matrix.os == 'ubuntu-22.04' }}
+    #   run: pnpm --filter algorithms run lint
+    # - name: (Algorithms) Run Tests
+    #   run: pnpm --filter algorithms run test:coverage
 
-    # @beautiful-tree/react
-    - name: (React SVG) Build Library
-      run: pnpm --filter react run build:ci
-    - name: (React SVG) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter react run lint
-    - name: (React SVG) Run Tests
-      run: pnpm --filter react run test:coverage
+    # # @beautiful-tree/react
+    # - name: (React SVG) Build Library
+    #   run: pnpm --filter react run build
+    # - name: (React SVG) Run Linters
+    #   if: ${{ matrix.os == 'ubuntu-22.04' }}
+    #   run: pnpm --filter react run lint
+    # - name: (React SVG) Run Tests
+    #   run: pnpm --filter react run test:coverage
