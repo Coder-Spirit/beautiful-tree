@@ -10,6 +10,13 @@
 			],
 			"outputs": ["dist/**"]
 		},
+		"@beautiful-tree/algorithms#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^lint:eslint"
+			]
+		},
 		"@beautiful-tree/algorithms#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
 			"dependsOn": [
@@ -47,6 +54,14 @@
 				"^build"
 			],
 			"outputs": ["dist/**"]
+		},
+		"@beautiful-tree/react#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^lint:eslint"
+			]
 		},
 		"@beautiful-tree/react#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
@@ -87,6 +102,10 @@
 			],
 			"outputs": ["dist/**"]
 		},
+		"@beautiful-tree/types#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": ["^lint:eslint"]
+		},
 		"@beautiful-tree/types#lint:publint": {
 			"inputs": ["dist/**", "package.json"],
 			"dependsOn": [
@@ -126,8 +145,11 @@
 			]
 		},
 		"lint:eslint": {
-			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
-			"dependsOn": ["^lint:eslint"]
+			"dependsOn": [
+				"@beautiful-tree/types#lint:eslint",
+				"@beautiful-tree/algorithms#lint:eslint",
+				"@beautiful-tree/react#lint:eslint"
+			]
 		},
     "lint:publint": {
 			"dependsOn": [
