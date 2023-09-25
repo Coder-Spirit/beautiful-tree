@@ -8,3 +8,4 @@ storybook-static/
 
 # Lockfiles
 pnpm-lock.yaml
+.turbo
