@@ -40,6 +40,6 @@ jobs:
 
     # All
     - name: (All) Install dependencies
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
     - name: (All) Run All Tasks
       run: pnpm turbo all
