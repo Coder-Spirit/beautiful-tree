@@ -34,9 +34,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
+    # All
+    - name: (All) Install dependencies
+      run: pnpm install
+
     # @beautiful-tree/types
-    - name: (Types) Install dependencies
-      run: pnpm --filter types install
     - name: (Types) Build Library
       run: pnpm --filter types run build:ci
     - name: (Types) Run Linters
@@ -44,8 +46,6 @@ jobs:
       run: pnpm --filter types run lint
 
     # @beautiful-tree/algorithms
-    - name: (Algorithms) Install dependencies
-      run: pnpm --filter algorithms install
     - name: (Algorithms) Build Library
       run: pnpm --filter algorithms run build:ci
     - name: (Algorithms) Run Linters
@@ -55,8 +55,6 @@ jobs:
       run: pnpm --filter algorithms run test:coverage
 
     # @beautiful-tree/react
-    - name: (React SVG) Install dependencies
-      run: pnpm --filter react install
     - name: (React SVG) Build Library
       run: pnpm --filter react run build:ci
     - name: (React SVG) Run Linters
