@@ -22,9 +22,7 @@ contact@coderspirit.xyz.
 
 ## Tooling
 
-1. If you are developing from a Macos system, it is advisable to install the
-   `findutils` package via `brew` (or your package manager of choice).
-2. To save time in CI and have more immediate feedback, it is a good idea to
+1. To save time in CI and have more immediate feedback, it is a good idea to
    enable the Git hooks with the command:
    ```bash
    pnpm install-githooks
