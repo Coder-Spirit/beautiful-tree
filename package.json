@@ -8,5 +8,8 @@
     "build": "pnpm -r run build",
     "install-githooks": "if [ -d .git ]; then git config core.hooksPath .hooks; fi",
     "test": "pnpm -r run test"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.14"
   }
 }

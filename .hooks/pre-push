@@ -3,5 +3,4 @@
 set -eu
 set -o pipefail
 
-pnpm run -r lint
-pnpm run -r test:coverage
+pnpm turbo all

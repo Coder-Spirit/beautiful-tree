@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-pnpm run -r lint
+pnpm turbo lint

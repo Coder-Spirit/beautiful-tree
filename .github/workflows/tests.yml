@@ -21,46 +21,25 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Install PNPM
-      uses: pnpm/action-setup@v2
+    - name: Checkout repository # v4.0.0
+      uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac
+    - name: Install PNPM # v2.4.0
+      uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598
       with:
         version: 8
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Use Node.js ${{ matrix.node-version }} # v3.8.1
+      uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
-    # @beautiful-tree/types
-    - name: (Types) Install dependencies
-      run: pnpm --filter types install
-    - name: (Types) Build Library
-      run: pnpm --filter types run build:ci
-    - name: (Types) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter types run lint
-
-    # @beautiful-tree/algorithms
-    - name: (Algorithms) Install dependencies
-      run: pnpm --filter algorithms install
-    - name: (Algorithms) Build Library
-      run: pnpm --filter algorithms run build:ci
-    - name: (Algorithms) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter algorithms run lint
-    - name: (Algorithms) Run Tests
-      run: pnpm --filter algorithms run test:coverage
-
-    # @beautiful-tree/react
-    - name: (React SVG) Install dependencies
-      run: pnpm --filter react install
-    - name: (React SVG) Build Library
-      run: pnpm --filter react run build:ci
-    - name: (React SVG) Run Linters
-      if: ${{ matrix.os == 'ubuntu-22.04' }}
-      run: pnpm --filter react run lint
-    - name: (React SVG) Run Tests
-      run: pnpm --filter react run test:coverage
+    # All
+    - name: (All) Install dependencies
+      run: pnpm install --frozen-lockfile
+    - name: (All) Run All Tasks
+      run: pnpm turbo all

@@ -1,0 +1,183 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["tsconfig.json"],
+	"pipeline": {
+		"@beautiful-tree/algorithms#build": {
+			"inputs": ["src/**", "package.json", "rollup.config.prod.mjs", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^build"
+			],
+			"outputs": ["dist/**"]
+		},
+		"@beautiful-tree/algorithms#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^lint:eslint"
+			]
+		},
+		"@beautiful-tree/algorithms#lint:publint": {
+			"inputs": ["dist/**", "package.json"],
+			"dependsOn": [
+				"@beautiful-tree/algorithms#build",
+				"^lint:publint"
+			]
+		},
+		"@beautiful-tree/algorithms#lint:tsc": {
+			"inputs": ["src/**", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^lint:tsc"
+			]
+		},
+		"@beautiful-tree/algorithms#test": {
+			"inputs": ["src/**", "package.json", "tsconfig.json", "vitest.config.mts"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^test"
+			]
+		},
+		"@beautiful-tree/algorithms#test:coverage": {
+			"inputs": ["src/**", "package.json", "tsconfig.json", "vitest.config.mts"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^test:coverage"
+			],
+			"outputs": ["coverage/**"]
+		},
+		"@beautiful-tree/react#build": {
+			"inputs": ["src/**", "package.json", "rollup.config.prod.mjs", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^build"
+			],
+			"outputs": ["dist/**"]
+		},
+		"@beautiful-tree/react#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^lint:eslint"
+			]
+		},
+		"@beautiful-tree/react#lint:publint": {
+			"inputs": ["dist/**", "package.json"],
+			"dependsOn": [
+				"@beautiful-tree/react#build",
+				"^lint:publint"
+			]
+		},
+		"@beautiful-tree/react#lint:tsc": {
+			"inputs": ["src/**", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^lint:tsc"
+			]
+		},
+		"@beautiful-tree/react#test": {
+			"inputs": ["src/**", "package.json", "tsconfig.json", "vitest.config.mts"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^test"
+			]
+		},
+		"@beautiful-tree/react#test:coverage": {
+			"inputs": ["src/**", "package.json", "tsconfig.json", "vitest.config.mts"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"^test:coverage"
+			],
+			"outputs": ["coverage/**"]
+		},
+		"@beautiful-tree/types#build": {
+			"inputs": ["src/**", "package.json", "rollup.config.prod.mjs", "tsconfig.json"],
+			"dependsOn": [
+				"^build"
+			],
+			"outputs": ["dist/**"]
+		},
+		"@beautiful-tree/types#lint:eslint": {
+			"inputs": ["src/**", ".eslintrc.js", ".prettierrc.mjs", "package.json", "tsconfig.json"],
+			"dependsOn": ["^lint:eslint"]
+		},
+		"@beautiful-tree/types#lint:publint": {
+			"inputs": ["dist/**", "package.json"],
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"^lint:publint"
+			]
+		},
+		"@beautiful-tree/types#lint:tsc": {
+			"inputs": ["src/**", "package.json", "tsconfig.json"],
+			"dependsOn": [
+				"^lint:tsc"
+			]
+		},
+		"@beautiful-tree/types#test": {
+			"inputs": ["package.json"],
+			"dependsOn": ["^test"]
+		},
+		"@beautiful-tree/types#test:coverage": {
+			"inputs": ["package.json"],
+			"dependsOn": ["^test:coverage"]
+		},
+		"all": {
+			"dependsOn": ["build", "lint", "test:coverage"]
+		},
+		"build": {
+			"dependsOn": [
+				"@beautiful-tree/types#build",
+				"@beautiful-tree/algorithms#build",
+				"@beautiful-tree/react#build"
+			]
+		},
+		"lint": {
+			"dependsOn": [
+				"lint:eslint",
+				"lint:publint",
+				"lint:tsc"
+			]
+		},
+		"lint:eslint": {
+			"dependsOn": [
+				"@beautiful-tree/types#lint:eslint",
+				"@beautiful-tree/algorithms#lint:eslint",
+				"@beautiful-tree/react#lint:eslint"
+			]
+		},
+    "lint:publint": {
+			"dependsOn": [
+				"@beautiful-tree/types#lint:publint",
+				"@beautiful-tree/algorithms#lint:publint",
+				"@beautiful-tree/react#lint:publint"
+			]
+		},
+		"lint:tsc": {
+			"dependsOn": [
+				"@beautiful-tree/types#lint:tsc",
+				"@beautiful-tree/algorithms#lint:tsc",
+				"@beautiful-tree/react#lint:tsc"
+			]
+		},
+		"test": {
+			"dependsOn": [
+				"@beautiful-tree/types#test",
+				"@beautiful-tree/algorithms#test",
+				"@beautiful-tree/react#test"
+			]
+		},
+		"test:coverage": {
+			"dependsOn": [
+				"@beautiful-tree/types#test:coverage",
+				"@beautiful-tree/algorithms#test:coverage",
+				"@beautiful-tree/react#test:coverage"
+			]
+		}
+	}
+}

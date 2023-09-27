@@ -37,10 +37,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "../../scripts/build.sh algorithms",
-    "build:ci": "rollup --config rollup.config.prod.mjs",
+    "build": "rollup --config rollup.config.prod.mjs",
     "build-storybook": "storybook build",
-    "lint": "tsc && eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0 && publint",
     "lint:eslint": "eslint . --ext ts,mts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:publint": "publint",
     "lint:tsc": "tsc",
