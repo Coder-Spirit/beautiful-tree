@@ -20,9 +20,20 @@ contact@coderspirit.xyz.
   - Backwards compatibility is almost sacred, please try to preserve it.
   - Try to respect the current coding style, to avoid style inconsistencies.
 
-## Tooling
+## Tooling & Workflow
 
-1. To save time in CI and have more immediate feedback, it is a good idea to
+1. We rely on [PNPM](https://pnpm.io/) to manage our dependencies and projects
+   inside the workspace.
+   - Remember to always run `pnpm install` before starting to work on any
+     project of the repository.
+2. We rely on [Turborepo](https://turbo.build/repo) to manage the dependencies
+   accross different projects of the monorepo.
+   - Use `pnpm turbo build` to build all the projects.
+   - Use `pnpm turbo lint` to run all the linters.
+   - Use `pnpm turbo test` to run all the tests.
+   - Feel free to explore the `turbo.json` file to learn more about the
+     available commands and relations between projects.
+3. To save time in CI and have more immediate feedback, it is a good idea to
    enable the Git hooks with the command:
    ```bash
    pnpm install-githooks

@@ -31,6 +31,7 @@ technologies such as Vue.
   [discussions section](https://github.com/Coder-Spirit/beautiful-tree/discussions).
 - For more unstructured and "real time" conversations, we have a
   [Discord space](https://discord.gg/3a8RSRdEv2).
+- [How to Contribute](CONTRIBUTING.md)
 
 ## Related articles
 

@@ -38,50 +38,61 @@ pnpm add @beautiful-tree/react
 ## Basic Usage
 
 ```jsx
+import { createRoot } from 'react-dom/client'
 import { BeautifulTree } from '@beautiful-tree/react'
 
 const tree = {
-	data: { v: 'A' },
-	children: [
-		{
-			node: {
-				/* node data can contain any kews we want */
-				data: { v: 'B' },
-				children: [
-					{
-						/* we can annotate edges with arbitrary metadata */
-						eData: { e: 0.5 },
-						node: { data: { v: 'C' } }
-					},
-				],
-			},
-		},
-		{
-			node: {
-				data: { v: 'D' },
-				children: [
-					{ node: { data: { v: 'E' } } },
-					{ node: { data: { v: 'F' } } },
-				],
-			},
-		},
-	],
+  data: { v: 'A' },
+  children: [
+    {
+      node: {
+        /* node data can contain any kews we want */
+        data: { v: 'B' },
+        children: [
+          {
+            /* we can annotate edges with arbitrary metadata */
+            eData: { e: 0.5 },
+            node: { data: { v: 'C' } }
+          },
+        ],
+      },
+    },
+    {
+      node: {
+        data: { v: 'D' },
+        children: [
+          { node: { data: { v: 'E' } } },
+          { node: { data: { v: 'F' } } },
+        ],
+      },
+    },
+  ],
 }
+
+const domNode = document.getElementById('root');
+
+// See https://react.dev/reference/react-dom/client/createRoot
+const root = createRoot(domNode);
 
 // The 3 main properties that we must always set are:
 // - `id`: the id for the tree component
 // - `tree:`` the tree data structure that will be rendered
 // - `svgProps``: the proportions of the SVG "canvas".
-render(
-	<BeautifulTree
-			id={'my-tree'}
-			tree={tree}
-			svgProps={{
-					width: 400,
-					height: 400,
-					// sizeUnit?: '%' | 'em' | 'px' | 'rem'
-			}}
-	/>
+root.render(
+  <BeautifulTree
+      id={'my-tree'}
+      tree={tree}
+      svgProps={{
+          width: 400,
+          height: 400,
+          // sizeUnit?: '%' | 'em' | 'px' | 'rem'
+      }}
+
+      // Optional:
+      // In case we want to show anything inside the tree nodes, we need to
+      // pass a lambda.
+      getNodeContent={(data) => data?.['v']?.toString() ?? ''}
+  />
 )
 ```
 
