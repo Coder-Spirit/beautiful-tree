@@ -4,11 +4,15 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.{css,js,cjs,mjs,json,ts,cjs,mts,jsx,tsx,md,sh}]
+[*.{css,js,cjs,mjs,json,ts,cjs,mts,jsx,tsx,sh}]
 charset = utf-8
 indent_style = tab
 indent_size = 2
 trim_trailing_whitespace = true
+
+[*.md]
+indent_style = space
+indent_size = 2
 
 [package.json]
 indent_style = space
