@@ -23,6 +23,8 @@ export type NodeContentGetter = (
 	data?: Readonly<Record<string, unknown>> | undefined,
 ) => JSX.Element | string
 
+type Orientation = 'D-T' | 'L-R' | 'R-L' | 'T-D'
+
 export interface BeautifulTreeProps {
 	readonly id: string
 	readonly svgProps: {
@@ -33,6 +35,7 @@ export interface BeautifulTreeProps {
 	readonly nodeShape?: 'circle' | 'rect'
 	readonly hCoef?: number
 	readonly tree: Tree
+	readonly orientation?: Orientation
 	readonly computeLayout?:
 		| ((tree: Readonly<Tree>) => Readonly<WrappedTreeWithLayout>)
 		| undefined
@@ -57,12 +60,31 @@ function runClassesGetter(
 	return cssClasses.length === 0 ? '' : ` ${cssClasses.join(' ')}`
 }
 
+function calculateTransformation(orientation: Orientation): string {
+	switch (orientation) {
+		case 'D-T': {
+			return 'rotate(180)'
+		}
+		case 'L-R': {
+			return 'rotate(-90)'
+		}
+		case 'R-L': {
+			return 'rotate(90)'
+		}
+		case 'T-D': {
+			//default
+			return ''
+		}
+	}
+}
+
 export function BeautifulTree({
 	id,
 	svgProps,
 	nodeShape,
 	hCoef = 1,
 	tree,
+	orientation = 'T-D',
 	computeLayout,
 	getNodeClass,
 	getNodeShape,
@@ -81,6 +103,8 @@ export function BeautifulTree({
 	const widthCenterShift = maxNodeWidth * 0.5
 	const heightCenterShift = maxNodeHeight * 0.5
 	const maxNodeRadius = maxNodeHeight * 0.5
+	const transformValue = calculateTransformation(orientation)
+	const transform = { ...(transformValue && { transform: transformValue }) }
 
 	return (
 		<svg
@@ -92,6 +116,7 @@ export function BeautifulTree({
 				height: `${height}${sizeUnit}`,
 			}}
 			className={'beautiful-tree-react'}
+			{...transform}
 		>
 			<style>
 				{`line{stroke:black;}

@@ -211,3 +211,63 @@ export const Centered3_Wide_Tree_Random: Story = {
 		getEdgeClass: getCssFromEdgeData,
 	},
 }
+
+export const Normal_Orientation_Small_Tree: Story = {
+	args: {
+		id: 'normal_orientation_small_tree',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: smallTree,
+		orientation: 'T-D',
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const LR_Orientation_Wide_Tree_A: Story = {
+	args: {
+		id: 'lr_orientation_wide_tree_a',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: wideTree_A,
+		orientation: 'L-R',
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const RL_Orientation_Wide_Tree_Bm: Story = {
+	args: {
+		id: 'rl_orientation_wide_tree_bm',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: wideTree_Bm,
+		orientation: 'R-L',
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const DT_Orientation_Wide_Tree_D: Story = {
+	args: {
+		id: 'dt_orientation_wide_tree_d',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: wideTree_D,
+		orientation: 'D-T',
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}

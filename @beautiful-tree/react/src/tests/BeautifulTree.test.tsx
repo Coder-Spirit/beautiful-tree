@@ -225,4 +225,72 @@ describe('BeautifulTree : Smart Layout', () => {
 
 		expect(rendered).toMatchSnapshot()
 	})
+
+	it('renders small tree, with T-D orientation', () => {
+		const rendered = render(
+			<BeautifulTree
+				id="smart-small-tree"
+				svgProps={{
+					width: 400,
+					height: 400,
+				}}
+				tree={smallTree}
+				orientation="T-D"
+				computeLayout={computeSmartLayout}
+			/>,
+		)
+
+		expect(rendered).toMatchSnapshot()
+	})
+
+	it('renders small tree, with L-R orientation', () => {
+		const rendered = render(
+			<BeautifulTree
+				id="smart-small-tree"
+				svgProps={{
+					width: 400,
+					height: 400,
+				}}
+				tree={smallTree}
+				orientation="L-R"
+				computeLayout={computeSmartLayout}
+			/>,
+		)
+
+		expect(rendered).toMatchSnapshot()
+	})
+
+	it('renders small tree, with R-L orientation', () => {
+		const rendered = render(
+			<BeautifulTree
+				id="smart-small-tree"
+				svgProps={{
+					width: 400,
+					height: 400,
+				}}
+				tree={smallTree}
+				orientation="R-L"
+				computeLayout={computeSmartLayout}
+			/>,
+		)
+
+		expect(rendered).toMatchSnapshot()
+	})
+
+	it('renders small tree, with D-T orientation', () => {
+		const rendered = render(
+			<BeautifulTree
+				id="smart-small-tree"
+				svgProps={{
+					width: 400,
+					height: 400,
+				}}
+				tree={smallTree}
+				orientation="D-T"
+				computeLayout={computeSmartLayout}
+			/>,
+		)
+
+		expect(rendered).toMatchSnapshot()
+	})
 })
