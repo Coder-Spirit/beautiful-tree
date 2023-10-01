@@ -49,7 +49,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.10.2",
+    "@arethetypeswrong/cli": "^0.11.0",
     "@beautiful-tree/algorithms": "workspace:*",
     "@beautiful-tree/types": "workspace:*",
     "@coderspirit/eslint-config": "^1.3.0",
