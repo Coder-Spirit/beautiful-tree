@@ -5334,7 +5334,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(90)"
+        transform="rotate(-90) scale(-1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -5421,7 +5421,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(180)"
+        transform="rotate(180) scale(-1, 1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -5509,7 +5509,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
       class="beautiful-tree-react"
       id="smart-small-tree"
       style="width: 400px; height: 400px;"
-      transform="rotate(180)"
+      transform="rotate(180) scale(-1, 1)"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -12946,7 +12946,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(90)"
+        transform="rotate(-90) scale(-1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -13034,7 +13034,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
       class="beautiful-tree-react"
       id="smart-small-tree"
       style="width: 400px; height: 400px;"
-      transform="rotate(90)"
+      transform="rotate(-90) scale(-1)"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
     >
