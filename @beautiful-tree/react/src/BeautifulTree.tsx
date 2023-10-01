@@ -60,20 +60,20 @@ function runClassesGetter(
 	return cssClasses.length === 0 ? '' : ` ${cssClasses.join(' ')}`
 }
 
-function calculateTransformation(orientation: Orientation): string {
+function calculateTransformation(orientation: Orientation): [string, string] {
 	switch (orientation) {
 		case 'D-T': {
-			return 'rotate(180)'
+			return ['rotate(180) scale(-1, 1)', 'scale(-1, 1) rotate(180deg)']
 		}
 		case 'L-R': {
-			return 'rotate(-90)'
+			return ['rotate(-90)', 'rotate(90deg)']
 		}
 		case 'R-L': {
-			return 'rotate(90)'
+			return ['rotate(-90) scale(-1)', 'rotate(270deg)']
 		}
 		case 'T-D': {
 			//default
-			return ''
+			return ['', '']
 		}
 	}
 }
@@ -103,9 +103,11 @@ export function BeautifulTree({
 	const widthCenterShift = maxNodeWidth * 0.5
 	const heightCenterShift = maxNodeHeight * 0.5
 	const maxNodeRadius = maxNodeHeight * 0.5
-	const transformValue = calculateTransformation(orientation)
-	const transform = { ...(transformValue && { transform: transformValue }) }
-
+	const [svgTransformValue, contentTransformValue] =
+		calculateTransformation(orientation)
+	const transform = {
+		...(svgTransformValue && { transform: svgTransformValue }),
+	}
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -185,6 +187,9 @@ export function BeautifulTree({
 									key={`${id}-node-div-${idx}`}
 									className={`beautiful-tree-node-content${_nodeClass}`}
 									xmlns="http://www.w3.org/1999/xhtml"
+									style={{
+										transform: contentTransformValue,
+									}}
 								>
 									{getNodeContent(node.data)}
 								</div>
