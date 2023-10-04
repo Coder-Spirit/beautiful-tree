@@ -3,6 +3,8 @@ import {
 	edgesIterator,
 	postOrderIterator,
 } from '@beautiful-tree/algorithms'
+// eslint-disable-next-line sort-imports
+import { computeAxesCoefAndNodeDimension, coordinateCreators } from './helper'
 import { Fragment } from 'react'
 import type { Tree } from '@beautiful-tree/types'
 import type { WrappedTreeWithLayout } from '@beautiful-tree/algorithms'
@@ -23,7 +25,7 @@ export type NodeContentGetter = (
 	data?: Readonly<Record<string, unknown>> | undefined,
 ) => JSX.Element | string
 
-type Orientation = 'D-T' | 'L-R' | 'R-L' | 'T-D'
+export type Orientation = 'D-T' | 'L-R' | 'R-L' | 'T-D'
 
 export interface BeautifulTreeProps {
 	readonly id: string
@@ -60,24 +62,6 @@ function runClassesGetter(
 	return cssClasses.length === 0 ? '' : ` ${cssClasses.join(' ')}`
 }
 
-function calculateTransformation(orientation: Orientation): [string, string] {
-	switch (orientation) {
-		case 'D-T': {
-			return ['rotate(180) scale(-1, 1)', 'scale(-1, 1) rotate(180deg)']
-		}
-		case 'L-R': {
-			return ['rotate(-90)', 'rotate(90deg)']
-		}
-		case 'R-L': {
-			return ['rotate(-90) scale(-1)', 'rotate(270deg)']
-		}
-		case 'T-D': {
-			//default
-			return ['', '']
-		}
-	}
-}
-
 export function BeautifulTree({
 	id,
 	svgProps,
@@ -96,18 +80,32 @@ export function BeautifulTree({
 	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xCoef = width / (mX + 2)
-	const yCoef = height / (mY + 2)
-	const maxNodeWidth = xCoef * 0.5
-	const maxNodeHeight = Math.min(yCoef * 0.5, maxNodeWidth * hCoef)
+	const { xCoef, yCoef, maxNodeHeight, maxNodeWidth } =
+		computeAxesCoefAndNodeDimension(orientation, {
+			width,
+			height,
+			hCoef,
+			mX,
+			mY,
+		})
+
 	const widthCenterShift = maxNodeWidth * 0.5
 	const heightCenterShift = maxNodeHeight * 0.5
 	const maxNodeRadius = maxNodeHeight * 0.5
-	const [svgTransformValue, contentTransformValue] =
-		calculateTransformation(orientation)
-	const transform = {
-		...(svgTransformValue && { transform: svgTransformValue }),
-	}
+
+	const {
+		circleCoordinateCreator,
+		lineCoordinateCreator,
+		rectCoordinateCreator,
+	} = coordinateCreators(orientation, {
+		width,
+		height,
+		xCoef,
+		yCoef,
+		heightCenterShift,
+		widthCenterShift,
+	})
+
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +116,6 @@ export function BeautifulTree({
 				height: `${height}${sizeUnit}`,
 			}}
 			className={'beautiful-tree-react'}
-			{...transform}
 		>
 			<style>
 				{`line{stroke:black;}
@@ -135,10 +132,7 @@ export function BeautifulTree({
 							getEdgeClass,
 							edge.eData,
 						)}`}
-						x1={(edge.start.x + 1) * xCoef}
-						y1={(edge.start.y + 1) * yCoef}
-						x2={(edge.end.x + 1) * xCoef}
-						y2={(edge.end.y + 1) * yCoef}
+						{...lineCoordinateCreator(edge)}
 					/>
 				)
 			})}
@@ -161,8 +155,7 @@ export function BeautifulTree({
 									getNodeClass,
 									node.data,
 								)}`}
-								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
-								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								{...rectCoordinateCreator(nm)}
 								width={maxNodeWidth}
 								height={maxNodeHeight}
 							/>
@@ -170,16 +163,14 @@ export function BeautifulTree({
 							<circle
 								key={`${id}-node-c-${idx}`}
 								className={`beautiful-tree-node${_nodeClass}`}
-								cx={(nm.pos.x + 1) * xCoef}
-								cy={(nm.pos.y + 1) * yCoef}
+								{...circleCoordinateCreator(nm)}
 								r={maxNodeRadius}
 							/>
 						)}
 						{getNodeContent ? (
 							<foreignObject
 								key={`${id}-node-fo-${idx}`}
-								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
-								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								{...rectCoordinateCreator(nm)}
 								width={maxNodeWidth}
 								height={maxNodeHeight}
 							>
@@ -187,9 +178,6 @@ export function BeautifulTree({
 									key={`${id}-node-div-${idx}`}
 									className={`beautiful-tree-node-content${_nodeClass}`}
 									xmlns="http://www.w3.org/1999/xhtml"
-									style={{
-										transform: contentTransformValue,
-									}}
 								>
 									{getNodeContent(node.data)}
 								</div>

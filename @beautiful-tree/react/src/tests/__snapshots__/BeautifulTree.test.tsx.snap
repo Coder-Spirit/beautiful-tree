@@ -5247,7 +5247,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(-90)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -5258,56 +5257,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         </style>
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="100"
-          y1="100"
-          y2="200"
+          x1="100"
+          x2="200"
+          y1="225"
+          y2="300"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="300"
+          y1="300"
+          y2="300"
         />
         <line
           class="beautiful-tree-edge"
           x1="100"
-          x2="100"
-          y1="200"
-          y2="300"
+          x2="200"
+          y1="225"
+          y2="150"
         />
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="250"
-          y1="100"
+          x1="200"
+          x2="300"
+          y1="150"
           y2="200"
         />
         <line
           class="beautiful-tree-edge"
-          x1="250"
-          x2="200"
-          y1="200"
-          y2="300"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="250"
+          x1="200"
           x2="300"
-          y1="200"
-          y2="300"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="100"
-          cy="300"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node"
-          cx="100"
-          cy="200"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="200"
-          cy="300"
-          r="25"
+          y1="150"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
@@ -5317,14 +5298,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         />
         <circle
           class="beautiful-tree-node"
-          cx="250"
+          cx="200"
+          cy="300"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="200"
           r="25"
         />
         <circle
-          class="beautiful-tree-node beautiful-tree-root"
-          cx="175"
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="100"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node"
+          cx="200"
+          cy="150"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-root"
+          cx="100"
+          cy="225"
           r="25"
         />
       </svg>
@@ -5334,7 +5333,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(-90) scale(-1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -5345,38 +5343,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         </style>
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="100"
-          y1="100"
-          y2="200"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="100"
-          x2="100"
-          y1="200"
-          y2="300"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="175"
-          x2="250"
-          y1="100"
-          y2="200"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="250"
+          x1="300"
           x2="200"
-          y1="200"
+          y1="225"
           y2="300"
         />
         <line
           class="beautiful-tree-edge"
-          x1="250"
-          x2="300"
-          y1="200"
+          x1="200"
+          x2="100"
+          y1="300"
           y2="300"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="300"
+          x2="200"
+          y1="225"
+          y2="150"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="100"
+          y1="150"
+          y2="200"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="100"
+          y1="150"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
@@ -5386,32 +5384,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         />
         <circle
           class="beautiful-tree-node"
-          cx="100"
-          cy="200"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
           cx="200"
           cy="300"
           r="25"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
-          cx="300"
-          cy="300"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node"
-          cx="250"
+          cx="100"
           cy="200"
           r="25"
         />
         <circle
-          class="beautiful-tree-node beautiful-tree-root"
-          cx="175"
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="100"
           cy="100"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node"
+          cx="200"
+          cy="150"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-root"
+          cx="300"
+          cy="225"
           r="25"
         />
       </svg>
@@ -5421,7 +5419,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(180) scale(-1, 1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -5434,7 +5431,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           class="beautiful-tree-edge"
           x1="175"
           x2="100"
-          y1="100"
+          y1="300"
           y2="200"
         />
         <line
@@ -5442,13 +5439,13 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           x1="100"
           x2="100"
           y1="200"
-          y2="300"
+          y2="100"
         />
         <line
           class="beautiful-tree-edge"
           x1="175"
           x2="250"
-          y1="100"
+          y1="300"
           y2="200"
         />
         <line
@@ -5456,19 +5453,19 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           x1="250"
           x2="200"
           y1="200"
-          y2="300"
+          y2="100"
         />
         <line
           class="beautiful-tree-edge"
           x1="250"
           x2="300"
           y1="200"
-          y2="300"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="100"
-          cy="300"
+          cy="100"
           r="25"
         />
         <circle
@@ -5480,13 +5477,13 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="200"
-          cy="300"
+          cy="100"
           r="25"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
-          cy="300"
+          cy="100"
           r="25"
         />
         <circle
@@ -5498,7 +5495,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="175"
-          cy="100"
+          cy="300"
           r="25"
         />
       </svg>
@@ -5509,7 +5506,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
       class="beautiful-tree-react"
       id="smart-small-tree"
       style="width: 400px; height: 400px;"
-      transform="rotate(180) scale(-1, 1)"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -5522,7 +5518,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         class="beautiful-tree-edge"
         x1="175"
         x2="100"
-        y1="100"
+        y1="300"
         y2="200"
       />
       <line
@@ -5530,13 +5526,13 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         x1="100"
         x2="100"
         y1="200"
-        y2="300"
+        y2="100"
       />
       <line
         class="beautiful-tree-edge"
         x1="175"
         x2="250"
-        y1="100"
+        y1="300"
         y2="200"
       />
       <line
@@ -5544,19 +5540,19 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         x1="250"
         x2="200"
         y1="200"
-        y2="300"
+        y2="100"
       />
       <line
         class="beautiful-tree-edge"
         x1="250"
         x2="300"
         y1="200"
-        y2="300"
+        y2="100"
       />
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="100"
-        cy="300"
+        cy="100"
         r="25"
       />
       <circle
@@ -5568,13 +5564,13 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="200"
-        cy="300"
+        cy="100"
         r="25"
       />
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="300"
-        cy="300"
+        cy="100"
         r="25"
       />
       <circle
@@ -5586,7 +5582,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
       <circle
         class="beautiful-tree-node beautiful-tree-root"
         cx="175"
-        cy="100"
+        cy="300"
         r="25"
       />
     </svg>
@@ -9140,7 +9136,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(-90)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -9151,56 +9146,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
         </style>
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="100"
-          y1="100"
-          y2="200"
+          x1="100"
+          x2="200"
+          y1="225"
+          y2="300"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="300"
+          y1="300"
+          y2="300"
         />
         <line
           class="beautiful-tree-edge"
           x1="100"
-          x2="100"
-          y1="200"
-          y2="300"
+          x2="200"
+          y1="225"
+          y2="150"
         />
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="250"
-          y1="100"
+          x1="200"
+          x2="300"
+          y1="150"
           y2="200"
         />
         <line
           class="beautiful-tree-edge"
-          x1="250"
-          x2="200"
-          y1="200"
-          y2="300"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="250"
+          x1="200"
           x2="300"
-          y1="200"
-          y2="300"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="100"
-          cy="300"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node"
-          cx="100"
-          cy="200"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="200"
-          cy="300"
-          r="25"
+          y1="150"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
@@ -9210,14 +9187,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
         />
         <circle
           class="beautiful-tree-node"
-          cx="250"
+          cx="200"
+          cy="300"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="200"
           r="25"
         />
         <circle
-          class="beautiful-tree-node beautiful-tree-root"
-          cx="175"
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="100"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node"
+          cx="200"
+          cy="150"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-root"
+          cx="100"
+          cy="225"
           r="25"
         />
       </svg>
@@ -9228,7 +9223,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
       class="beautiful-tree-react"
       id="smart-small-tree"
       style="width: 400px; height: 400px;"
-      transform="rotate(-90)"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -9239,56 +9233,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
       </style>
       <line
         class="beautiful-tree-edge"
-        x1="175"
-        x2="100"
-        y1="100"
-        y2="200"
+        x1="100"
+        x2="200"
+        y1="225"
+        y2="300"
+      />
+      <line
+        class="beautiful-tree-edge"
+        x1="200"
+        x2="300"
+        y1="300"
+        y2="300"
       />
       <line
         class="beautiful-tree-edge"
         x1="100"
-        x2="100"
-        y1="200"
-        y2="300"
+        x2="200"
+        y1="225"
+        y2="150"
       />
       <line
         class="beautiful-tree-edge"
-        x1="175"
-        x2="250"
-        y1="100"
+        x1="200"
+        x2="300"
+        y1="150"
         y2="200"
       />
       <line
         class="beautiful-tree-edge"
-        x1="250"
-        x2="200"
-        y1="200"
-        y2="300"
-      />
-      <line
-        class="beautiful-tree-edge"
-        x1="250"
+        x1="200"
         x2="300"
-        y1="200"
-        y2="300"
-      />
-      <circle
-        class="beautiful-tree-node beautiful-tree-leaf"
-        cx="100"
-        cy="300"
-        r="25"
-      />
-      <circle
-        class="beautiful-tree-node"
-        cx="100"
-        cy="200"
-        r="25"
-      />
-      <circle
-        class="beautiful-tree-node beautiful-tree-leaf"
-        cx="200"
-        cy="300"
-        r="25"
+        y1="150"
+        y2="100"
       />
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
@@ -9298,14 +9274,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
       />
       <circle
         class="beautiful-tree-node"
-        cx="250"
+        cx="200"
+        cy="300"
+        r="25"
+      />
+      <circle
+        class="beautiful-tree-node beautiful-tree-leaf"
+        cx="300"
         cy="200"
         r="25"
       />
       <circle
-        class="beautiful-tree-node beautiful-tree-root"
-        cx="175"
+        class="beautiful-tree-node beautiful-tree-leaf"
+        cx="300"
         cy="100"
+        r="25"
+      />
+      <circle
+        class="beautiful-tree-node"
+        cx="200"
+        cy="150"
+        r="25"
+      />
+      <circle
+        class="beautiful-tree-node beautiful-tree-root"
+        cx="100"
+        cy="225"
         r="25"
       />
     </svg>
@@ -12859,7 +12853,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(-90)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -12870,56 +12863,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         </style>
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="100"
-          y1="100"
-          y2="200"
+          x1="100"
+          x2="200"
+          y1="225"
+          y2="300"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="300"
+          y1="300"
+          y2="300"
         />
         <line
           class="beautiful-tree-edge"
           x1="100"
-          x2="100"
-          y1="200"
-          y2="300"
+          x2="200"
+          y1="225"
+          y2="150"
         />
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="250"
-          y1="100"
+          x1="200"
+          x2="300"
+          y1="150"
           y2="200"
         />
         <line
           class="beautiful-tree-edge"
-          x1="250"
-          x2="200"
-          y1="200"
-          y2="300"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="250"
+          x1="200"
           x2="300"
-          y1="200"
-          y2="300"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="100"
-          cy="300"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node"
-          cx="100"
-          cy="200"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
-          cx="200"
-          cy="300"
-          r="25"
+          y1="150"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
@@ -12929,14 +12904,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         />
         <circle
           class="beautiful-tree-node"
-          cx="250"
+          cx="200"
+          cy="300"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="200"
           r="25"
         />
         <circle
-          class="beautiful-tree-node beautiful-tree-root"
-          cx="175"
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="300"
           cy="100"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node"
+          cx="200"
+          cy="150"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-root"
+          cx="100"
+          cy="225"
           r="25"
         />
       </svg>
@@ -12946,7 +12939,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         class="beautiful-tree-react"
         id="smart-small-tree"
         style="width: 400px; height: 400px;"
-        transform="rotate(-90) scale(-1)"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -12957,38 +12949,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         </style>
         <line
           class="beautiful-tree-edge"
-          x1="175"
-          x2="100"
-          y1="100"
-          y2="200"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="100"
-          x2="100"
-          y1="200"
-          y2="300"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="175"
-          x2="250"
-          y1="100"
-          y2="200"
-        />
-        <line
-          class="beautiful-tree-edge"
-          x1="250"
+          x1="300"
           x2="200"
-          y1="200"
+          y1="225"
           y2="300"
         />
         <line
           class="beautiful-tree-edge"
-          x1="250"
-          x2="300"
-          y1="200"
+          x1="200"
+          x2="100"
+          y1="300"
           y2="300"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="300"
+          x2="200"
+          y1="225"
+          y2="150"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="100"
+          y1="150"
+          y2="200"
+        />
+        <line
+          class="beautiful-tree-edge"
+          x1="200"
+          x2="100"
+          y1="150"
+          y2="100"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
@@ -12998,32 +12990,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         />
         <circle
           class="beautiful-tree-node"
-          cx="100"
-          cy="200"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node beautiful-tree-leaf"
           cx="200"
           cy="300"
           r="25"
         />
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
-          cx="300"
-          cy="300"
-          r="25"
-        />
-        <circle
-          class="beautiful-tree-node"
-          cx="250"
+          cx="100"
           cy="200"
           r="25"
         />
         <circle
-          class="beautiful-tree-node beautiful-tree-root"
-          cx="175"
+          class="beautiful-tree-node beautiful-tree-leaf"
+          cx="100"
           cy="100"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node"
+          cx="200"
+          cy="150"
+          r="25"
+        />
+        <circle
+          class="beautiful-tree-node beautiful-tree-root"
+          cx="300"
+          cy="225"
           r="25"
         />
       </svg>
@@ -13034,7 +13026,6 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
       class="beautiful-tree-react"
       id="smart-small-tree"
       style="width: 400px; height: 400px;"
-      transform="rotate(-90) scale(-1)"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -13045,38 +13036,38 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
       </style>
       <line
         class="beautiful-tree-edge"
-        x1="175"
-        x2="100"
-        y1="100"
-        y2="200"
-      />
-      <line
-        class="beautiful-tree-edge"
-        x1="100"
-        x2="100"
-        y1="200"
-        y2="300"
-      />
-      <line
-        class="beautiful-tree-edge"
-        x1="175"
-        x2="250"
-        y1="100"
-        y2="200"
-      />
-      <line
-        class="beautiful-tree-edge"
-        x1="250"
+        x1="300"
         x2="200"
-        y1="200"
+        y1="225"
         y2="300"
       />
       <line
         class="beautiful-tree-edge"
-        x1="250"
-        x2="300"
-        y1="200"
+        x1="200"
+        x2="100"
+        y1="300"
         y2="300"
+      />
+      <line
+        class="beautiful-tree-edge"
+        x1="300"
+        x2="200"
+        y1="225"
+        y2="150"
+      />
+      <line
+        class="beautiful-tree-edge"
+        x1="200"
+        x2="100"
+        y1="150"
+        y2="200"
+      />
+      <line
+        class="beautiful-tree-edge"
+        x1="200"
+        x2="100"
+        y1="150"
+        y2="100"
       />
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
@@ -13086,32 +13077,32 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
       />
       <circle
         class="beautiful-tree-node"
-        cx="100"
-        cy="200"
-        r="25"
-      />
-      <circle
-        class="beautiful-tree-node beautiful-tree-leaf"
         cx="200"
         cy="300"
         r="25"
       />
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
-        cx="300"
-        cy="300"
-        r="25"
-      />
-      <circle
-        class="beautiful-tree-node"
-        cx="250"
+        cx="100"
         cy="200"
         r="25"
       />
       <circle
-        class="beautiful-tree-node beautiful-tree-root"
-        cx="175"
+        class="beautiful-tree-node beautiful-tree-leaf"
+        cx="100"
         cy="100"
+        r="25"
+      />
+      <circle
+        class="beautiful-tree-node"
+        cx="200"
+        cy="150"
+        r="25"
+      />
+      <circle
+        class="beautiful-tree-node beautiful-tree-root"
+        cx="300"
+        cy="225"
         r="25"
       />
     </svg>
