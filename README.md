@@ -15,7 +15,7 @@ Some of its hightlights:
 - Very lightweight (3.9Kb in its minimised ESM form, and 4.2Kb in its UMD form)
 - The generated trees can be styled with CSS
 
-For now there is only a React variant, but we'll extend the support for other
+For now there is only a React variant, but we'll extend the   support for other
 technologies such as Vue.
 
 ## Packages in this repository:
