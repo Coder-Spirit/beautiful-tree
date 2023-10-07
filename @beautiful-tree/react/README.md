@@ -1,5 +1,12 @@
 # Beautiful-Tree
 
+[![NPM version (beautiful-tree)](https://img.shields.io/npm/v/@beautiful-tree/react.svg?style=flat)](https://www.npmjs.com/package/@beautiful-tree/react)
+[![TypeScript (beautiful-tree)](https://badgen.net/npm/types/@beautiful-tree/react)](http://www.typescriptlang.org/)
+[![License (beautiful-tree)](https://badgen.net/npm/license/@beautiful-tree/react)](https://opensource.org/licenses/MIT)
+[![npm downloads (beautiful-tree)](https://img.shields.io/npm/dm/@beautiful-tree/react.svg?style=flat)](https://www.npmjs.com/package/@beautiful-tree/react)
+[![Known Vulnerabilities (beautiful-tree)](https://snyk.io//test/github/Coder-Spirit/nominal/badge.svg?targetFile=package.json)](https://snyk.io//test/github/Coder-Spirit/nominal?targetFile=package.json)
+[![Security Score (beautiful-tree)](https://snyk-widget.herokuapp.com/badge/npm/@beautiful-tree%2Freact/badge.svg)](https://snyk.io/advisor/npm-package/@beautiful-tree/react)
+
 <p align="center">
 <img
   src="https://raw.githubusercontent.com/Coder-Spirit/beautiful-tree/main/docs/example1.svg"
@@ -16,12 +23,6 @@ Some of its hightlights:
 - The generated trees can be styled with CSS
 
 
-[![NPM version (beautiful-tree)](https://img.shields.io/npm/v/@beautiful-tree/react.svg?style=flat)](https://www.npmjs.com/package/@beautiful-tree/react)
-[![TypeScript (beautiful-tree)](https://badgen.net/npm/types/@beautiful-tree/react)](http://www.typescriptlang.org/)
-[![License (beautiful-tree)](https://badgen.net/npm/license/@beautiful-tree/react)](https://opensource.org/licenses/MIT)
-[![npm downloads (beautiful-tree)](https://img.shields.io/npm/dm/@beautiful-tree/react.svg?style=flat)](https://www.npmjs.com/package/@beautiful-tree/react)
-[![Known Vulnerabilities (beautiful-tree)](https://snyk.io//test/github/Coder-Spirit/nominal/badge.svg?targetFile=package.json)](https://snyk.io//test/github/Coder-Spirit/nominal?targetFile=package.json)
-[![Security Score (beautiful-tree)](https://snyk-widget.herokuapp.com/badge/npm/@beautiful-tree%2Freact/badge.svg)](https://snyk.io/advisor/npm-package/@beautiful-tree/react)
 ## Other members of the family
 
 This is the "React variant" of the BeautifulTree library. If you are looking
