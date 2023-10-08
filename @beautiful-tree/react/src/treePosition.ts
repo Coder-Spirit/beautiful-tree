@@ -1,5 +1,25 @@
 import type { Edge, TreeWithLayout } from '@beautiful-tree/types'
-import type { Orientation } from 'BeautifulTree'
+
+interface LineCoordinates {
+	x1: number
+	y1: number
+	x2: number
+	y2: number
+}
+
+interface RectangleCoordinates {
+	x: number
+	y: number
+}
+
+interface CircleCoordinates {
+	cx: number
+	cy: number
+}
+
+type TreeMetaData = TreeWithLayout['meta']
+
+export type Orientation = 'D-T' | 'L-R' | 'R-L' | 'T-D'
 
 export function coordinateCreators(
 	orientation: Orientation,
@@ -12,30 +32,14 @@ export function coordinateCreators(
 		heightCenterShift: number
 	}>,
 ): {
-	lineCoordinateCreator: (edge: Readonly<Edge>) => {
-		x1: number
-		y1: number
-		x2: number
-		y2: number
-	}
-	rectCoordinateCreator: (nm: TreeWithLayout['meta']) => {
-		x: number
-		y: number
-	}
-	circleCoordinateCreator: (nm: TreeWithLayout['meta']) => {
-		cx: number
-		cy: number
-	}
+	lineCoordinateCreator: (edge: Readonly<Edge>) => LineCoordinates
+	rectCoordinateCreator: (nm: TreeMetaData) => RectangleCoordinates
+	circleCoordinateCreator: (nm: TreeMetaData) => CircleCoordinates
 } {
 	const { width, height, xCoef, yCoef, widthCenterShift, heightCenterShift } =
 		layoutProps
 	return {
-		lineCoordinateCreator: function (edge: Readonly<Edge>): {
-			x1: number
-			y1: number
-			x2: number
-			y2: number
-		} {
+		lineCoordinateCreator: function (edge: Readonly<Edge>): LineCoordinates {
 			switch (orientation) {
 				case 'D-T': {
 					return {
@@ -71,10 +75,8 @@ export function coordinateCreators(
 				}
 			}
 		},
-		rectCoordinateCreator: function (nm: TreeWithLayout['meta']): {
-			x: number
-			y: number
-		} {
+
+		rectCoordinateCreator: function (nm: TreeMetaData): RectangleCoordinates {
 			switch (orientation) {
 				case 'D-T': {
 					return {
@@ -102,10 +104,8 @@ export function coordinateCreators(
 				}
 			}
 		},
-		circleCoordinateCreator: function (nm: TreeWithLayout['meta']): {
-			cx: number
-			cy: number
-		} {
+
+		circleCoordinateCreator: function (nm: TreeMetaData): CircleCoordinates {
 			switch (orientation) {
 				case 'D-T': {
 					return {
@@ -152,7 +152,9 @@ export function computeAxesCoefAndNodeDimension(
 	maxNodeWidth: number
 } {
 	const { width, height, hCoef, mX, mY } = layoutProps
+
 	let xCoef: number, yCoef: number, maxNodeHeight: number, maxNodeWidth: number
+
 	if (orientation === 'L-R' || orientation === 'R-L') {
 		xCoef = height / (mY + 2)
 		yCoef = width / (mX + 2)

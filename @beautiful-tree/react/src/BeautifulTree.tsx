@@ -1,11 +1,14 @@
 import {
+	computeAxesCoefAndNodeDimension,
+	coordinateCreators,
+} from './treePosition'
+import {
 	computeSmartLayout,
 	edgesIterator,
 	postOrderIterator,
 } from '@beautiful-tree/algorithms'
-// eslint-disable-next-line sort-imports
-import { computeAxesCoefAndNodeDimension, coordinateCreators } from './helper'
 import { Fragment } from 'react'
+import type { Orientation } from './treePosition'
 import type { Tree } from '@beautiful-tree/types'
 import type { WrappedTreeWithLayout } from '@beautiful-tree/algorithms'
 export {
@@ -24,8 +27,6 @@ export type NodeShapeGetter = (
 export type NodeContentGetter = (
 	data?: Readonly<Record<string, unknown>> | undefined,
 ) => JSX.Element | string
-
-export type Orientation = 'D-T' | 'L-R' | 'R-L' | 'T-D'
 
 export interface BeautifulTreeProps {
 	readonly id: string
