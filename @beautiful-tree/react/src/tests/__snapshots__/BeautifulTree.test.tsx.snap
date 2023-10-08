@@ -5159,7 +5159,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_T-D-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -5245,7 +5245,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_L-R-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -5296,42 +5296,120 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="150"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="125"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="100"
           cy="225"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="200"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_R-L-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -5382,42 +5460,120 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="100"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="100"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="150"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="125"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="300"
           cy="225"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="200"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_D-T-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -5468,43 +5624,121 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="100"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="200"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="250"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="225"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="175"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="150"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
   </body>,
   "container": <div>
     <svg
       class="beautiful-tree-react"
-      id="smart-small-tree"
+      id="smart-small-tree_D-T-orientation"
       style="width: 400px; height: 400px;"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
@@ -5555,36 +5789,114 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with D-T orientation
         cy="100"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="75"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          C
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="100"
         cy="200"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="175"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          B
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="200"
         cy="100"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="175"
+        y="75"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          E
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="300"
         cy="100"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="275"
+        y="75"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          F
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="250"
         cy="200"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="225"
+        y="175"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          D
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-root"
         cx="175"
         cy="300"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="150"
+        y="275"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-root"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          A
+        </div>
+      </foreignobject>
     </svg>
   </div>,
   "debug": [Function],
@@ -9048,7 +9360,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_T-D-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -9134,7 +9446,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_L-R-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -9185,43 +9497,121 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="150"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="125"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="100"
           cy="225"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="200"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
   </body>,
   "container": <div>
     <svg
       class="beautiful-tree-react"
-      id="smart-small-tree"
+      id="smart-small-tree_L-R-orientation"
       style="width: 400px; height: 400px;"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
@@ -9272,36 +9662,114 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with L-R orientation
         cy="300"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="275"
+        y="275"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          C
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="200"
         cy="300"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="175"
+        y="275"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          B
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="300"
         cy="200"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="275"
+        y="175"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          E
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="300"
         cy="100"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="275"
+        y="75"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          F
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="200"
         cy="150"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="175"
+        y="125"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          D
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-root"
         cx="100"
         cy="225"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="200"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-root"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          A
+        </div>
+      </foreignobject>
     </svg>
   </div>,
   "debug": [Function],
@@ -12765,7 +13233,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_T-D-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -12851,7 +13319,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_L-R-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -12902,42 +13370,120 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="300"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="150"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="125"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="100"
           cy="225"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="200"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_R-L-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -12988,43 +13534,121 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            C
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="300"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="275"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            B
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="100"
           cy="200"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="175"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            E
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-leaf"
           cx="100"
           cy="100"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="75"
+          y="75"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-leaf"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            F
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node"
           cx="200"
           cy="150"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="175"
+          y="125"
+        >
+          <div
+            class="beautiful-tree-node-content"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            D
+          </div>
+        </foreignobject>
         <circle
           class="beautiful-tree-node beautiful-tree-root"
           cx="300"
           cy="225"
           r="25"
         />
+        <foreignobject
+          height="50"
+          width="50"
+          x="275"
+          y="200"
+        >
+          <div
+            class="beautiful-tree-node-content beautiful-tree-root"
+            xmlns="http://www.w3.org/1999/xhtml"
+          >
+            A
+          </div>
+        </foreignobject>
       </svg>
     </div>
   </body>,
   "container": <div>
     <svg
       class="beautiful-tree-react"
-      id="smart-small-tree"
+      id="smart-small-tree_R-L-orientation"
       style="width: 400px; height: 400px;"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
@@ -13075,36 +13699,114 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with R-L orientation
         cy="300"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="275"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          C
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="200"
         cy="300"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="175"
+        y="275"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          B
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="100"
         cy="200"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="175"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          E
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-leaf"
         cx="100"
         cy="100"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="75"
+        y="75"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-leaf"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          F
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node"
         cx="200"
         cy="150"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="175"
+        y="125"
+      >
+        <div
+          class="beautiful-tree-node-content"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          D
+        </div>
+      </foreignobject>
       <circle
         class="beautiful-tree-node beautiful-tree-root"
         cx="300"
         cy="225"
         r="25"
       />
+      <foreignobject
+        height="50"
+        width="50"
+        x="275"
+        y="200"
+      >
+        <div
+          class="beautiful-tree-node-content beautiful-tree-root"
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          A
+        </div>
+      </foreignobject>
     </svg>
   </div>,
   "debug": [Function],
@@ -16568,7 +17270,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with T-D orientation
     <div>
       <svg
         class="beautiful-tree-react"
-        id="smart-small-tree"
+        id="smart-small-tree_T-D-orientation"
         style="width: 400px; height: 400px;"
         viewBox="0 0 400 400"
         xmlns="http://www.w3.org/2000/svg"
@@ -16655,7 +17357,7 @@ exports[`BeautifulTree : Smart Layout > renders small tree, with T-D orientation
   "container": <div>
     <svg
       class="beautiful-tree-react"
-      id="smart-small-tree"
+      id="smart-small-tree_T-D-orientation"
       style="width: 400px; height: 400px;"
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"

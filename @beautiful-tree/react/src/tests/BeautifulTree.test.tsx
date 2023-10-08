@@ -229,7 +229,7 @@ describe('BeautifulTree : Smart Layout', () => {
 	it('renders small tree, with T-D orientation', () => {
 		const rendered = render(
 			<BeautifulTree
-				id="smart-small-tree"
+				id="smart-small-tree_T-D-orientation"
 				svgProps={{
 					width: 400,
 					height: 400,
@@ -246,7 +246,7 @@ describe('BeautifulTree : Smart Layout', () => {
 	it('renders small tree, with L-R orientation', () => {
 		const rendered = render(
 			<BeautifulTree
-				id="smart-small-tree"
+				id="smart-small-tree_L-R-orientation"
 				svgProps={{
 					width: 400,
 					height: 400,
@@ -254,6 +254,7 @@ describe('BeautifulTree : Smart Layout', () => {
 				tree={smallTree}
 				orientation="L-R"
 				computeLayout={computeSmartLayout}
+				getNodeContent={(data): string => data?.['v']?.toString() ?? ''}
 			/>,
 		)
 
@@ -263,7 +264,7 @@ describe('BeautifulTree : Smart Layout', () => {
 	it('renders small tree, with R-L orientation', () => {
 		const rendered = render(
 			<BeautifulTree
-				id="smart-small-tree"
+				id="smart-small-tree_R-L-orientation"
 				svgProps={{
 					width: 400,
 					height: 400,
@@ -271,6 +272,7 @@ describe('BeautifulTree : Smart Layout', () => {
 				tree={smallTree}
 				orientation="R-L"
 				computeLayout={computeSmartLayout}
+				getNodeContent={(data): string => data?.['v']?.toString() ?? ''}
 			/>,
 		)
 
@@ -280,7 +282,7 @@ describe('BeautifulTree : Smart Layout', () => {
 	it('renders small tree, with D-T orientation', () => {
 		const rendered = render(
 			<BeautifulTree
-				id="smart-small-tree"
+				id="smart-small-tree_D-T-orientation"
 				svgProps={{
 					width: 400,
 					height: 400,
@@ -288,6 +290,7 @@ describe('BeautifulTree : Smart Layout', () => {
 				tree={smallTree}
 				orientation="D-T"
 				computeLayout={computeSmartLayout}
+				getNodeContent={(data): string => data?.['v']?.toString() ?? ''}
 			/>,
 		)
 
