@@ -1,9 +1,14 @@
 import {
+	computeAxesCoefAndNodeDimension,
+	coordinateCreators,
+} from './treePosition'
+import {
 	computeSmartLayout,
 	edgesIterator,
 	postOrderIterator,
 } from '@beautiful-tree/algorithms'
 import { Fragment } from 'react'
+import type { Orientation } from './treePosition'
 import type { Tree } from '@beautiful-tree/types'
 import type { WrappedTreeWithLayout } from '@beautiful-tree/algorithms'
 export {
@@ -33,6 +38,7 @@ export interface BeautifulTreeProps {
 	readonly nodeShape?: 'circle' | 'rect'
 	readonly hCoef?: number
 	readonly tree: Tree
+	readonly orientation?: Orientation
 	readonly computeLayout?:
 		| ((tree: Readonly<Tree>) => Readonly<WrappedTreeWithLayout>)
 		| undefined
@@ -63,6 +69,7 @@ export function BeautifulTree({
 	nodeShape,
 	hCoef = 1,
 	tree,
+	orientation = 'T-D',
 	computeLayout,
 	getNodeClass,
 	getNodeShape,
@@ -74,13 +81,31 @@ export function BeautifulTree({
 	const { tree: treeWithLayout, mX, mY } = computeLayout(tree)
 	const { width, height, sizeUnit = 'px' } = svgProps
 
-	const xCoef = width / (mX + 2)
-	const yCoef = height / (mY + 2)
-	const maxNodeWidth = xCoef * 0.5
-	const maxNodeHeight = Math.min(yCoef * 0.5, maxNodeWidth * hCoef)
+	const { xCoef, yCoef, maxNodeHeight, maxNodeWidth } =
+		computeAxesCoefAndNodeDimension(orientation, {
+			width,
+			height,
+			hCoef,
+			mX,
+			mY,
+		})
+
 	const widthCenterShift = maxNodeWidth * 0.5
 	const heightCenterShift = maxNodeHeight * 0.5
 	const maxNodeRadius = maxNodeHeight * 0.5
+
+	const {
+		circleCoordinateCreator,
+		lineCoordinateCreator,
+		rectCoordinateCreator,
+	} = coordinateCreators(orientation, {
+		width,
+		height,
+		xCoef,
+		yCoef,
+		heightCenterShift,
+		widthCenterShift,
+	})
 
 	return (
 		<svg
@@ -108,10 +133,7 @@ export function BeautifulTree({
 							getEdgeClass,
 							edge.eData,
 						)}`}
-						x1={(edge.start.x + 1) * xCoef}
-						y1={(edge.start.y + 1) * yCoef}
-						x2={(edge.end.x + 1) * xCoef}
-						y2={(edge.end.y + 1) * yCoef}
+						{...lineCoordinateCreator(edge)}
 					/>
 				)
 			})}
@@ -134,8 +156,7 @@ export function BeautifulTree({
 									getNodeClass,
 									node.data,
 								)}`}
-								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
-								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								{...rectCoordinateCreator(nm)}
 								width={maxNodeWidth}
 								height={maxNodeHeight}
 							/>
@@ -143,16 +164,14 @@ export function BeautifulTree({
 							<circle
 								key={`${id}-node-c-${idx}`}
 								className={`beautiful-tree-node${_nodeClass}`}
-								cx={(nm.pos.x + 1) * xCoef}
-								cy={(nm.pos.y + 1) * yCoef}
+								{...circleCoordinateCreator(nm)}
 								r={maxNodeRadius}
 							/>
 						)}
 						{getNodeContent ? (
 							<foreignObject
 								key={`${id}-node-fo-${idx}`}
-								x={(nm.pos.x + 1) * xCoef - widthCenterShift}
-								y={(nm.pos.y + 1) * yCoef - heightCenterShift}
+								{...rectCoordinateCreator(nm)}
 								width={maxNodeWidth}
 								height={maxNodeHeight}
 							>

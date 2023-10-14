@@ -211,3 +211,100 @@ export const Centered3_Wide_Tree_Random: Story = {
 		getEdgeClass: getCssFromEdgeData,
 	},
 }
+
+export const Normal_Orientation_Small_Tree: Story = {
+	args: {
+		id: 'normal_orientation_small_tree',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: smallTree,
+		orientation: 'T-D',
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
+
+export const LR_Orientation_Small_Tree: Story = {
+	args: {
+		id: 'lr_orientation_small_tree',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: smallTree,
+		orientation: 'L-R',
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
+
+export const RL_Orientation_Small_Tree: Story = {
+	args: {
+		id: 'rl_orientation_small_tree',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: smallTree,
+		orientation: 'R-L',
+		computeLayout: computeSmartLayout,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
+
+export const DT_Orientation_Small_Tree: Story = {
+	args: {
+		id: 'dt_orientation_small_tree',
+		svgProps: {
+			width: 400,
+			height: 400,
+		},
+		tree: smallTree,
+		orientation: 'D-T',
+		computeLayout: computeSmartLayout,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
+
+export const LR_Orientation_Wide_Tree_A_On_Rectangle: Story = {
+	args: {
+		id: 'lr_orientation_wide_tree_a_on_rectangle',
+		svgProps: {
+			width: 250,
+			height: 450,
+		},
+		tree: wideTree_A,
+		orientation: 'L-R',
+		computeLayout: computeSmartLayout,
+		getNodeClass: getCssFromNodeData,
+		getEdgeClass: getCssFromEdgeData,
+	},
+}
+
+export const RL_Orientation_Wide_Tree_Bm_On_Rectangle: Story = {
+	args: {
+		id: 'rl_orientation_wide_tree_bm_on_rectangle',
+		svgProps: {
+			width: 250,
+			height: 450,
+		},
+		tree: smallTree,
+		orientation: 'R-L',
+		computeLayout: computeSmartLayout,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
+
+export const DT_Orientation_Wide_Tree_D_On_Rectangle: Story = {
+	args: {
+		id: 'dt_orientation_wide_tree_d_on_rectangle',
+		svgProps: {
+			width: 250,
+			height: 450,
+		},
+		tree: smallTree,
+		orientation: 'D-T',
+		computeLayout: computeSmartLayout,
+		getNodeContent: (data) => data?.['v']?.toString() ?? '',
+	},
+}
