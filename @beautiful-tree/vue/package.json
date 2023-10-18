@@ -1,0 +1,28 @@
+{
+  "name": "vue",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/@beautiful-tree-vue.umd.cjs",
+  "module": "./dist/@beautiful-tree-vue.js",
+  "exports": {
+    ".": {
+      "import": "./dist/@beautiful-tree-vue.js",
+      "require": "./dist/@beautiful-tree-vue.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  }
+}
